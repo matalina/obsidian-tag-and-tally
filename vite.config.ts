@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { copyFileSync, existsSync, mkdirSync } from "fs";
 import { resolve } from "path";
-import builtins from "builtin-modules";
+import { builtinModules as builtins } from "node:module";
 
 const externals = [
     "obsidian",
