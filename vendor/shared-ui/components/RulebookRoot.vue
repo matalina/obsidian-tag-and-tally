@@ -101,7 +101,7 @@ watch(
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100vh !important;
+  height: 100vh;
 }
 .rulebook-view__loading,
 .rulebook-view__error,

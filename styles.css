@@ -73,7 +73,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: transparent !important;
+    background: transparent;
     cursor: pointer;
     padding: 0;
     margin: 0;
@@ -94,7 +94,9 @@
     fill: var(--interactive-accent);
 }
 
-/* Shared control appearance: no shadows/outlines (all tabs); thin border only */
+/* Shared control appearance: no shadows/outlines (all tabs); thin border only.
+ * Obsidian core form styling uses high specificity + !important on focus rings;
+ * we match it to keep the flat look across themes. */
 .tag-tally-main-content .tag-tally-control,
 .tag-tally-main-content .tag-tally-select,
 .tag-tally-main-content .tag-tally-button,
@@ -449,12 +451,12 @@
 .tag-tally-tag-hidden .tag-tally-tag-label-label,
 .tag-tally-tag-hidden .tag-tally-tag-label-value,
 .tag-tally-tag-hidden .tag-tally-tag-tally {
-    color: transparent !important;
+    color: transparent;
 }
 
 .tag-tally-tag-hidden .tag-tally-tag-tally svg {
-    color: transparent !important;
-    fill: transparent !important;
+    color: transparent;
+    fill: transparent;
 }
 
 /* Overlay for flag message */
@@ -1077,7 +1079,10 @@
     padding: 1em;
 }
 
-/* Documentation view: rulebook panel layout (ensures overlay works in Obsidian) */
+/* Documentation view: rulebook panel layout (ensures overlay works in Obsidian).
+ * Overrides shared-ui RulebookPanel's default fixed-position layout to make it
+ * work as a workspace-leaf overlay. Refactoring shared-ui to expose an
+ * "obsidian" mode would let us drop these !important rules — deferred. */
 .tag-tally-documentation-rulebook {
     overflow: auto !important;
     height: 100vh !important;
@@ -1126,7 +1131,7 @@
     font-size: 0.9rem;
 }
 .tag-tally-documentation-rulebook .rulebook-view__empty code {
-    font-family: ui-monospace, monospace;
+    font-family: var(--font-monospace, monospace);
     background: var(--background-modifier-border);
     padding: 0.15rem 0.35rem;
     border-radius: 4px;

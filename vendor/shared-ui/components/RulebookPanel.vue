@@ -264,7 +264,6 @@ watch(
   min-height: 3.5rem;
   flex-shrink: 0;
   border-bottom: 1px solid var(--rulebook-border, #ddd);
-  background-color: #fff;
   background-color: var(--background-primary, #fff);
   position: sticky;
   top: 0;
@@ -308,7 +307,7 @@ watch(
   min-width: 16rem;
   z-index: 101;
   isolation: isolate;
-  background-color: #fff !important;
+  background-color: #fff;
   border-right: 1px solid var(--rulebook-border, #ddd);
   padding: 1rem;
   overflow-y: auto;
@@ -477,7 +476,7 @@ watch(
   font-size: 0.85rem;
 }
 .rulebook-panel .markdown code {
-  font-family: ui-monospace, monospace;
+  font-family: var(--font-monospace, monospace);
   font-size: 0.9em;
 }
 .rulebook-panel .markdown blockquote {
