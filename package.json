@@ -10,8 +10,7 @@
     "typecheck": "vue-tsc --noEmit",
     "push": "bash scripts/push-to-vault.sh",
     "check": "node scripts/check.mjs",
-    "publish": "bash scripts/publish.sh",
-    "publish:build": "bash scripts/publish.sh --build"
+    "publish": "bash scripts/publish.sh"
   },
   "keywords": [
     "obsidian",

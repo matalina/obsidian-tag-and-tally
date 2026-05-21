@@ -5,16 +5,15 @@
 #   1. The monorepo's deploy-all (or deploy-plugin) has synced the latest
 #      plugin source + vendored deps + bumped manifest.json/versions.json
 #      into this repo, leaving an uncommitted diff.
-#   2. You ran `npm install` (first time only) and `npm run build`, then
-#      smoke-tested dist/main.js + manifest.json + styles.css in a real vault.
-#   3. You're happy with the build. Run this script to commit, tag, push,
-#      and publish the GitHub release.
+#   2. You ran `npm install` (first time only) and `npm run push` to
+#      smoke-test the build in a real vault.
+#   3. You're happy with the build. Run this script to commit the synced
+#      diff, tag, and push. The release itself is built and published by
+#      the .github/workflows/release.yml workflow, which also attaches
+#      build-provenance attestations to main.js, manifest.json, and styles.css.
 #
-# Usage: bash scripts/publish.sh [--dry-run] [--build]
-#   --dry-run  Print what would happen; don't commit, tag, push, or release.
-#   --build    Run `npm install && npm run build` before publishing. Skip this
-#              flag if you've just pushed (npm run push) and smoke-tested the
-#              build in a vault — that's the same dist/ this will publish.
+# Usage: bash scripts/publish.sh [--dry-run]
+#   --dry-run  Print what would happen; don't commit, tag, or push.
 #
 # Requires: gh CLI installed and authenticated (`gh auth login`).
 
@@ -24,11 +23,9 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 DRY_RUN=0
-DO_BUILD=0
 for arg in "$@"; do
   case "$arg" in
     --dry-run) DRY_RUN=1 ;;
-    --build)   DO_BUILD=1 ;;
     *) echo "Unknown arg: $arg" >&2; exit 1 ;;
   esac
 done
@@ -71,25 +68,6 @@ if git ls-remote --exit-code --tags origin "refs/tags/$VERSION" >/dev/null 2>&1;
   exit 1
 fi
 
-# --- Build (only with --build); otherwise trust the existing dist/ ---
-if [ "$DO_BUILD" -eq 1 ]; then
-  echo "==> npm install"
-  run "npm install --silent"
-  echo "==> npm run build"
-  run "npm run build"
-else
-  echo "==> Using existing dist/ (pass --build to rebuild)"
-fi
-
-if [ "$DRY_RUN" -eq 0 ]; then
-  for f in dist/main.js dist/manifest.json dist/styles.css; do
-    if [ ! -f "$f" ]; then
-      echo "Error: missing $f. Run 'npm run push' (which builds) or pass --build." >&2
-      exit 1
-    fi
-  done
-fi
-
 # --- Commit pending sync diff (if any) ---
 if [ -n "$(git status --porcelain)" ]; then
   echo "==> Committing synced changes"
@@ -99,7 +77,7 @@ else
   echo "==> No pending changes to commit"
 fi
 
-# --- Tag, push, release ---
+# --- Tag, push ---
 echo "==> Tagging $VERSION (no 'v' prefix per Obsidian guidelines)"
 run "git tag '$VERSION'"
 
@@ -107,13 +85,14 @@ echo "==> Pushing main + tag to origin"
 run "git push origin main"
 run "git push origin 'refs/tags/$VERSION'"
 
-echo "==> Creating GitHub release with main.js, manifest.json, styles.css"
-run "gh release create '$VERSION' dist/main.js dist/manifest.json dist/styles.css --title '$VERSION' --generate-notes"
-
 if [ "$DRY_RUN" -eq 0 ]; then
   REPO=$(gh repo view --json nameWithOwner -q .nameWithOwner)
   echo ""
-  echo "Done: https://github.com/$REPO/releases/tag/$VERSION"
+  echo "==> Tag pushed. The release workflow will build, attest, and publish:"
+  echo "    https://github.com/$REPO/actions"
+  echo ""
+  echo "Once it finishes:"
+  echo "    https://github.com/$REPO/releases/tag/$VERSION"
   echo ""
   echo "If this is your first release, the next step is the one-time PR to the"
   echo "Obsidian community plugin list:"
