@@ -23,7 +23,7 @@ export const SVG_HREF_REGEX = /(xlink:href="#)(\S+)(")/g;
 export interface SVGElement {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     createSvg(tag: string, options?: any): SVGElement;
-    innerHTML: string;
+    appendChild(node: Node): Node;
     textContent: string;
 }
 

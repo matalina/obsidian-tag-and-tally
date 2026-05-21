@@ -452,10 +452,7 @@ export class TextMapperParser {
 
     svgDefs(svgEl: SvgNode): void {
         const defsEl = svgEl.createSvg("defs");
-        // `this.defs` is populated by text-mapper's own internal SVG
-        // generation code (gradients, markers, hex grid patterns) — never
-        // from user input — so innerHTML is safe here.
-        defsEl.innerHTML = this.defs.join("\n");
+        defsEl.appendSvgRaw(this.defs.join("\n"));
 
         const types: any = {};
         for (const region of this.regions) {

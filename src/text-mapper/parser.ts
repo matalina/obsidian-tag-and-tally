@@ -764,11 +764,14 @@ export class TextMapperParser {
   }
 
   svgDefs(svgEl: SVGElement): void {
-    // All the definitions are included by default. `this.defs` is populated
-    // by text-mapper's own internal SVG generation code (gradients, markers,
-    // hex grid patterns) — never from user input — so innerHTML is safe here.
     const defsEl = svgEl.createSvg('defs');
-    defsEl.innerHTML = this.defs.join('\n');
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const parsed = new DOMParser().parseFromString(
+      `<svg xmlns="${SVG_NS}">${this.defs.join('\n')}</svg>`,
+      'image/svg+xml',
+    );
+    const root = parsed.documentElement;
+    while (root.firstChild) defsEl.appendChild(root.firstChild);
 
     // collect region types from attributes and paths in case the sets don't overlap
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

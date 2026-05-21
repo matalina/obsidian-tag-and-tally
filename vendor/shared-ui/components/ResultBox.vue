@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import TagTallyIcon from "./TagTallyIcon.vue";
 
 const props = withDefaults(
@@ -25,13 +25,6 @@ async function copy() {
     console.error("Failed to copy:", err);
   }
 }
-
-const escapedContent = computed(() => {
-  if (props.contentMode !== "text" || props.content == null) return "";
-  const div = document.createElement("div");
-  div.textContent = props.content;
-  return div.innerHTML;
-});
 </script>
 
 <template>
@@ -50,7 +43,7 @@ const escapedContent = computed(() => {
     <div class="tag-tally-result-box__body">
       <template v-if="content != null && content !== ''">
         <div v-if="contentMode === 'html'" class="tag-tally-result-box__content" v-html="content" />
-        <div v-else class="tag-tally-result-box__content" v-html="escapedContent" />
+        <div v-else class="tag-tally-result-box__content">{{ content }}</div>
       </template>
       <slot v-else />
     </div>
