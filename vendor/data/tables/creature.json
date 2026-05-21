@@ -1,0 +1,5797 @@
+[
+  {
+    "name": "creature-type",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Humanoid"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "value": "Animal"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Automation"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Ethereal"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Undead"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Draconic"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Ooze/Slime"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Insect"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Plant"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Chimera"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Fiend"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Elemental"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Fey"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Alien"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Celestial"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Giant"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "value": "Monstrosity"
+      }
+    ]
+  },
+  {
+    "name": "creature-motivation",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Destroys everything"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Defends itself"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Seeks knowledge"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Hungers for flesh"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Craves blood"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Feeds on life-force"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Defies explanation"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Seeks a host"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Feeds on fear"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Hates relentlessly"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Defends its domain"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Protects something"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Explores endlessly"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Struggles to survive"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Alters itself"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Fixates obsessively"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Seeks vengeance"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Inflicts suffering"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Seeks power"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Loves deeply"
+      }
+    ]
+  },
+  {
+    "name": "creature-descriptor",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Shadowed"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Hulking"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Twisted"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Ancient"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Unstable"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Stonebound"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Whispering"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Thorned"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Frozen"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Shifting"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Radiant"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Masked"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Hollow"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Keen-eyed"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Bloodied"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Weathered"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Barbed"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Glowing"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Cracked"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Ethereal"
+      }
+    ]
+  },
+  {
+    "name": "creature-disposition",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Cunning"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Vicious"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Wrathful"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Patient"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Feral"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Loyal"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Enigmatic"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Malevolent"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Stoic"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Relentless"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Proud"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Deceitful"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Melancholy"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Inquisitive"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Savage"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Resilient"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Cruel"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Devoted"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Paranoid"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Tranquil"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-prefix",
+    "formula": "4d8",
+    "table": [
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Dire"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Hollow"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Gloomtouched"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Runed"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Dreambound"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Phantom"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Cursed"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Broken"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Forsaken"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Rusted"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Clockwork"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Withered"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Blooded"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Shadowed"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Luminous"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Thorned"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Invisible"
+      },
+      {
+        "min": 21,
+        "max": 21,
+        "value": "Haunted"
+      },
+      {
+        "min": 22,
+        "max": 22,
+        "value": "Giant"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "value": "Barbed"
+      },
+      {
+        "min": 24,
+        "max": 24,
+        "value": "Feral"
+      },
+      {
+        "min": 25,
+        "max": 25,
+        "value": "Twisted"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "value": "Wild"
+      },
+      {
+        "min": 27,
+        "max": 27,
+        "value": "Shifting"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "value": "Enchanted"
+      },
+      {
+        "min": 29,
+        "max": 29,
+        "value": "Primal"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "value": "Arcane"
+      },
+      {
+        "min": 31,
+        "max": 31,
+        "value": "Chaotic"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "value": "Verdant"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-animal",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Wolf"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Bear"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Stag"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Boar"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Hound"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Lion"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Serpent"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Jackal"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Ram"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Frog"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Warg"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Lizard"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Fox"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Eagle"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Ape"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Weasel"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Rat"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Cat"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Raven"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Crow"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-automation",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Golem"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Homunculus"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Automaton"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Sentinel"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Watcher"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Guardian"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Warden"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Forgeling"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Drone"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Engine"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Walker"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Construct"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Shell"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Animation"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Husk"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Manikin"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Ironclad"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Retainer"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Vessel"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Gearforged"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-ethereal",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Wraith"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Shade"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Banshee"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Specter"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Poltergeist"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Revenant"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Phantom"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Haunt"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Apparition"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Shadow"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Will-o-wisp"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Spirit"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Ghost"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Deathshade"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Nightwalker"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Whisperer"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Soulstalker"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Veilwalker"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Shadehunter"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Lamentor"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-undead",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Zombie"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Ghoul"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Lich"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Skeleton"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Revenant"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Banshee"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Wight"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Vampire"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Wraith"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Mummy"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Shade"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Shambler"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Death Knight"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Ghast"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Shadow"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Flameskull"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Dracolich"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Demilich"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Death Tyrant"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Crawling Claw"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-draconic",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Wrym"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Drake"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Wyvren"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Kobold"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Dragon"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Hydra"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Basilisk"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Drakari"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Wrym"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Drake"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Wyvren"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Kobold"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Dragon"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Hydra"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Basilisk"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Wrym"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Drake"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Wyvren"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Hydra"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Kobold"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-ooze-slime",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Ooze"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Slime"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Gelatinous Cube"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Blob"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Gloop"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Pudding"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Jelly"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Ooze"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Slime"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Gelatinous Cube"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Blob"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Gloop"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Pudding"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Jelly"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Ooze"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Slime"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Gelatinous Cube"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Blob"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Pudding"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Jelly"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-insect",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Swarm"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Manticore"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Widow"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Hornet"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Beetle"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Locust"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Spider"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Scorpion"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Grub"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Ant"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Silkbeast"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Firefly"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Stinger"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Venomwing"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Dragonfly"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Tarantula"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Centipede"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Wasp"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Cockroach"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Tick"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-plant",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Treant"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Ent"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Bloom"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Shambler"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Spriggan"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Willowisp"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Seedling"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Sap"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Flower"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Mushroom"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Vine"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Thrasher"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Crawler"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Shrub"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Tree"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Sapling"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Fern"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Thornbush"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Maneater"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Briar"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-elemental",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Fire Elemental"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Water Elemental"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Air Elemental"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Earth Elemental"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Phoenix"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Ice Mephit"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Mud Mephit"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Air Mephit"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Dust Mephit"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Magma Mephit"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Steam Mephit"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Gargoyle"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Fire Myrmidon"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Water Myrmidon"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Air Myrmidon"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Earth Myrmidon"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Fire Titan"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Water Titan"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Air Titan"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Earth Titan"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-fey",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Fey-dragon"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Changeling"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Fey-cat"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Fey-dog"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Pixie"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Sprite"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Dryad"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Nymph"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Satyr"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Puca"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Kelpie"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Hobgoblin"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Brownie"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Selkie"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Faun"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Hag"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Boggle"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Unicorn"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Redcap"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Darkling"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-fiend",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Fiend"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Devil"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Imp"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Quasit"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Demon"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Hellhound"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Balor"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Brute"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Succubus/Inccubus"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Demon Lord"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Archdevil"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Pit Fiend"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Infernal Knight"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Hellspawn"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Soulbinder"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Revenant"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Abyssal Stalker"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Wretch"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Infernal Warden"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Tyrant"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-celestial",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Luminar"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Radiant Herald"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Seraph"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Dawnbringer"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Starwarden"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Lightwarden"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Solarion"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Radiant Sentinel"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Beacon"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Angelic Avenger"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Celestial Judge"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Lightbringer"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Dawnseeker"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Luminous Warden"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Starforged"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Halo"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Solar Warden"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Glorious Herald"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Dawnlight"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Radiant Wraith"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-giant",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Stonebreaker"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Thunderfoot"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Ironjaw"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Mountainstalker"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Colossus"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Skycrusher"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Earthshaker"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Frosttusk"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Stormbreaker"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Giantkin"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Ironmaw"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Titan"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Goliath"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Colossus King"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Earthbreaker"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Thunderlord"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Icebreaker"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Stonebeard"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Stormtusk"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Frostmaw"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-monstrosity",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Bloodmaw"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Skulldrake"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Venomspine"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Blightmaw"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Goremaw"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Fangjaw"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Fleshgrinder"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Deathclaw"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Rotfang"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Bonegnasher"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Carrionfiend"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Plaguebeast"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Horrorclaw"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Venomclaw"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Bonecrusher"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Gravetalon"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Bloodreaper"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Deathspike"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Plagueclaw"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Doomfang"
+      }
+    ]
+  },
+  {
+    "name": "creature-name-alien",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Mindseer"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Thoughtweaver"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Psion"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Brainfiend"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Voidling"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Mindflayer"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Dreamfiend"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Echo"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Whisperer"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Thoughtspawn"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Synapse"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Brainstorm"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Mindpiercer"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Astral Stalker"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Dreamstalker"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Psychic Shade"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Mindshard"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Voidwalker"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Cerebral Horror"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Thought Reaver"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-draconic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 3,
+        "value": "Elemental"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "value": "Physical"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Psychic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-automation",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Physical"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "value": "Toxic"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Elemental"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Radiant"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-beast",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 4,
+        "value": "Physical"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "value": "Toxic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-humanoid",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Physical"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Elemental"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Psychic"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Shadow"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Chaos"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Toxic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-ethereal",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Pschyic"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Necrotic"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Shadow"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "value": "Physical"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-fiend",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Elemental"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Shadow"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "value": "Physical"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Psychic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-fey",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Chaos"
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "value": "Physical"
+      },
+      {
+        "min": 4,
+        "max": 6,
+        "value": "Pshycic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-elemental",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 6,
+        "value": "Elemental"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-ooze-slime",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Toxic"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "value": "Physical"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "value": "Necrotic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-insect",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Toxic"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "value": "Physical"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Psychic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-undead",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 3,
+        "value": "Necrotic"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Shadow"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Physical"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Toxic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-plant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 3,
+        "value": "Physical"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "value": "Toxic"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Chaos"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-giant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 6,
+        "value": "Physical"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-celestial",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 5,
+        "value": "Radiant"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Physical"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-alien",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 6,
+        "value": "Psychic"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-monstrosity",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 2,
+        "value": "Physical"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "value": "Elemental"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "value": "Toxic"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-humanoid",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Coordinate a synchronized attack with allies to overwhelm a single target"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Read an opponent's fighting style to predict their next three moves"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Feint with such precision that it creates an opening for a devastating counterstrike"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Command nearby allies with tactical precision to form an impenetrable defensive formation"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Disarm an enemy by striking their weapon with pinpoint accuracy"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Manipulate a target's emotions through carefully chosen words to turn them against their allies"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Execute a complex series of strikes that leaves multiple enemies off-balance"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Identify the weakest point in an enemy's armor and strike with surgical precision"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Inspire nearby allies with a rousing battle cry that boosts their resolve"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Trap an opponent's weapon between two blades and wrench it from their grasp"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Negotiate a temporary truce by appealing to an enemy's sense of honor or greed"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Parry multiple incoming attacks simultaneously with a spinning defensive maneuver"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Exploit an enemy's overconfidence to lure them into a carefully prepared trap"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Masterfully blend magic and martial prowess to create an unexpected combination attack"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Rally scattered allies with strategic commands that reorganize the battlefield"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Strike pressure points to temporarily paralyze a target's dominant arm"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Deceive enemies with false information whispered at just the right moment"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Chain together multiple weapon techniques in a fluid, unstoppable assault"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Adapt fighting style mid-combat to perfectly counter an opponent's technique"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Unleash a devastating finishing move that combines all their combat expertise into a single strike"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-animal",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Track a target by scent across miles of terrain without losing the trail"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Coordinate with pack members to surround and isolate a single enemy"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Detect the heartbeat of hidden prey from dozens of feet away"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Mark territory with a scent that drives away rival predators"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Ambush prey by remaining perfectly still until the perfect moment to strike"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Communicate complex strategies to pack members through subtle body language"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Sense approaching danger through vibrations in the ground or air"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Execute a pounce that covers incredible distance in a single bound"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Regenerate wounds by consuming fresh meat from a recent kill"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Intimidate enemies with a display of dominance that causes them to flee"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Navigate through complete darkness using only sound and smell"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Execute a coordinated attack where pack members strike from multiple angles simultaneously"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Camouflage perfectly with the surrounding environment to become nearly invisible"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Endure extreme conditions that would kill most creatures through sheer resilience"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Lure prey into a trap by mimicking the sounds of wounded animals"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Execute a death roll that disorients and incapacitates a grappled target"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Sense the emotional state of other creatures to predict their actions"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Protect pack members by taking a fatal blow meant for an ally"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Adapt hunting strategies in real-time based on the prey's defensive responses"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Unleash a primal roar that echoes for miles and calls all nearby pack members to aid"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-automation",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Calculate the optimal attack trajectory in microseconds to guarantee a hit"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Generate superheated steam from internal boilers to blast enemies with scalding pressure"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Manipulate stone and earth to reshape the battlefield to their advantage"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Execute a perfectly synchronized attack pattern with other automations in the network"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Extend mechanical limbs to reach targets far beyond normal range"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Create protective wards that deflect magical attacks back at the caster"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Reboot damaged systems mid-combat to restore full functionality"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Transform body parts into different tools or weapons by rearranging mechanical components"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Merge with the ground to become one with the earth, making them nearly invulnerable"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Interface with nearby technology to gain tactical information about the battlefield"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Overclock internal systems to perform actions at triple speed for a brief period"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Reform from destruction by drawing upon the magical animation that created them"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Override enemy technology by transmitting a virus through physical contact"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Generate magnetic fields to attract or repel metallic objects and weapons"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Absorb the properties of materials they touch, incorporating them into their form"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Switch between multiple combat programs instantly to adapt to changing threats"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Unleash a catastrophic system failure that creates a devastating explosion of steam and shrapnel"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Split into multiple smaller golems that can coordinate attacks"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Access emergency protocols that unlock hidden combat capabilities when critically damaged"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Achieve true sentience, breaking free from their programming to act independently"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-undead",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Drain the life force from a living target to heal their own wounds"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Rise from apparent destruction by drawing upon the negative energy that animates them"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Spread a disease that rapidly decays living flesh on contact"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Raise fallen enemies as undead minions to fight on their behalf"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Emit an aura of despair that saps the will to fight from nearby living creatures"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Regenerate lost limbs by consuming the bones of the dead"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Transform their body into a swarm of smaller undead creatures to avoid destruction"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Curse a target so that any damage they deal is reflected back upon them"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Absorb holy magic and convert it into necromantic energy to power their abilities"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Create a cloud of grave dust that blinds and chokes the living"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Bind their soul to a phylactery, allowing them to reform after destruction"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Age living targets rapidly by draining their youth and vitality"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Command all undead within a vast radius to obey their will"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Transform their touch into a deathly chill that freezes blood and stops hearts"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Emerge from the ground beneath an enemy to drag them into the earth"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Absorb the memories and knowledge of those they consume"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Create a barrier of negative energy that repels all positive magic"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Split their consciousness across multiple bodies, allowing them to fight in several places at once"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Transform the area around them into a deathly wasteland where nothing can grow"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Unleash a wave of pure death energy that instantly kills all living creatures of weak constitution"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-draconic",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Breathe a cone of searing flame that melts armor and flesh"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Take flight with powerful wingbeats that create hurricane-force winds"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Command the loyalty of lesser dragons through displays of draconic dominance"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Sense the presence of valuable treasure from miles away"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Channel elemental power through their scales to resist damage of that type"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Impart ancient knowledge to those who prove worthy through a mental link"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Create a lair effect that warps reality within their hoard's domain"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Transform their hoard into a weapon by animating treasure to attack enemies"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Exude an aura of draconic majesty that causes weaker creatures to flee in terror"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Regenerate wounds by sleeping on a bed of gold and precious gems"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Breathe a cloud of corrosive acid that dissolves stone and metal"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Shape-shift into a humanoid form while retaining their draconic power"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Cast powerful magic spells learned over centuries of existence"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Create a magical bond with a chosen champion, sharing their power and longevity"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Absorb magical energy from spells cast at them to enhance their own abilities"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Summon a storm of their elemental affinity to devastate the battlefield"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Curse those who steal from their hoard with a mark that tracks them forever"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Enter a state of hibernation that slows time around them, allowing them to outlive eras"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Unleash a roar that shatters mountains and causes earthquakes"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Ascend to true dragonhood, gaining god-like power and near-immortality"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-ooze-slime",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Engulf a target completely, trapping them in acidic slime that dissolves armor and flesh"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Split into multiple smaller oozes that can attack from different angles simultaneously"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Secrete a trail of corrosive slime that damages anyone who steps in it"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Absorb the properties of materials they consume, gaining their strengths"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Flow through the tiniest cracks and gaps to reach otherwise inaccessible areas"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Regenerate lost mass by consuming organic matter or inorganic materials"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Shape their body into weapons, tools, or barriers as needed"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Emit a cloud of acidic mist that corrodes metal and burns exposed skin"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Merge with other oozes to form a larger, more powerful entity"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Adhere to surfaces with incredible strength, making them impossible to remove"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Mimic the appearance of inanimate objects to ambush unsuspecting prey"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Extract and store memories from creatures they consume"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Create pseudopods that can extend far beyond their main body to grab distant targets"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Generate intense heat through chemical reactions to melt through obstacles"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Absorb magical energy from spells, becoming immune to that type of magic"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Reform from even the smallest remaining fragment after apparent destruction"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Create a web of slime strands that entangle and slow enemies"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Transform their outer layer into a hard shell while remaining fluid inside"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Eject portions of themselves as projectiles that stick to targets and continue corroding"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Assimilate a living creature's form and abilities by completely absorbing them"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-insect",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Coordinate with a swarm to attack in perfect synchronization from all directions"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Release pheromones that mark enemies for the entire hive to target"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "See in all directions simultaneously with compound eyes that detect the slightest movement"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Share information instantly with all members of the hive through telepathic connection"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Lay eggs inside a living host that hatch into parasitic young"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Regenerate lost limbs by molting and growing new exoskeleton"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Emit a high-frequency vibration that disrupts enemy coordination and communication"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Transform into a swarm of smaller insects to avoid damage and surround enemies"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Weave a web of silk stronger than steel to trap and immobilize targets"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Inject a paralyzing venom that freezes victims in place"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Camouflage perfectly by changing color and texture to match surroundings"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Carry objects many times their own weight with incredible strength"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Detect chemical trails left by prey from miles away"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Rapidly reproduce to create an overwhelming swarm of offspring"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Form a living shield by interlocking with other insects to create an impenetrable barrier"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Absorb nutrients from any organic matter to sustain themselves indefinitely"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Create a cloud of chitinous dust that blinds and chokes enemies"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Adapt their exoskeleton to resist damage types they've previously encountered"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Command lesser insects to serve as scouts, messengers, or additional combatants"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Evolve new abilities in response to threats by rapidly mutating their genetic structure"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-plant",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Entangle enemies with rapidly growing vines that constrict and immobilize"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Release a cloud of spores that cause hallucinations and confusion"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Extend roots through the ground to attack enemies from below"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Regenerate damage by absorbing nutrients from the soil and sunlight"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Create a network of connected plants that share information and coordinate attacks"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Grow thorns that inject a paralyzing toxin into anyone who touches them"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Manipulate the growth of nearby vegetation to create barriers or obstacles"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Emit a sweet fragrance that lures prey into a trap"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Absorb water from the environment to grow to massive size in moments"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Create a canopy that blocks sunlight, weakening enemies who rely on it"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Release seeds that rapidly grow into smaller plant creatures to aid in combat"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Transform their body into different plant forms to adapt to threats"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Create a symbiotic relationship with other plants to share nutrients and protection"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Emit a cloud of pollen that causes severe allergic reactions in enemies"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Anchor themselves to the ground, becoming nearly impossible to uproot"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Store energy from photosynthesis to unleash devastating attacks when needed"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Create a living maze of branches and roots that confuses and traps enemies"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Absorb magical energy from the environment to enhance their natural abilities"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Transform the area around them into a deadly garden of carnivorous plants"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Merge with the forest itself, becoming one with all plant life in a vast area"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-chimera",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Switch between beast and insect forms mid-combat to adapt to threats"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Combine the strength of a beast with the precision of an insect in a single attack"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Emit a hybrid roar that combines animal intimidation with insect pheromones"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Grow insect wings from a beast body to gain flight capabilities"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Transform limbs into different animal and insect parts as needed"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Regenerate using both animal healing and insect molting processes simultaneously"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Create a swarm of smaller hybrid creatures from their own body"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Adapt their exoskeleton to match the defensive properties of different animals"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Coordinate attacks using both pack tactics and hive mind communication"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Absorb the traits of creatures they consume, adding them to their hybrid form"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Split into separate beast and insect forms that fight independently"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Evolve new hybrid abilities in response to damage they've sustained"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Create unpredictable attack patterns by randomly switching between forms"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Merge the senses of multiple animals and insects to detect threats from all directions"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Transform their body into a chaotic fusion that defies natural classification"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Reproduce by splitting off hybrid offspring that combine random traits"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Adapt their biology to survive in environments that would kill pure forms"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Create a terrifying display that combines the worst aspects of both forms"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Unleash a chaotic burst of mixed abilities that defies all expectations"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Achieve perfect fusion of all their hybrid traits, becoming an unstoppable force of nature"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-fiend",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Tempt mortals with offers of power in exchange for their soul"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Unleash infernal fire that burns both body and soul"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Corrupt the land around them, transforming it into a hellish landscape"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Command lesser fiends through displays of infernal dominance"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Manipulate mortals by exploiting their deepest desires and fears"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Create portals to the infernal planes to summon reinforcements"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Absorb the souls of the damned to increase their own power"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Transform enemies into lesser fiends through infernal corruption"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Emit an aura of despair that weakens the resolve of the righteous"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Bind mortals to infernal contracts that grant power at a terrible cost"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Shape-shift into forms that appeal to their target's weaknesses"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Create illusions of paradise to lure victims into damnation"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Resist holy magic by drawing power from the infernal planes"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Curse enemies so that their good deeds bring them suffering"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Manipulate chaos energy to create unpredictable and devastating effects"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Transform their body into pure infernal energy to become nearly invulnerable"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Create a network of infernal influence that corrupts all who enter"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Absorb the sins of mortals to grow stronger and more powerful"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Unleash a wave of pure chaos that warps reality in unpredictable ways"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Ascend to true demonhood, gaining the power to reshape reality itself"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-elemental",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Transform their body into pure elemental energy to become nearly invulnerable"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Create a natural disaster of their element that devastates the battlefield"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Merge with their element in the environment to become one with it"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Summon smaller elementals of their type to aid in combat"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Absorb attacks of their element type to heal and grow stronger"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Transform the environment to match their element, creating a deadly zone"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Channel elemental power through their form to enhance all their abilities"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Create a barrier of pure elemental energy that blocks all non-elemental attacks"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Split into multiple smaller elementals that can coordinate attacks"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Transform their body into different states of matter to adapt to threats"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Command all elementals of their type within a vast radius"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Create a vortex of elemental energy that draws enemies in and tears them apart"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Absorb the essence of other elementals to gain their powers"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Transform into a hybrid form that combines multiple elements"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Create a permanent elemental effect that persists long after they leave"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Manipulate the fundamental forces of their element to reshape reality"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Merge with the elemental plane itself to draw unlimited power"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Transform enemies into their element, turning them into extensions of themselves"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Create a cataclysmic event that combines all elements in a devastating explosion"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Achieve perfect elemental mastery, becoming a living embodiment of their element's power"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-fey",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Cast glamour that makes enemies see them as a trusted friend or ally"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Create illusions so real that they can cause physical harm"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Manipulate wild magic to create unpredictable and chaotic effects"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Enchant mortals with a binding promise that compels them to fulfill it"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Transform the seasons in their immediate area to match their mood"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Command nature itself to attack their enemies with vines, roots, and thorns"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Create a maze of shifting paths that confuses and traps intruders"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Grant wishes that always come with a terrible, unexpected cost"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Manipulate time within their domain, making hours pass like seconds or vice versa"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Transform enemies into harmless animals or plants through fey magic"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Create a circle of protection that prevents all hostile magic from entering"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Summon other fey creatures to aid them through ancient pacts"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Curse enemies so that their words become literal truth with terrible consequences"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Manipulate memories to make enemies forget why they're fighting"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Create a pocket dimension that exists outside normal space and time"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Bind mortals to the fey realm, making them unable to leave"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Transform their appearance to perfectly mimic anyone they've seen"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Create a dance that compels all who see it to join, losing themselves in the rhythm"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Unleash a burst of pure fey magic that warps reality in unpredictable ways"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Achieve perfect harmony with the fey realm, becoming one with wild magic itself"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-ethereal",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Travel instantly between shadows, appearing from any dark space"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Possess a living creature's body to control their actions against their will"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Drain the life force from a living target by passing through their body"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Become completely invisible by merging with shadows"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Create a poltergeist effect that hurls objects at enemies with deadly force"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Bind enemies' shadows to prevent them from moving"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Replay the moment of their death to traumatize and paralyze witnesses with fear"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Create a void that absorbs all light, sound, and magic"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Curse a target with bad luck that causes their actions to fail catastrophically"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Merge with the shadow plane to become nearly invulnerable to physical attacks"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Manipulate the temperature of a room to drop to freezing cold in moments"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Transform enemies into shadows, making them unable to interact with the physical world"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Create a haunting echo that repeats the last words spoken, disorienting enemies"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Unleash a wave of pure darkness that extinguishes all light and life"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Unleash a wail that shatters glass, disrupts magic, and drives the living to madness"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Absorb the shadows of the dead to gain their knowledge and abilities"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Materialize objects from their past life to use as weapons or tools"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Create a network of shadow paths that connect distant locations"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Become completely invisible and intangible, making them impossible to detect or harm"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Achieve perfect unity with the shadow plane, becoming an eternal being of pure darkness"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-alien",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Scan the surface thoughts of everyone in a room to detect hidden ambushes."
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Induce a state of total sensory deprivation, leaving the target blind and deaf."
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Banish a troublesome foe to a pocket dimension of absolute darkness"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Gaze into the future to gain a tactical advantage over an opponent's next move."
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Infiltrate the dreams of a sleeping target to plant seeds of madness or doubt."
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Teleport through the Ethereal Plane to reappear instantly behind an enemy"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Paralyze the motor functions of a victim with a touch of a slime-covered tentacle."
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Excrete a pheromone that induces a state of total, unquestioning compliance."
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Liquefy their skeletal structure to squeeze through gaps mere millimeters wide."
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Teleport three seconds into the past to dodge an otherwise lethal strike."
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Extract the iron from a target's blood using a high-intensity magnetic pulse."
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Warp the fabric of space to create a portal shortcut across the battlefield."
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Transmit a sensory overload that causes the target’s brain to reboot."
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Seize control of a victim's vocal cords to speak through their own mouth."
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Charm a warrior into defending their master with fanatical, mindless devotion"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Levitate heavy objects or creatures using nothing but a concentrated thought."
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Stun nearby enemies with a telepathic blast that feels like a physical hammer."
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Disintegrate a target into fine grey dust with a single beam of pure energy."
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Project a cone of anti-magic to nullify all enemy spells"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Manipulate the local light spectrum to become invisible,"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-celestial",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Imprint a sacred geometry onto the battlefield that prevents all deception."
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Dissect a complex curse into its harmless constituent elements with a touch."
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Magnify the inner light of a peasant until they possess the strength of a titan."
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Sacrifice a wing to create a permanent sanctuary for the lost."
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Echo the song of creation to heal the very molecules of a wounded ally."
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Wither the hand of any mortal who dares to strike a sacred being"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Grant the gift of tongues, allowing all creatures to understand the divine."
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Ascend to a higher dimension to strike from a point of absolute safety"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Project a vision of paradise that breaks the will of aggressive foes"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Judge a soul instantly, stripping away the immortality of the corrupt."
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Manifest a crown of fire that grants total immunity to mental charms."
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Condense the prayers of the faithful into a devastating beam of energy."
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Vibrate at a celestial frequency that shatters the armor of the unholy."
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Blind an entire legion of heathens with the flash of a drawn blade."
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Purify a blighted landscape, causing white lilies to bloom in the ash"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Expose the secret sins of an enemy to weaken their physical resolve."
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Inscribe glowing runes of warding upon the skin of the innocent."
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Command the tides of battle to still, freezing all projectiles mid-air."
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Incinerate the shadows of the wicked with a burst of primordial radiance."
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Enforce a zone of absolute silence where only the voice of truth can be heard."
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-giant",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "Squeeze a boulder until it liquefies into molten magma from pure pressure."
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "Condense their weight into a single point to punch through solid objects"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "Sunder a hero's legendary weapon by biting it in half with iron-hard teeth."
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "Grind their teeth to produce a sound that shatters magical glass barriers."
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "Absorb the force of a lightning bolt into a conductive iron club."
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "Shrug off a killing blow by letting the weapon lodge harmlessly in thick fat"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "Siphon the moisture from a cloud to create a localized flash-flood."
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "Ignite their own breath by swallowing a mouthful of flint and iron."
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "Clap their hands with enough force to create a localized vacuum-burst"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "Harden their skin to the density of obsidian through ancient lithic rituals."
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "Grind boulders into a fine dust to create a blinding, localized sandstorm."
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "Compress a handful of coal into a diamond-hard projectile"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "Roar with such frequency that it liquefies the internal organs of nearby foes."
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Project a shadow so large it acts as a psychological shroud of doom."
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "Anchor themselves to the earth, becoming impossible to move or knock down"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "Harness the power of a thunderstorm to imbue a stone axe with lightning"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "Condense the weight of their stride to shatter the ground beneath an enemy."
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "Exhale a cloud of freezing mountain fog to obscure the battlefield"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "Bellow a warcry that causes a localized earthquake"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "Hurl a boulder at the target with incredible force"
+      }
+    ]
+  },
+  {
+    "name": "creature-special-ability-monstrosity",
+    "formula": "1d20",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "paralyze a creature with a single touch"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "can bend and twist at extreme angles"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "learns from its prey with every strike"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "twist magical spells thrown at it back onto the caster"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "blink across short distances"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "possess the body of a creature it can touch"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "value": "regenerate lost body parts by consuming the flesh of other creatures"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "value": "erupt into a fiery explosion and return from the ashes"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "value": "can catch incoming projectiles and redirect them"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "value": "last out with a barbed tongue"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "value": "erupt into a flurry of jagged bone shards"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "value": "vibrates at frequencies that shatters glass and crystal"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "value": "absorb kinetic energy and empower its own attacks"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "value": "Project a terrifying hallucination of the victim's greates fear"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "value": "burrow through stone at blinding speed"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "value": "warp local gravity"
+      },
+      {
+        "min": 17,
+        "max": 17,
+        "value": "phase through solid objects"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "value": "mimic the voice of someone you know"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "value": "exude a corrosive miasma that dissolves armor"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "value": "shatter the resolve of foes with a peircing howl"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-humanoid",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "shows forebearance"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "shows mercy"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "shows compassion"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "maintains hope"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "shows fortitude"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "shows patience"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-animal",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "moves with explosive speed"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has an intimidating presence"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "possesses bear's strength"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "moves stealthily"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "has thick skin"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "uses camouflage"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-automation",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "learns interactively"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "lacks a biometric signature"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "resists distraction"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "feels no pain"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "feels no emotions"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "ignores pain"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-ethereal",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "radiates an aura of despair"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has a frightening presence"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "possesses other creatures"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "feels no emotions or pain"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "passes through solid objects"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "resists physical damage"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-undead",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "sees in the dark"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "shows the patience of a centurion"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "resists necrotic damage"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "has a frightening appearance"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "needs no sleep"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "feels no pain"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-draconic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "fights from above"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has a frightening presence"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "wields a prehensile tail"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "burns with a heart of fire"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "resists magic"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "wears natural armor"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-ooze-slime",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "needs no breath"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "shows the patience of a centurion"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "secretes paralytic ichor"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "secretes adhesive ichor"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "secretes acidic ichor"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "has malleable skin"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-insect",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "communicates non-verbally"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "sacrifices instinctively"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "shares a hive-mind"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "sees with multifaceted vision"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "possesses the strength of a thousand men"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "wears chitinous armor"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-plant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "resists water damage"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "resists radiant damage"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "releases spores"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "wears natural armor"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "has no death blow"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "feels no pain"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-chimera",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "wields a prehensile tail"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "wears natural armor"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "masters distraction"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "launches multiple attacks"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "benefits from two heads"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "resists toxic damage"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-fiend",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "ignores pain"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has an intimidating presence"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "has a frightening appearance"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "bleeds acid"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "resists fire damage"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "has thick hide"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-elemental",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "conserves energy"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "ignores inertia effects"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "passes through tiny spaces"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "forms no emotional attachments"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "changes form at will"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "consists of pure elemental energy"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-fey",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "moves with grace"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "operates in moral grey areas"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "negotiates excellently"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "changes shape at will"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "maintains beauty"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "resists psychic damage"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-alien",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "resists toxic damage"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "exists in two places at once"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "sees with extraordinary vision"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "thinks with high intelligence"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "resists physical damage"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "resists psychic damage"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-celestial",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "resists radiant damage"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "draws power from the gods"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "sees the truth always"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "embodies perfection"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "radiates light"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "needs no food or sleep"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-giant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "speaks with the voice of the mountains"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "employs top-down tactics"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "takes hits and keeps fighting"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "cannot be intimidated"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "has thick skin"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "possesses great strength"
+      }
+    ]
+  },
+  {
+    "name": "creature-strength-monstrosity",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "navigates by echolocation"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "resists toxic damage"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "wears natural armor"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "sees from multiple angles"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "bleeds corrosive blood"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "wields a prehensile tail"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-humanoid",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "feels envy"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "succumbs to sloth"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "is consumed by greed"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "indulges in gluttony"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "rages with wrath"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "is blinded by pride"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-animal",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "has a heavy center of gravity"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "cannot swim"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "hunts by sound and smell"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "cannot see in bright light"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from physical damage"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "relies on pack mentality"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-automation",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "succumbs to dead-end logic"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "suffers from salt"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from sound damage"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "obsesses over a singular task"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "cannot reason beyond programming"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "succumbs to command interference"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-ethereal",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "is bound to an object"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "is bound to a location"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from Cold Iron"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from salt"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from silver"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from iron"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-undead",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "must feed on blood"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "cannot cross running water"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "repeats actions in loops"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from silver"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "collapses from desiccation"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from radiant damage"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-draconic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "suffers from silver"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has tunnel vision"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "obsesses over collecting things"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from heat sink failure"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from orbital vulnerability"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from cold"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-ooze-slime",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "melts easily"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "suffers from chemical neutralization"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "sees only through heat"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from electricity"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from extreme temperatures"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from salt"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-insect",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "has a heavy center of gravity"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "flies compulsively toward light"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "relies on pheromones"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "sees only moving objects"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from antenna root instability"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "overloads from strong scents"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-plant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "cannot move"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "suffers from toxic damage"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from extreme temperatures"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from death magic"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from necrotic damage"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffocates at the roots"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-chimera",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "struggles with conflicting instincts"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "has hollow-bone fragility"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "overloads from sensory input"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "has a blind spot"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "has a soft abdomen"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "overloads from strong scents"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-fiend",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "reacts lethally to hallowed ground"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "suffers from holy water"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "cannot break a verbal pact"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "is bound by its true name"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from silver"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from Cold Iron"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-elemental",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "suffers from its opposite element"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "suffers from salt"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "reacts to specific musical notes"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "is bound by its True Name"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from ancient tools"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from abrasive materials"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-fey",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "is allergic to Cold Iron"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "must return gifts compulsively"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "cannot enter a home uninvited"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "obsesses over counting scattered objects"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "cannot cross running water"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "must honor all debts"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-alien",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "suffers from high-frequency sonic vibrations"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "succumbs to intense atmospheric pressure"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from salt and dehydration"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "relies on a Hive-Link"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "cannot track objects moving in zig-zag patterns"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "suffers from magic it cannot use"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-celestial",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "suffers from cold iron"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "succumbs to necrotic corruption"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "must tell the truth compulsively"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "is bound by its true name"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from sincere doubt"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "cannot cross a Circle of Salt"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-giant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "lacks balance"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "requires heavy oxygen intake"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from extreme heat"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "is consumed by hubris"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "fears heights paralyzingly"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "must win games of riddles compulsively"
+      }
+    ]
+  },
+  {
+    "name": "creature-weakness-monstrosity",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "suffers from high-frequency sounds"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "avoids flashes of bright light"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "suffers from strong odors"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "suffers from extreme temperatures"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "suffers from silver"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "must consume shiny objects compulsively"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-physical",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "slashing manuever"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "smashing manuever"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "piercing manuever"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "stabbing manuever"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "crushing manuever"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "cleaving manuever"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-elemental",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "fireball"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "call lightning"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "cone ofice"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "acid spray"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "earthquake"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "blast of air"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-psychic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "mind attack"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "fear"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "possession"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "confusion wave"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "mental spike"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "telekinetic slap"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-necrotic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "death of touch"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "withering touch"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "blight"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "death touch"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "chilling touch"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "aura of despair"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-radiant",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "solar flare"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "sunbeam"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "ray of light"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "guiding light"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "light ray"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "corana burst"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-shadow",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "shadow strike"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "shadow bolt"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "nightmare lance"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "hunger of the void"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "black fog"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "claws of darkness"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-chaos",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "entropy ray"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "chaos bolt"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "discordant bolt"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "aura of instability"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "butteryfly effect"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "fractal explosion"
+      }
+    ]
+  },
+  {
+    "name": "creature-attack-choice-toxic",
+    "formula": "1d6",
+    "table": [
+      {
+        "min": 1,
+        "max": 1,
+        "value": "poison"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "value": "venom"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "value": "disease"
+      },
+      {
+        "min": 4,
+        "max": 4,
+        "value": "acidic spray"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "value": "corrosive spray"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "value": "radiation leak"
+      }
+    ]
+  }
+]

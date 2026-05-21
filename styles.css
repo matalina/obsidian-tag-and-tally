@@ -1,0 +1,1133 @@
+.textmapper {
+    position: relative;
+}
+
+.textmapper-svg {
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.textmapper-svg:active {
+    cursor: grabbing;
+}
+
+/* Documentation pane: ensure rulebook content is selectable for copy/paste */
+.tag-tally-documentation-view .rulebook-panel__content,
+.tag-tally-documentation-view .rulebook-panel__body {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+}
+
+.tag-tally-track {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+    vertical-align: bottom;
+}
+
+.tag-tally-track-btn {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--text-normal);
+    border-radius: var(--radius-s);
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    padding: 0;
+    margin: 0;
+}
+
+.tag-tally-track-btn:hover {
+    border-color: var(--interactive-accent);
+}
+
+.tag-tally-track-btn.active {
+    border-color: var(--interactive-accent);
+    background-color: var(--interactive-accent);
+}
+
+.tag-tally-track-circles {
+    border-radius: 50%;
+}
+
+.tag-tally-clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    vertical-align: bottom;
+}
+
+.tag-tally-clock-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.tag-tally-clock-svg {
+    cursor: pointer;
+}
+
+.tag-tally-clock-svg circle,
+.tag-tally-clock-svg path {
+    stroke: var(--text-muted);
+}
+
+.tag-tally-clock-svg circle[fill="currentColor"],
+.tag-tally-clock-svg path[fill="currentColor"] {
+    fill: var(--interactive-accent);
+}
+
+/* Shared control appearance: no shadows/outlines (all tabs); thin border only */
+.tag-tally-main-content .tag-tally-control,
+.tag-tally-main-content .tag-tally-select,
+.tag-tally-main-content .tag-tally-button,
+.tag-tally-main-content .tag-tally-textarea,
+.tag-tally-main-content .tag-tally-input,
+.tag-tally-main-content .tag-tally-cards-btn,
+.tag-tally-main-content .tag-tally-dice-input,
+.tag-tally-main-content .tag-tally-dice-roll-btn,
+.tag-tally-main-content .tag-tally-dice-clear-btn,
+.tag-tally-main-content .tag-tally-copy-button,
+.tag-tally-main-content .tag-tally-output,
+.tag-tally-main-content select,
+.tag-tally-main-content input[type="text"],
+.tag-tally-main-content input[type="number"],
+.tag-tally-main-content button:not(.clickable-icon) {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.tag-tally-main-content .tag-tally-control:focus,
+.tag-tally-main-content .tag-tally-select:focus,
+.tag-tally-main-content .tag-tally-button:focus,
+.tag-tally-main-content .tag-tally-textarea:focus,
+.tag-tally-main-content .tag-tally-dice-input:focus,
+.tag-tally-main-content select:focus,
+.tag-tally-main-content input:focus,
+.tag-tally-main-content button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.tag-tally-main-content .tag-tally-control,
+.tag-tally-main-content .tag-tally-select,
+.tag-tally-main-content .tag-tally-button,
+.tag-tally-main-content .tag-tally-textarea,
+.tag-tally-main-content .tag-tally-input,
+.tag-tally-main-content .tag-tally-cards-btn,
+.tag-tally-main-content .tag-tally-dice-input,
+.tag-tally-main-content .tag-tally-dice-roll-btn,
+.tag-tally-main-content .tag-tally-dice-clear-btn,
+.tag-tally-main-content .tag-tally-output {
+    border: 1px solid var(--gray-3, var(--background-modifier-border)) !important;
+}
+
+/* Travel / generic input field appearance (matches Resolution tab inputs) */
+.tag-tally-main-content .tag-tally-input {
+    background: var(--background-primary) !important;
+    color: var(--text-normal) !important;
+    padding: 0.5rem 1rem;
+    min-height: 2.5rem;
+    border-radius: var(--radius-2, 5px);
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+/* Icon-only buttons (e.g. dice, compass, shuffle): no shadow/outline */
+.tag-tally-main-content .clickable-icon,
+.tag-tally-main-content .tag-tally-cards-btn:empty,
+.tag-tally-main-content button[aria-label] {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Resolution form styles */
+.tag-tally-select-container {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.tag-tally-select-container label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.1em;
+    font-size: 0.7rem;
+}
+
+.tag-tally-select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tag-tally-textarea-container {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.tag-tally-textarea-container label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.1em;
+    font-size: 0.7rem;
+}
+
+.tag-tally-textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 6em;
+    resize: vertical;
+}
+
+.tag-tally-button-container {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.tag-tally-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tag-tally-output-container {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.tag-tally-output-wrapper {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.tag-tally-output {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    background-color: var(--background-secondary);
+}
+
+.tag-tally-output-text {
+    display: block;
+}
+
+.tag-tally-output-text strong,
+.tag-tally-generated-display strong {
+    color: var(--bold-color, #dc2626);
+    font-weight: bold;
+}
+
+.tag-tally-copy-button {
+    display: block;
+    padding: 0.25em 0.5em;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-top: 0.25em;
+    float: right;
+}
+
+/* Dice widget styles */
+.tag-tally-dice {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: baseline;
+}
+
+.tag-tally-dice-result {
+    display: inline-block;
+}
+
+.tag-tally-dice-reroll {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.tag-tally-dice-reroll:hover {
+    color: var(--interactive-accent);
+}
+
+/* Roll widget styles */
+.tag-tally-roll {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* Random table widget styles */
+.tag-tally-random {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: baseline;
+}
+
+.tag-tally-random-result {
+    display: inline-block;
+}
+
+.tag-tally-random-reroll {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.tag-tally-random-reroll:hover {
+    color: var(--interactive-accent);
+}
+
+/* Pick widget styles */
+.tag-tally-pick {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* Tag widget styles */
+.tag-tally-tag {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline;
+    margin: 2px 0;
+}
+
+.tag-tally-tag-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: var(--radius-m, 8px);
+    background-color: var(--background-secondary-alt);
+    border: 1px solid var(--background-modifier-border);
+}
+
+/* Category-based colors */
+.tag-tally-tag-umbrella {
+    background-color: rgba(138, 43, 226, 0.3);
+    border-color: rgba(138, 43, 226, 0.5);
+}
+
+.tag-tally-tag-skill {
+    background-color: rgba(100, 149, 237, 0.3);
+    border-color: rgba(100, 149, 237, 0.5);
+}
+
+.tag-tally-tag-condition {
+    background-color: rgba(255, 193, 7, 0.4);
+    border-color: rgba(255, 193, 7, 0.6);
+}
+
+.tag-tally-tag-generic {
+    background-color: rgba(128, 128, 128, 0.3);
+    border-color: rgba(128, 128, 128, 0.5);
+}
+
+.tag-tally-tag-danger {
+    background-color: rgba(220, 20, 60, 0.3);
+    border-color: rgba(220, 20, 60, 0.5);
+}
+
+.tag-tally-tag-environment {
+    background-color: rgba(139, 90, 43, 0.3);
+    border-color: rgba(139, 90, 43, 0.5);
+}
+
+.tag-tally-tag-trait {
+    background-color: rgba(144, 238, 144, 0.3);
+    border-color: rgba(144, 238, 144, 0.5);
+}
+
+.tag-tally-tag-default {
+    background-color: rgba(211, 211, 211, 0.3);
+    border-color: rgba(211, 211, 211, 0.5);
+}
+
+.tag-tally-tag-icon {
+    display: inline-flex;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.tag-tally-tag-tier {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.tag-tally-tag-text {
+    color: var(--text-normal);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.tag-tally-tag-label-label {
+    color: var(--text-normal);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.tag-tally-tag-label-value {
+    color: var(--text-normal);
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.tag-tally-tag-tally {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s, 4px);
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.tag-tally-tag-tally svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hidden tag state - text matches background */
+.tag-tally-tag-hidden {
+    position: relative;
+}
+
+.tag-tally-tag-hidden .tag-tally-tag-icon,
+.tag-tally-tag-hidden .tag-tally-tag-tier,
+.tag-tally-tag-hidden .tag-tally-tag-text,
+.tag-tally-tag-hidden .tag-tally-tag-label-label,
+.tag-tally-tag-hidden .tag-tally-tag-label-value,
+.tag-tally-tag-hidden .tag-tally-tag-tally {
+    color: transparent !important;
+}
+
+.tag-tally-tag-hidden .tag-tally-tag-tally svg {
+    color: transparent !important;
+    fill: transparent !important;
+}
+
+/* Overlay for flag message */
+.tag-tally-tag-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    color: var(--text-normal);
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Main content wrapper */
+.tag-tally-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Tab navigation styles */
+.tag-tally-tab-bar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: 1em;
+    gap: 0;
+    flex-shrink: 0;
+}
+
+.tag-tally-tab-button {
+    padding: 0.5em 0.75em;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-tally-tab-button:hover {
+    color: var(--text-normal);
+    background-color: var(--background-modifier-hover);
+}
+
+.tag-tally-tab-button.active {
+    color: var(--text-normal);
+    border-bottom-color: var(--interactive-accent);
+}
+
+.tag-tally-tab-content-container {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.tag-tally-tab-content {
+    display: none;
+    width: 100%;
+    overflow: visible;
+}
+
+.tag-tally-tab-content.active {
+    display: block;
+}
+
+.tag-tally-coming-soon {
+    padding: 2em;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.tag-tally-coming-soon h3 {
+    margin-bottom: 0.5em;
+    color: var(--text-normal);
+}
+
+/* View footer styles */
+.tag-tally-view-footer {
+    margin-top: auto;
+    padding-top: 1em;
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+.tag-tally-doc-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.tag-tally-doc-link:hover {
+    color: var(--interactive-accent);
+    text-decoration: underline;
+}
+
+/* Custom callouts */
+.callout[data-callout="creature"] {
+    --callout-color: 220, 38, 38;
+    --callout-icon: lucide-paw-print;
+}
+
+.callout[data-callout="scene"] {
+    --callout-color: 6, 182, 212;
+    --callout-icon: lucide-image;
+}
+
+.callout[data-callout="character"] {
+    --callout-color: 16, 185, 129;
+    --callout-icon: lucide-user;
+}
+
+.callout[data-callout="npc"] {
+    --callout-color: 16, 185, 129;
+    --callout-icon: lucide-user;
+}
+
+.callout[data-callout="species"] {
+    --callout-color: 16, 185, 129;
+    --callout-icon: lucide-type;
+}
+
+.callout[data-callout="type"] {
+    --callout-color: 16, 185, 129;
+    --callout-icon: lucide-type;
+}
+
+.callout[data-callout="wounds"] {
+    --callout-color: 220, 38, 38;
+    --callout-icon: lucide-swords;
+}
+
+.callout[data-callout="encounter"] {
+    --callout-color: 220, 38, 38;
+    --callout-icon: lucide-swords;
+}
+
+.callout[data-callout="faction"] {
+    --callout-color: 6, 182, 212;
+    --callout-icon: lucide-flag;
+}
+
+.callout[data-callout="location"] {
+    --callout-color: 6, 182, 212;
+    --callout-icon: lucide-arrow-down-to-dot;
+}
+
+.callout[data-callout="dungeon"] {
+    --callout-color: 107, 114, 128;
+    --callout-icon: lucide-skull;
+}
+
+.callout[data-callout="lair"] {
+    --callout-color: 107, 114, 128;
+    --callout-icon: lucide-skull;
+}
+
+.callout[data-callout="room"] {
+    --callout-color: 107, 114, 128;
+    --callout-icon: lucide-door-closed;
+}
+
+.callout[data-callout="armor"] {
+    --callout-color: 59, 130, 246;
+    --callout-icon: lucide-shield;
+}
+
+.callout[data-callout="item"] {
+    --callout-color: 59, 130, 246;
+    --callout-icon: lucide-amphora;
+}
+
+.callout[data-callout="consumable"] {
+    --callout-color: 59, 130, 246;
+    --callout-icon: lucide-amphora;
+}
+
+.callout[data-callout="trap"] {
+    --callout-color: 220, 38, 38;
+    --callout-icon: lucide-amphora;
+}
+
+.callout[data-callout="resource"] {
+    --callout-color: 59, 130, 246;
+    --callout-icon: lucide-amphora;
+}
+
+.callout[data-callout="weapon"] {
+    --callout-color: 59, 130, 246;
+    --callout-icon: lucide-sword;
+}
+
+.callout[data-callout="spell"] {
+    --callout-color: 139, 92, 246;
+    --callout-icon: lucide-sparkles;
+}
+
+.callout[data-callout="quest"] {
+    --callout-color: 245, 158, 11;
+    --callout-icon: lucide-puzzle;
+}
+
+.callout[data-callout="insight"] {
+    --callout-color: 245, 158, 11;
+    --callout-icon: lucide-puzzle;
+}
+
+.callout[data-callout="arc"] {
+    --callout-color: 245, 158, 11;
+    --callout-icon: lucide-puzzle;
+}
+
+.callout[data-callout="ai"] {
+    --callout-color: 217, 70, 239;
+    --callout-icon: lucide-brain-circuit;
+}
+
+/* Cards Tab Styles */
+.tag-tally-cards-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tag-tally-cards-selector label {
+    font-weight: 500;
+    color: var(--text-normal);
+}
+
+.tag-tally-cards-decks {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    gap: 16px;
+}
+
+.tag-tally-cards-deck {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    flex: 1;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-m, 8px);
+    padding: 12px;
+}
+
+.tag-tally-cards-tab {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.tag-tally-cards-deck-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.tag-tally-cards-deck-name {
+    font-weight: 600;
+    color: var(--text-normal);
+    font-size: 1em;
+}
+
+.tag-tally-cards-deck-count {
+    color: var(--text-muted);
+    font-size: 0.9em;
+}
+
+.tag-tally-cards-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag-tally-cards-buttons-sep {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin: 0 2px;
+    user-select: none;
+}
+
+.tag-tally-cards-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: var(--radius-s, 4px);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tag-tally-cards-btn:hover {
+    background: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+}
+
+.tag-tally-cards-btn-primary {
+    background: var(--interactive-accent);
+    border-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.tag-tally-cards-btn-primary:hover {
+    background: var(--interactive-accent-hover);
+    border-color: var(--interactive-accent-hover);
+}
+
+.tag-tally-cards-btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tag-tally-cards-btn-disabled:hover {
+    background: var(--interactive-accent);
+    border-color: var(--interactive-accent);
+}
+
+.tag-tally-cards-display {
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s, 4px);
+    padding: 12px;
+    margin-bottom: 12px;
+    min-height: 48px;
+}
+
+.tag-tally-cards-label {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.tag-tally-cards-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.tag-tally-cards-symbol {
+    font-size: 1.2em;
+}
+
+.tag-tally-cards-name {
+    color: var(--text-normal);
+}
+
+.tag-tally-cards-empty {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 8px;
+}
+
+.tag-tally-cards-counts {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+.tag-tally-cards-remaining,
+.tag-tally-cards-drawn {
+    display: inline-block;
+}
+
+.tag-tally-cards-discard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.tag-tally-cards-discard-label {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.tag-tally-cards-discard-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.tag-tally-cards-discard-entry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.tag-tally-cards-discard-entry:last-child {
+    border-bottom: none;
+}
+
+.tag-tally-cards-discard-empty {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Card suit colors */
+.tag-tally-cards-red {
+    color: #dc2626;
+}
+
+.tag-tally-cards-red .tag-tally-cards-symbol {
+    color: #dc2626;
+}
+
+.tag-tally-cards-black {
+    color: var(--text-normal);
+}
+
+.tag-tally-cards-black .tag-tally-cards-symbol {
+    color: var(--text-normal);
+}
+
+.tag-tally-cards-joker {
+    color: #8b5cf6;
+}
+
+.tag-tally-cards-joker .tag-tally-cards-symbol {
+    color: #8b5cf6;
+}
+
+/* Tarot suit colors */
+.tag-tally-cards-wands {
+    color: #f59e0b;
+}
+
+.tag-tally-cards-wands .tag-tally-cards-symbol {
+    color: #f59e0b;
+}
+
+.tag-tally-cards-cups {
+    color: #3b82f6;
+}
+
+.tag-tally-cards-cups .tag-tally-cards-symbol {
+    color: #3b82f6;
+}
+
+.tag-tally-cards-swords {
+    color: #6b7280;
+}
+
+.tag-tally-cards-swords .tag-tally-cards-symbol {
+    color: #6b7280;
+}
+
+.tag-tally-cards-pentacles {
+    color: #10b981;
+}
+
+.tag-tally-cards-pentacles .tag-tally-cards-symbol {
+    color: #10b981;
+}
+
+.tag-tally-cards-major {
+    color: #8b5cf6;
+}
+
+.tag-tally-cards-major .tag-tally-cards-symbol {
+    color: #8b5cf6;
+}
+
+/* Dice Tab Styles (sidebar only; inline dice widget uses .tag-tally-dice .tag-tally-dice-result) */
+.tag-tally-dice-tab {
+    padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tag-tally-dice-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.tag-tally-dice-input {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 1em;
+    font-family: var(--font-monospace);
+}
+
+.tag-tally-dice-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+}
+
+.tag-tally-dice-roll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tag-tally-dice-roll-btn:hover {
+    background: var(--background-modifier-hover);
+}
+
+/* Dice tab result box: ensure block + full width (ResultBox provides layout and copy) */
+.tag-tally-dice-tab .tag-tally-dice-result {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.tag-tally-dice-logging {
+    border-top: 1px solid var(--background-modifier-border);
+    padding-top: 1em;
+}
+
+.tag-tally-dice-logging-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.tag-tally-dice-logging-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.9em;
+}
+
+.tag-tally-dice-logging-toggle input {
+    cursor: pointer;
+}
+
+.tag-tally-dice-clear-btn {
+    padding: 4px 12px;
+    background: transparent;
+    border-radius: 4px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.tag-tally-dice-clear-btn:hover {
+    color: var(--text-normal);
+    border-color: var(--text-muted);
+}
+
+.tag-tally-dice-log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.tag-tally-dice-log-entry {
+    font-family: var(--font-monospace);
+    font-size: 0.85em;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.tag-tally-dice-log-entry:last-child {
+    border-bottom: none;
+}
+
+.tag-tally-dice-log-empty {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Documentation view: rulebook panel layout (ensures overlay works in Obsidian) */
+.tag-tally-documentation-rulebook {
+    overflow: auto !important;
+    height: 100vh !important;
+}
+.tag-tally-documentation-rulebook .rulebook-panel {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+}
+.tag-tally-documentation-rulebook .rulebook-panel__header {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 102 !important;
+}
+.tag-tally-documentation-rulebook .rulebook-panel__backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 100 !important;
+}
+.tag-tally-documentation-rulebook .rulebook-panel__sidebar {
+    position: absolute !important;
+    left: 0 !important;
+    top: 3.5rem !important;
+    height: calc(100% - 3.5rem) !important;
+    width: 16rem !important;
+    max-width: 85vw !important;
+    z-index: 101 !important;
+    background-color: #fff !important;
+}
+.tag-tally-documentation-rulebook .rulebook-panel__main {
+    position: relative !important;
+    z-index: 0 !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+}
+.tag-tally-documentation-rulebook .rulebook-view__empty {
+    padding: 1.5rem;
+    color: var(--text-error);
+    font-size: 0.9rem;
+}
+.tag-tally-documentation-rulebook .rulebook-view__empty code {
+    font-family: ui-monospace, monospace;
+    background: var(--background-modifier-border);
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+}

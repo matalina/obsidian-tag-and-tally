@@ -1,0 +1,20 @@
+# build output
+dist/
+*.tsbuildinfo
+
+# dependencies
+node_modules/
+
+# editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.swp
+
+# env
+.env
+.env.local
+
+# obsidian sample plugin defaults
+data.json

@@ -1,0 +1,54 @@
+[
+  {
+    "name": "monster-hunter-type",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Slayer" },
+      { "min": 2, "max": 2, "value": "Exorcist" },
+      { "min": 3, "max": 3, "value": "Tracker" },
+      { "min": 4, "max": 4, "value": "Bounty Hunter" },
+      { "min": 5, "max": 5, "value": "Inquisitor" },
+      { "min": 6, "max": 6, "value": "Hexblade" },
+      { "min": 7, "max": 7, "value": "Alchemist" },
+      { "min": 8, "max": 8, "value": "Binder" },
+      { "min": 9, "max": 9, "value": "Diviner" },
+      { "min": 10, "max": 10, "value": "Gadgeteer" },
+      { "min": 11, "max": 11, "value": "CyberHunter" },
+      { "min": 12, "max": 12, "value": "Forensic Occultist" },
+      { "min": 13, "max": 13, "value": "Monster Wright" },
+      { "min": 14, "max": 14, "value": "Mercy Killer" },
+      { "min": 15, "max": 15, "value": "Monster Turncoat" },
+      { "min": 16, "max": 16, "value": "Lone Wolf" },
+      { "min": 17, "max": 17, "value": "Defector" },
+      { "min": 18, "max": 18, "value": "Enforcer" },
+      { "min": 19, "max": 19, "value": "Cursed Hunter" },
+      { "min": 20, "max": 20, "value": "Ritualist" }
+    ]
+  },
+  {
+    "name": "monster-hunter-does-something",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Slays with Brutal Efficiency" },
+      { "min": 2, "max": 2, "value": "Sacrifices Everything" },
+      { "min": 3, "max": 3, "value": "Wields Custom-made weapons" },
+      { "min": 4, "max": 4, "value": "Outmaneuvers with Cunning Tactics" },
+      { "min": 5, "max": 5, "value": "Hunts with Ruthless Percision" },
+      { "min": 6, "max": 6, "value": "Channels Forbidden magic" },
+      { "min": 7, "max": 7, "value": "Harnesses Runes and Sigils" },
+      { "min": 8, "max": 8, "value": "Preforms Rituals" },
+      { "min": 9, "max": 9, "value": "Drinks Monster For their Powers" },
+      { "min": 10, "max": 10, "value": "Reads Omens and Visions" },
+      { "min": 11, "max": 11, "value": "Communes with Ghosts" },
+      { "min": 12, "max": 12, "value": "Binds Creatures to their Will" },
+      { "min": 13, "max": 13, "value": "Unravels Occult Mysteries" },
+      { "min": 14, "max": 14, "value": "Analyzes Crime Scenes" },
+      { "min": 15, "max": 15, "value": "Reads Magical Auras" },
+      { "min": 16, "max": 16, "value": "Uses Enhanced Senses" },
+      { "min": 17, "max": 17, "value": "Infiltrates Supernatural Societies" },
+      { "min": 18, "max": 18, "value": "Works Undercover" },
+      { "min": 19, "max": 19, "value": "Scavenges and Repourposes" },
+      { "min": 20, "max": 20, "value": "Uses Disguises and False Identities" }
+    ]
+  }
+]

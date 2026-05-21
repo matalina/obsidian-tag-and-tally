@@ -1,0 +1,78 @@
+[
+  {
+    "name": "point-of-interest",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Settlement" },
+      { "min": 4, "max": 5, "value": "`1d4` Insights" },
+      { "min": 6, "max": 8, "value": "Terrain/District Specific" },
+      { "min": 9, "max": 11, "value": "Wandering Creature" },
+      { "min": 12, "max": 12, "value": "Wandering NPC" },
+      { "min": 13, "max": 15, "value": "`1d4-1` Room Creature Lair" },
+      { "min": 16, "max": 17, "value": "`1d6+4` Room Dungeon" },
+      { "min": 18, "max": 18, "value": "Nothing" }
+    ]
+  },
+  {
+    "name": "landmark-type",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Settlement." },
+      { "min": 4, "max": 5, "value": "`1d6+4` Room Dungeon" },
+      { "min": 6, "max": 7, "value": "Magic Anomaly" },
+      { "min": 8, "max": 9, "value": "Resources" },
+      { "min": 10, "max": 11, "value": "Geographic"},
+      { "min": 12, "max": 13, "value": "`1d6+1` Room Single Structure" },
+      { "min": 14, "max": 15, "value": "Barrier" },
+      { "min": 16, "max": 18, "value": "`1d4-1` Room Creature Lair" }
+    ]
+  },
+  {
+    "name": "event-type",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 4, "value": "Wandering NPC" },
+      { "min": 5, "max": 8, "value": "`1d4` Insights" },
+      { "min": 9, "max": 13, "value": "Wandering Creatures" },
+      { "min": 14, "max": 17, "value": "Biome/District Event" },
+      { "min": 18, "max": 18, "value": "Legendary Wandering NPC" }
+    ]
+  },
+  {
+    "name": "modern-event-type",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 5, "value": "Street Encounter" },
+      { "min": 6, "max": 9, "value": "Wandering Creatures" },
+      { "min": 10, "max": 13, "value": "`1d4` Insights" },
+      { "min": 14, "max": 17, "value": "Biome/District Event" },
+      { "min": 18, "max": 18, "value": "Legendary Wandering NPC" }
+    ]
+  },
+  {
+    "name": "city-geographic-landmark",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Grand Statue" },
+      { "min": 2, "max": 2, "value": "Memorial Plaza" },
+      { "min": 3, "max": 3, "value": "Clock / Chronos Tower" },
+      { "min": 4, "max": 4, "value": "The Mega-Screen" },
+      { "min": 5, "max": 5, "value": "Public Fountain" },
+      { "min": 6, "max": 6, "value": "The Obelisk" },
+      { "min": 7, "max": 7, "value": "Garden Conservatory" },
+      { "min": 8, "max": 8, "value": "Victory Arch" },
+      { "min": 9, "max": 9, "value": "Public Amphitheater" },
+      { "min": 10, "max": 10, "value": "Sky-Bridge Nexus" },
+      { "min": 11, "max": 11, "value": "Grand Subway Station" },
+      { "min": 12, "max": 12, "value": "Subway Access Stairs" },
+      { "min": 13, "max": 13, "value": "Central Bus Terminal" },
+      { "min": 14, "max": 14, "value": "Elevated Rail Station" },
+      { "min": 15, "max": 15, "value": "Sewer/Utility Vault" },
+      { "min": 16, "max": 16, "value": "Heliport/Sky Dock" },
+      { "min": 17, "max": 17, "value": "Water Tower" },
+      { "min": 18, "max": 18, "value": "Utility Substation" },
+      { "min": 19, "max": 19, "value": "Drainage Ditch" },
+      { "min": 20, "max": 20, "value": "Ventilation Tower" }
+    ]
+  }
+]

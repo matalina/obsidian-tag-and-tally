@@ -1,0 +1,359 @@
+import { App, TFile, setIcon } from "obsidian";
+
+// Match: `tag:(type) T(tier) (Tag information) %(tally) ^(flag) !`
+// All parts except tag information are optional
+export const TAG_REGEX = /^`tag(?::(\w+))?(?:\s+T(\d+))?\s+(.+?)(?:\s+%(\d+))?(?:\s+\^([xswl]))?(?:\s+!)?\s*`$/;
+export const TAG_REGEX_G = /`tag(?::(\w+))?(?:\s+T(\d+))?\s+(.+?)(?:\s+%(\d+))?(?:\s+\^([xswl]))?(?:\s+!)?\s*`/g;
+
+interface TagOptions {
+    app: App;
+    file: TFile;
+    lineStart: number;
+    lineEnd: number;
+    index: number;
+    originalText: string;
+}
+
+export class TagWidget {
+    type: string | null;
+    tier: number | null;
+    tagText: string;
+    tally: number | null;
+    flag: 'x' | 's' | 'w' | 'l' | null;
+    temporary: boolean;
+    el: HTMLElement;
+    app: App;
+    file: TFile;
+    lineStart: number;
+    lineEnd: number;
+    index: number;
+    originalText: string;
+
+    constructor(opts: TagOptions) {
+        this.app = opts.app;
+        this.file = opts.file;
+        this.lineStart = opts.lineStart;
+        this.lineEnd = opts.lineEnd;
+        this.index = opts.index;
+        this.originalText = opts.originalText;
+        this.parseValue(opts.originalText);
+    }
+
+    private parseValue(text: string) {
+        this.type = null;
+        this.tier = null;
+        this.tagText = "";
+        this.tally = null;
+        this.flag = null;
+        this.temporary = false;
+
+        // Match the regex (which includes backticks)
+        const match = text.match(TAG_REGEX);
+        if (!match) {
+            // Fallback: try to extract just the tag text
+            const simpleMatch = text.match(/^`tag\s+(.+?)`$/);
+            if (simpleMatch) {
+                this.tagText = simpleMatch[1].trim();
+            }
+            return;
+        }
+
+        this.type = match[1] || null;
+        this.tier = match[2] ? parseInt(match[2]) : null;
+        this.tagText = match[3] ? match[3].trim() : "";
+        this.tally = match[4] ? parseInt(match[4]) : null;
+        this.flag = (match[5] as 'x' | 's' | 'w' | 'l') || null;
+        // Check if ! appears before the closing backtick
+        this.temporary = /!\s*`$/.test(text);
+
+        // Clamp tally to 1-5
+        if (this.tally !== null) {
+            if (this.tally < 1) this.tally = 1;
+            if (this.tally > 5) this.tally = 5;
+        }
+    }
+
+    getText(): string {
+        let result = "`tag";
+        if (this.type) {
+            result += `:${this.type}`;
+        }
+        if (this.tier) {
+            result += ` T${this.tier}`;
+        }
+        result += ` ${this.tagText}`;
+        if (this.tally) {
+            result += ` %${this.tally}`;
+        }
+        if (this.flag) {
+            result += ` ^${this.flag}`;
+        }
+        if (this.temporary) {
+            result += ` !`;
+        }
+        result += "`";
+        return result;
+    }
+
+    private getTagCategory(type: string): string {
+        const categoryMap: { [key: string]: string } = {
+            // Umbrella tags
+            umbrella: 'umbrella',
+            special: 'umbrella',
+            species: 'umbrella',
+            type: 'umbrella',
+            aged: 'umbrella',
+            
+            // Skill tags
+            skill: 'skill',
+            ability: 'skill',
+            attack: 'skill',
+            
+            // Condition tags
+            condition: 'condition',
+            reputation: 'condition',
+            
+            // Generic tags
+            background: 'generic',
+            experience: 'generic',
+            language: 'generic',
+            goal: 'generic',
+            secret: 'generic',
+            location: 'generic',
+            spell: 'generic',
+            item: 'generic',
+            use: 'generic',
+            
+            // Danger tags
+            flaw: 'danger',
+            weakness: 'danger',
+            damage: 'danger',
+            wound: 'danger',
+            
+            // Environment tags
+            scene: 'environment',
+            
+            // Trait tags
+            trait: 'trait',
+            strong: 'trait',
+            descriptor: 'trait',
+            drive: 'trait',
+        };
+        
+        return categoryMap[type.toLowerCase()] || 'generic';
+    }
+
+    private getTypeIconName(type: string): string | null {
+        // Map tag types to Lucide icon names
+        const iconMap: { [key: string]: string } = {
+            background: "book",
+            scene: "image",
+            trait: "type",
+            umbrella: "type",
+            flaw: "circle-off",
+            weakness: "circle-off",
+            condition: "split",
+            reputation: "message-circle",
+            skill: "brain",
+            ability: "brain",
+            experience: "ticket",
+            damage: "swords",
+            wound: "swords",
+            attack: "swords",
+            special: "sparkles",
+            language: "languages",
+            strong: "biceps-flexed",
+            goal: "chart-no-axes-combined",
+            secret: "lock",
+            location: "arrow-down-to-dot",
+            descriptor: "type",
+            species: "users-round",
+            spell: "sparkles",
+            item: "amphora",
+            type: "crown",
+            use: "amphora",
+            aged: "binary",
+            drive: "flame",
+        };
+
+        return iconMap[type.toLowerCase()] || null;
+    }
+
+    private getTallyIconName(tally: number): string {
+        // Clamp tally to 1-5 and return icon name
+        const clampedTally = Math.max(1, Math.min(5, tally));
+        return `tally-${clampedTally}`;
+    }
+
+    private getFlagMessage(flag: 'x' | 's' | 'w' | 'l'): string {
+        const flagMap: { [key: string]: string } = {
+            x: "has a secret",
+            s: "has a strength",
+            w: "has a weakness",
+            l: "unknown location",
+        };
+        return flagMap[flag] || "";
+    }
+
+    toDOM(): HTMLElement {
+        this.el = document.createElement("span");
+        this.el.classList.add("tag-tally-tag");
+        this.el.style.cursor = "pointer";
+
+        const box = this.el.createEl("span");
+        box.classList.add("tag-tally-tag-box");
+        if (this.type) {
+            // Label type uses default styling
+            if (this.type.toLowerCase() === "label") {
+                box.classList.add("tag-tally-tag-default");
+            } else {
+                const category = this.getTagCategory(this.type);
+                box.classList.add(`tag-tally-tag-${category}`);
+            }
+        } else {
+            box.classList.add("tag-tally-tag-default");
+        }
+
+        // If flag is present, add hidden class and make box position relative
+        if (this.flag) {
+            box.classList.add("tag-tally-tag-hidden");
+            box.style.position = "relative";
+        }
+
+        // Type icon (skip for label type)
+        if (this.type && this.type.toLowerCase() !== "label") {
+            const iconContainer = box.createEl("span");
+            iconContainer.classList.add("tag-tally-tag-icon");
+            const iconName = this.getTypeIconName(this.type);
+            if (iconName) {
+                setIcon(iconContainer, iconName);
+            }
+            // Hide icon if flag is present
+            if (this.flag) {
+                iconContainer.style.color = "transparent";
+            }
+        }
+
+        // Tier display
+        if (this.tier !== null) {
+            const tierEl = box.createEl("span");
+            tierEl.classList.add("tag-tally-tag-tier");
+            tierEl.textContent = `T${this.tier}`;
+            // Hide tier if flag is present
+            if (this.flag) {
+                tierEl.style.color = "transparent";
+            }
+        }
+
+        // Tag text - handle label format specially
+        if (this.type && this.type.toLowerCase() === "label") {
+            // Parse label format: (label): (value)
+            const labelMatch = this.tagText.match(/^(.+?):\s*(.+)$/);
+            if (labelMatch) {
+                const labelText = labelMatch[1].trim();
+                const valueText = labelMatch[2].trim();
+                
+                const labelEl = box.createEl("span");
+                labelEl.classList.add("tag-tally-tag-label-label");
+                labelEl.textContent = labelText;
+                // Hide text if flag is present
+                if (this.flag) {
+                    labelEl.style.color = "transparent";
+                }
+                
+                const colonEl = box.createEl("span");
+                colonEl.textContent = ": ";
+                // Hide colon if flag is present
+                if (this.flag) {
+                    colonEl.style.color = "transparent";
+                }
+                
+                const valueEl = box.createEl("span");
+                valueEl.classList.add("tag-tally-tag-label-value");
+                valueEl.textContent = valueText;
+                // Hide value if flag is present
+                if (this.flag) {
+                    valueEl.style.color = "transparent";
+                }
+            } else {
+                // Fallback if format doesn't match
+                const textEl = box.createEl("span");
+                textEl.classList.add("tag-tally-tag-text");
+                textEl.textContent = this.tagText;
+                // Hide text if flag is present
+                if (this.flag) {
+                    textEl.style.color = "transparent";
+                }
+            }
+        } else {
+            const textEl = box.createEl("span");
+            textEl.classList.add("tag-tally-tag-text");
+            textEl.textContent = this.tagText;
+            // Hide text if flag is present
+            if (this.flag) {
+                textEl.style.color = "transparent";
+            }
+        }
+
+        // Tally icon
+        if (this.tally !== null) {
+            const tallyEl = box.createEl("span");
+            tallyEl.classList.add("tag-tally-tag-tally");
+            const tallyIconName = this.getTallyIconName(this.tally);
+            setIcon(tallyEl, tallyIconName);
+            // Hide tally icon if flag is present
+            if (this.flag) {
+                tallyEl.style.color = "transparent";
+            }
+        }
+
+        // Temporary tag icon
+        if (this.temporary) {
+            const tempEl = box.createEl("span");
+            tempEl.classList.add("tag-tally-tag-icon");
+            setIcon(tempEl, "triangle-dashed");
+            // Hide temporary icon if flag is present
+            if (this.flag) {
+                tempEl.style.color = "transparent";
+            }
+        }
+
+        // Overlay for flag message
+        if (this.flag) {
+            const overlay = box.createEl("span");
+            overlay.classList.add("tag-tally-tag-overlay");
+            overlay.textContent = this.getFlagMessage(this.flag);
+        }
+
+        // Make clickable to edit
+        this.el.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.restoreForEditing();
+        };
+
+        return this.el;
+    }
+
+    private restoreForEditing() {
+        // Create a code element with the original text
+        const codeEl = document.createElement("code");
+        codeEl.textContent = this.originalText.slice(1, -1); // Remove backticks
+        
+        // Replace the widget with the code element
+        if (this.el.parentElement) {
+            this.el.parentElement.replaceChild(codeEl, this.el);
+            
+            // Make it editable and focus it
+            codeEl.contentEditable = "true";
+            codeEl.focus();
+            
+            // Select all text for easy editing
+            const range = document.createRange();
+            range.selectNodeContents(codeEl);
+            const selection = window.getSelection();
+            selection?.removeAllRanges();
+            selection?.addRange(range);
+        }
+    }
+}

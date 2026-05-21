@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "jsx": "preserve",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared-ui/*": ["./vendor/shared-ui/*"],
+      "@tag-and-tally/shared-ui": ["./vendor/shared-ui/index.ts"],
+      "@tag-and-tally/shared-ui/logic": ["./vendor/shared-ui/logic/index.ts"],
+      "@tag-and-tally/theme": ["./vendor/theme"],
+      "@data/*": ["./vendor/data/*"],
+      "vue": ["./node_modules/vue"],
+      "pinia": ["./node_modules/pinia"],
+      "vue-router": ["./node_modules/vue-router"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "vendor/**/*.ts", "vendor/**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}

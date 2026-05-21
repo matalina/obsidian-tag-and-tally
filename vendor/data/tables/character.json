@@ -1,0 +1,575 @@
+[
+  {
+    "name": "character-species-aged",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 2, "value": "Short-Lived" },
+      { "min": 3, "max": 4, "value": "Average" },
+      { "min": 5, "max": 6, "value": "Long-Lived" }
+    ]
+  },
+  {
+    "name": "character-species-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Ancient" },
+      { "min": 2, "max": 2, "value": "Celestial" },
+      { "min": 3, "max": 3, "value": "Runebound" },
+      { "min": 4, "max": 4, "value": "Ethereal" },
+      { "min": 5, "max": 5, "value": "Aristocratic" },
+      { "min": 6, "max": 6, "value": "Corporate" },
+      { "min": 7, "max": 7, "value": "Synthetic" },
+      { "min": 8, "max": 8, "value": "Scavenging" },
+      { "min": 9, "max": 9, "value": "Underground" },
+      { "min": 10, "max": 10, "value": "Feral" },
+      { "min": 11, "max": 11, "value": "Anphibious" },
+      { "min": 12, "max": 12, "value": "Nomadic" },
+      { "min": 13, "max": 13, "value": "Preadtory" },
+      { "min": 14, "max": 14, "value": "Symbiotic" },
+      { "min": 15, "max": 15, "value": "Keen-eyed" },
+      { "min": 16, "max": 16, "value": "Bloodied" },
+      { "min": 17, "max": 17, "value": "Weathered" },
+      { "min": 18, "max": 18, "value": "Mystical" },
+      { "min": 19, "max": 19, "value": "Haunted" },
+      { "min": 20, "max": 20, "value": "Technological" }
+    ]
+  }, 
+  {
+    "name": "character-species-cultural-trait",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1  , "value": "Hoards lost secrets" },
+      { "min": 2, "max": 2, "value": "Lives by a strict code" },
+      { "min": 3, "max": 3, "value": "Beleive their dreams dictate reality" },
+      { "min": 4, "max": 4, "value": "Obsessively document history" },
+      { "min": 5, "max": 5, "value": "Prioritize the collective over the individual" },
+      { "min": 6, "max": 6, "value": "Are bound by a blood oath" },
+      { "min": 7, "max": 7, "value": "Strive to achieve perfect biological evolution" },
+      { "min": 8, "max": 8, "value": "Seek to reclain their homeland" },
+      { "min": 9, "max": 9, "value": "Value aesthetic beauty above all" },
+      { "min": 10, "max": 10, "value": "Value anonymity and social invisibility" },
+      { "min": 11, "max": 11, "value": "Value anonymity and social invisibility" },
+      { "min": 12, "max": 12, "value": "Treat debt as a physical, inherited curse" },
+      { "min": 13, "max": 13, "value": "Believe they are the rightful heirs to a fallen star" },
+      { "min": 14, "max": 14, "value": "Are nomadic by law" },
+      { "min": 15, "max": 15, "value": "Obsessively hunt for a specific, extinct predator" },
+      { "min": 16, "max": 16, "value": "View physical touch as a sacred, legally binding contract" },
+      { "min": 17, "max": 17, "value": "Are obsessed with fashion" },
+      { "min": 18, "max": 18, "value": "Believe their true name must be kept secret" },
+      { "min": 19, "max": 19, "value": "Are legally required to switch professions every decade" },
+      { "min": 20, "max": 20, "value": "Value the beauty of decay" }
+    ]
+  }, {
+    "name": "character-species-feature",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Possess skin that changes color" },
+      { "min": 2, "max": 2, "value": "Have multiple eyes" },
+      { "min": 3, "max": 3, "value": "Display bioluminescent markings" },
+      { "min": 4, "max": 4, "value": "Have hollow bones" },
+      { "min": 5, "max": 5, "value": "Have prehensile tails" },
+      { "min": 6, "max": 6, "value": "Possess a second heart" },
+      { "min": 7, "max": 7, "value": "Are composed of a dense, living mineral" },
+      { "min": 8, "max": 8, "value": "Have three distinct biological sexes" },
+      { "min": 9, "max": 9, "value": "Have metallic scales" },
+      { "min": 10, "max": 10, "value": "Can enter a state of suspended animation at will" },
+      { "min": 11, "max": 11, "value": "Possess echo-location" },
+      { "min": 12, "max": 12, "value": "Lack a permanent physical form" },
+      { "min": 13, "max": 13, "value": "Have skin that functions like a solar panel" },
+      { "min": 14, "max": 14, "value": "Possess detachable limbs" },
+      { "min": 15, "max": 15, "value": "Have eyes that rotate 360 degrees" },
+      { "min": 16, "max": 16, "value": "Are born with a twin parasitic organism" },
+      { "min": 17, "max": 17, "value": "Possess silver-threaded hair" },
+      { "min": 18, "max": 18, "value": "Grow natural carbon-fiber plating over their vital organs" },
+      { "min": 19, "max": 19, "value": "Can detach their shadow to act as an independent scout" },
+      { "min": 20, "max": 20, "value": "Possess a specialized organ that stores Aether like a battery" }
+    ]
+  },
+  {
+    "name": "character-motivation-verb",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "to seek" },
+      { "min": 2, "max": 2, "value": "to desire" },
+      { "min": 3, "max": 3, "value": "to crave" },
+      { "min": 4, "max": 4, "value": "to fear" },
+      { "min": 5, "max": 5, "value": "to hate" },
+      { "min": 6, "max": 6, "value": "to love" },
+      { "min": 7, "max": 7, "value": "to need" },
+      { "min": 8, "max": 8, "value": "to want" },
+      { "min": 9, "max": 9, "value": "to pursue" },
+      { "min": 10, "max": 10, "value": "to avoid" },
+      { "min": 11, "max": 11, "value": "to protect" },
+      { "min": 12, "max": 12, "value": "to destroy" },
+      { "min": 13, "max": 13, "value": "to collect" },
+      { "min": 14, "max": 14, "value": "to study" },
+      { "min": 15, "max": 15, "value": "to worship" },
+      { "min": 16, "max": 16, "value": "to serve" },
+      { "min": 17, "max": 17, "value": "to betray" },
+      { "min": 18, "max": 18, "value": "to rescue" },
+      { "min": 19, "max": 19, "value": "to corrupt" },
+      { "min": 20, "max": 20, "value": "to purify" }
+    ]
+  },
+  {
+    "name": "character-motivation-noun",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "power" },
+      { "min": 2, "max": 2, "value": "revenge" },
+      { "min": 3, "max": 3, "value": "wealth" },
+      { "min": 4, "max": 4, "value": "knowledge" },
+      { "min": 5, "max": 5, "value": "freedom" },
+      { "min": 6, "max": 6, "value": "justice" },
+      { "min": 7, "max": 7, "value": "recognition" },
+      { "min": 8, "max": 8, "value": "redemption" },
+      { "min": 9, "max": 9, "value": "vengeance" },
+      { "min": 10, "max": 10, "value": "control" },
+      { "min": 11, "max": 11, "value": "acceptance" },
+      { "min": 12, "max": 12, "value": "survival" },
+      { "min": 13, "max": 13, "value": "order" },
+      { "min": 14, "max": 14, "value": "chaos" },
+      { "min": 15, "max": 15, "value": "perfection" },
+      { "min": 16, "max": 16, "value": "balance" },
+      { "min": 17, "max": 17, "value": "truth" },
+      { "min": 18, "max": 18, "value": "oblivion" },
+      { "min": 19, "max": 19, "value": "transcendence" },
+      { "min": 20, "max": 20, "value": "salvation" }
+    ]
+  },
+  {
+    "name": "character-goal-verb",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "to achieve" },
+      { "min": 2, "max": 2, "value": "to obtain" },
+      { "min": 3, "max": 3, "value": "to destroy" },
+      { "min": 4, "max": 4, "value": "to protect" },
+      { "min": 5, "max": 5, "value": "to uncover" },
+      { "min": 6, "max": 6, "value": "to establish" },
+      { "min": 7, "max": 7, "value": "to reclaim" },
+      { "min": 8, "max": 8, "value": "to prevent" },
+      { "min": 9, "max": 9, "value": "to create" },
+      { "min": 10, "max": 10, "value": "to restore" },
+      { "min": 11, "max": 11, "value": "to overthrow" },
+      { "min": 12, "max": 12, "value": "to unite" },
+      { "min": 13, "max": 13, "value": "to liberate" },
+      { "min": 14, "max": 14, "value": "to corrupt" },
+      { "min": 15, "max": 15, "value": "to purify" },
+      { "min": 16, "max": 16, "value": "to master" },
+      { "min": 17, "max": 17, "value": "to escape" },
+      { "min": 18, "max": 18, "value": "to avenge" },
+      { "min": 19, "max": 19, "value": "to transform" },
+      { "min": 20, "max": 20, "value": "to transcend" }
+    ]
+  },
+  {
+    "name": "character-goal-noun",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "dominance" },
+      { "min": 2, "max": 2, "value": "the throne" },
+      { "min": 3, "max": 3, "value": "their legacy" },
+      { "min": 4, "max": 4, "value": "peace" },
+      { "min": 5, "max": 5, "value": "the truth" },
+      { "min": 6, "max": 6, "value": "a dynasty" },
+      { "min": 7, "max": 7, "value": "their homeland" },
+      { "min": 8, "max": 8, "value": "chaos" },
+      { "min": 9, "max": 9, "value": "balance" },
+      { "min": 10, "max": 10, "value": "order" },
+      { "min": 11, "max": 11, "value": "immortality" },
+      { "min": 12, "max": 12, "value": "enlightenment" },
+      { "min": 13, "max": 13, "value": "redemption" },
+      { "min": 14, "max": 14, "value": "vengeance" },
+      { "min": 15, "max": 15, "value": "freedom" },
+      { "min": 16, "max": 16, "value": "control" },
+      { "min": 17, "max": 17, "value": "perfection" },
+      { "min": 18, "max": 18, "value": "oblivion" },
+      { "min": 19, "max": 19, "value": "transcendence" },
+      { "min": 20, "max": 20, "value": "salvation" }
+    ]
+  },
+  {
+    "name": "character-attack-choice",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "a swift blade" },
+      { "min": 2, "max": 2, "value": "poisoned daggers" },
+      { "min": 3, "max": 3, "value": "elemental magic" },
+      { "min": 4, "max": 4, "value": "psychic attacks" },
+      { "min": 5, "max": 5, "value": "ranged weapons" },
+      { "min": 6, "max": 6, "value": "unarmed strikes" },
+      { "min": 7, "max": 7, "value": "cursed artifacts" },
+      { "min": 8, "max": 8, "value": "illusions" },
+      { "min": 9, "max": 9, "value": "traps" },
+      { "min": 10, "max": 10, "value": "allies" },
+      { "min": 11, "max": 11, "value": "shadow magic" },
+      { "min": 12, "max": 12, "value": "mind control" },
+      { "min": 13, "max": 13, "value": "disease" },
+      { "min": 14, "max": 14, "value": "technology" },
+      { "min": 15, "max": 15, "value": "nature" },
+      { "min": 16, "max": 16, "value": "holy power" },
+      { "min": 17, "max": 17, "value": "dark rituals" },
+      { "min": 18, "max": 18, "value": "words" },
+      { "min": 19, "max": 19, "value": "time manipulation" },
+      { "min": 20, "max": 20, "value": "raw force" }
+    ]
+  },
+  {
+    "name": "character-secret-verb",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "is secretly" },
+      { "min": 2, "max": 2, "value": "has been" },
+      { "min": 3, "max": 3, "value": "was once" },
+      { "min": 4, "max": 4, "value": "conceals that they" },
+      { "min": 5, "max": 5, "value": "hides the fact that they" },
+      { "min": 6, "max": 6, "value": "denies being" },
+      { "min": 7, "max": 7, "value": "pretends not to be" },
+      { "min": 8, "max": 8, "value": "was never actually" },
+      { "min": 9, "max": 9, "value": "is actually" },
+      { "min": 10, "max": 10, "value": "has always been" },
+      { "min": 11, "max": 11, "value": "will become" },
+      { "min": 12, "max": 12, "value": "is fated to be" },
+      { "min": 13, "max": 13, "value": "was created to be" },
+      { "min": 14, "max": 14, "value": "is cursed to be" },
+      { "min": 15, "max": 15, "value": "is blessed to be" },
+      { "min": 16, "max": 16, "value": "is bound to be" },
+      { "min": 17, "max": 17, "value": "is destined to become" },
+      { "min": 18, "max": 18, "value": "is transforming into" },
+      { "min": 19, "max": 19, "value": "is slowly becoming" },
+      { "min": 20, "max": 20, "value": "is unknowingly" }
+    ]
+  },
+  {
+    "name": "character-secret-noun",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "a traitor" },
+      { "min": 2, "max": 2, "value": "the true heir" },
+      { "min": 3, "max": 3, "value": "responsible for the disaster" },
+      { "min": 4, "max": 4, "value": "working for the enemy" },
+      { "min": 5, "max": 5, "value": "dying" },
+      { "min": 6, "max": 6, "value": "immortal" },
+      { "min": 7, "max": 7, "value": "a shapeshifter" },
+      { "min": 8, "max": 8, "value": "the last of their kind" },
+      { "min": 9, "max": 9, "value": "a clone" },
+      { "min": 10, "max": 10, "value": "possessed by a demon" },
+      { "min": 11, "max": 11, "value": "a god in disguise" },
+      { "min": 12, "max": 12, "value": "cursed" },
+      { "min": 13, "max": 13, "value": "blessed" },
+      { "min": 14, "max": 14, "value": "a construct" },
+      { "min": 15, "max": 15, "value": "from another dimension" },
+      { "min": 16, "max": 16, "value": "the chosen one" },
+      { "min": 17, "max": 17, "value": "a vessel for an ancient power" },
+      { "min": 18, "max": 18, "value": "bound to a dark pact" },
+      { "min": 19, "max": 19, "value": "seeking redemption" },
+      { "min": 20, "max": 20, "value": "planning their own downfall" }
+    ]
+  },
+  {
+    "name": "character-distinguishing-feature-type",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Extreme Deformity/Scarring" },
+      { "min": 4, "max": 5, "value": "Heavy Body Art" },
+      { "min": 6, "max": 7, "value": "Notable Skin Condition" },
+      { "min": 8, "max": 9, "value": "Minor Flaw" },
+      { "min": 10, "max": 11, "value": "Nothing of Note" },
+      { "min": 12, "max": 13, "value": "Distinctive Grooming" },
+      { "min": 14, "max": 15, "value": "Clean/Striking Feature" },
+      { "min": 16, "max": 17, "value": "Wealth/Status" },
+      { "min": 18, "max": 18, "value": "Legendary Presence" }
+    ]
+  },
+  {
+    "name": "character-skin-tone",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Ghostly / Albino" },
+      { "min": 4, "max": 5, "value": "Ashy / Sallow" },
+      { "min": 6, "max": 8, "value": "Ruddy / Red" },
+      { "min": 9, "max": 12, "value": "Common Tone (Fair/Tan/Brown)" },
+      { "min": 13, "max": 15, "value": "Deep Bronze / Olive" },
+      { "min": 16, "max": 17, "value": "Ink-Black / Dark" },
+      { "min": 18, "max": 18, "value": "Mottled / Greyish" }
+    ]
+  },
+  {
+    "name": "character-skin-complexion",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Translucent / Veiny" },
+      { "min": 4, "max": 5, "value": "Pockmarked / Deep Pores" },
+      { "min": 6, "max": 8, "value": "Pimply / Broke-out" },
+      { "min": 9, "max": 12, "value": "Clear / Smooth" },
+      { "min": 13, "max": 15, "value": "Weathered / Leathery" },
+      { "min": 16, "max": 17, "value": "Lustrous / Oily" },
+      { "min": 18, "max": 18, "value": "Scaly / Calloused" }
+    ]
+  },
+  {
+    "name": "character-build-height",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 5, "value": "Extreme" },
+      { "min": 6, "max": 9, "value": "Lean/Stocky" },
+      { "min": 10, "max": 11, "value": "Generic" },
+      { "min": 12, "max": 15, "value": "Athletic/Tall" },
+      { "min": 16, "max": 18, "value": "Towering/Powerful" }
+    ]
+  },
+  {
+    "name": "character-hair-texture",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Bone Straight" },
+      { "min": 2, "max": 2, "value": "Fine / Wispy" },
+      { "min": 3, "max": 3, "value": "Thick / Voluminous" },
+      { "min": 4, "max": 4, "value": "Wavy / Rippled" },
+      { "min": 5, "max": 5, "value": "Tight Curls / Coiled" },
+      { "min": 6, "max": 6, "value": "Wild / Unruly" },
+      { "min": 7, "max": 7, "value": "Kinky / Textured" },
+      { "min": 8, "max": 8, "value": "Ringlets" },
+      { "min": 9, "max": 9, "value": "Shaggy / Layered" },
+      { "min": 10, "max": 10, "value": "Buzz-cut Stubble" },
+      { "min": 11, "max": 11, "value": "Receding / Balding" },
+      { "min": 12, "max": 12, "value": "Widow's Peak" },
+      { "min": 13, "max": 13, "value": "Greasy / Stringy" },
+      { "min": 14, "max": 14, "value": "Coarse / Wiry" },
+      { "min": 15, "max": 15, "value": "Frizzy / Static" },
+      { "min": 16, "max": 16, "value": "Silky / Lustrous" },
+      { "min": 17, "max": 17, "value": "Sparse / Patchy" },
+      { "min": 18, "max": 18, "value": "Soft / Downy" },
+      { "min": 19, "max": 19, "value": "Brittle / Dry" },
+      { "min": 20, "max": 20, "value": "Completely Bald" }
+    ]
+  },
+  {
+    "name": "character-hair-style",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Shoulder-length" },
+      { "min": 2, "max": 2, "value": "Cropped / Short" },
+      { "min": 3, "max": 3, "value": "Waist-length Mane" },
+      { "min": 4, "max": 4, "value": "Single Braid" },
+      { "min": 5, "max": 5, "value": "Multiple Small Braids" },
+      { "min": 6, "max": 6, "value": "Bowl Cut" },
+      { "min": 7, "max": 7, "value": "Messy / Just-woke-up" },
+      { "min": 8, "max": 8, "value": "Slicked Back" },
+      { "min": 9, "max": 9, "value": "Pompadour" },
+      { "min": 10, "max": 10, "value": "Bound with leather" },
+      { "min": 11, "max": 11, "value": "High Pony-tail" },
+      { "min": 12, "max": 12, "value": "Side-shaved / Undercut" },
+      { "min": 13, "max": 13, "value": "Top-knot / Bun" },
+      { "min": 14, "max": 14, "value": "Twin Braids / Pigtails" },
+      { "min": 15, "max": 15, "value": "Mohawk / Crest" },
+      { "min": 16, "max": 16, "value": "Spiked with Wax" },
+      { "min": 17, "max": 17, "value": "Parted in Middle" },
+      { "min": 18, "max": 18, "value": "Side-swept Fringe" },
+      { "min": 19, "max": 19, "value": "Tucked behind ears" },
+      { "min": 20, "max": 20, "value": "Hidden under a cap/hood" }
+    ]
+  },
+  {
+    "name": "character-hair-color",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Ink Black" },
+      { "min": 2, "max": 2, "value": "Raven (Blue-Black)" },
+      { "min": 3, "max": 3, "value": "Deep Espresso Brown" },
+      { "min": 4, "max": 4, "value": "Chestnut Brown" },
+      { "min": 5, "max": 5, "value": "Russet / Auburn" },
+      { "min": 6, "max": 6, "value": "Copper Red" },
+      { "min": 7, "max": 7, "value": "Fiery Orange" },
+      { "min": 8, "max": 8, "value": "Sandy Brown" },
+      { "min": 9, "max": 9, "value": "Honey Blonde" },
+      { "min": 10, "max": 10, "value": "Golden Blonde" },
+      { "min": 11, "max": 11, "value": "Strawberry Blonde" },
+      { "min": 12, "max": 12, "value": "Ash Blonde" },
+      { "min": 13, "max": 13, "value": "Platinum / Bleached" },
+      { "min": 14, "max": 14, "value": "Snow White" },
+      { "min": 15, "max": 15, "value": "Salt and Pepper (Grey-streaked)" },
+      { "min": 16, "max": 16, "value": "Steel Grey" },
+      { "min": 17, "max": 17, "value": "Silver / Metallic" },
+      { "min": 18, "max": 18, "value": "Muddy / Mousey Brown" },
+      { "min": 19, "max": 19, "value": "Faded / Sun-bleached" },
+      { "min": 20, "max": 20, "value": "Unnatural Tint (Dyed/Stained)" }
+    ]
+  },
+  {
+    "name": "character-eye-color",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Dark Chocolate" },
+      { "min": 2, "max": 2, "value": "Muddy Brown" },
+      { "min": 3, "max": 3, "value": "Golden Hazel" },
+      { "min": 4, "max": 4, "value": "Greenish Hazel" },
+      { "min": 5, "max": 5, "value": "Deep Amber" },
+      { "min": 6, "max": 6, "value": "Honey / Pale Gold" },
+      { "min": 7, "max": 7, "value": "Charcoal / Dark Grey" },
+      { "min": 8, "max": 8, "value": "Slate Blue" },
+      { "min": 9, "max": 9, "value": "Royal Blue" },
+      { "min": 10, "max": 10, "value": "Sapphire Blue" },
+      { "min": 11, "max": 11, "value": "Pale Sky Blue" },
+      { "min": 12, "max": 12, "value": "Icy / Piercing Blue" },
+      { "min": 13, "max": 13, "value": "Moss Green" },
+      { "min": 14, "max": 14, "value": "Bright Emerald" },
+      { "min": 15, "max": 15, "value": "Sea-foam / Teal" },
+      { "min": 16, "max": 16, "value": "Steel Grey" },
+      { "min": 17, "max": 17, "value": "Silver / Mercury" },
+      { "min": 18, "max": 18, "value": "Pale Violet (Rare)" },
+      { "min": 19, "max": 19, "value": "Reddish / Bloodshot" },
+      { "min": 20, "max": 20, "value": "Heterochromia (Two different colors)" }
+    ]
+  },
+  {
+    "name": "character-deformity",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Extensive chemical/acid burns across one side of the body" },
+      { "min": 2, "max": 2, "value": "Missing a primary limb (Arm or Leg) replaced by a simple prosthetic" },
+      { "min": 3, "max": 3, "value": "Severe facial reconstruction / Cragged, melted features" },
+      { "min": 4, "max": 4, "value": "Large, jagged \"Map\" scar covering the chest and neck" },
+      { "min": 5, "max": 5, "value": "Empty eye socket or heavy, opaque cataracts in both eyes" },
+      { "min": 6, "max": 6, "value": "Twisted spine/hunched posture that drastically affects height" }
+    ]
+  },
+  {
+    "name": "character-body-art",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Full \"Sleeve\" tattoos on both arms (geometric or floral)" },
+      { "min": 2, "max": 2, "value": "Intricate facial tattoos (cheeks, forehead, or chin)" },
+      { "min": 3, "max": 3, "value": "Large, blackened \"blackout\" style ink on the neck and hands" },
+      { "min": 4, "max": 4, "value": "Ritualistic branding on the forearms or shoulders" },
+      { "min": 5, "max": 5, "value": "Matching tattoos that span the entire chest and back" },
+      { "min": 6, "max": 6, "value": "Faded, sprawling mural of ink that peeks out from all clothing" }
+    ]
+  },
+  {
+    "name": "character-skin-condition",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Severe Acne/Pimply" },
+      { "min": 2, "max": 2, "value": "Pockmarked" },
+      { "min": 3, "max": 3, "value": "Vitiligo" },
+      { "min": 4, "max": 4, "value": "Jaundiced" },
+      { "min": 5, "max": 5, "value": "Leathery" },
+      { "min": 6, "max": 6, "value": "Flaking/Scaling" }
+    ]
+  },
+  {
+    "name": "character-minor-flaw",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Broken Nose" },
+      { "min": 2, "max": 2, "value": "Notched Ear" },
+      { "min": 3, "max": 3, "value": "Birthmark" },
+      { "min": 4, "max": 4, "value": "Split Lip" },
+      { "min": 5, "max": 5, "value": "Missing Finger" },
+      { "min": 6, "max": 6, "value": "Heavy Freckles" }
+    ]
+  },
+  {
+    "name": "character-distinguished-grooming",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Waxed Mustache" },
+      { "min": 2, "max": 2, "value": "Braided Beard" },
+      { "min": 3, "max": 3, "value": "Artificially Dyed" },
+      { "min": 4, "max": 4, "value": "Surgical Precision" },
+      { "min": 5, "max": 5, "value": "Scented" },
+      { "min": 6, "max": 6, "value": "Heavy Makeup/Paint" }
+    ]
+  },
+  {
+    "name": "character-clean-striking-feature",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Piercing Eyes" },
+      { "min": 2, "max": 2, "value": "High Cheekbones" },
+      { "min": 3, "max": 3, "value": "Perfect Teeth" },
+      { "min": 4, "max": 4, "value": "Statuesque" },
+      { "min": 5, "max": 5, "value": "Graceful Hands" },
+      { "min": 6, "max": 6, "value": "Silky Hair" }
+    ]
+  },
+  {
+    "name": "character-status-feature",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Heavy Gold" },
+      { "min": 2, "max": 2, "value": "Fine Fabrics" },
+      { "min": 3, "max": 3, "value": "Signet Ring" },
+      { "min": 4, "max": 4, "value": "Embroidered" },
+      { "min": 5, "max": 5, "value": "Polished Boots" },
+      { "min": 6, "max": 6, "value": "Jeweled Accessory" }
+    ]
+  },
+  {
+    "name": "character-legendary-presence",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Giantism" },
+      { "min": 2, "max": 2, "value": "Supernatural Eyes" },
+      { "min": 3, "max": 3, "value": "Unearthly Calm" },
+      { "min": 4, "max": 4, "value": "Scarred Veteran" },
+      { "min": 5, "max": 5, "value": "Aura of Power" },
+      { "min": 6, "max": 6, "value": "Exotic Mutation" }
+    ]
+  },
+  {
+    "name": "character-pronoun",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Xe / Xer" },
+      { "min": 4, "max": 5, "value": "Xi / Xir" },
+      { "min": 6, "max": 8, "value": "They / Them" },
+      { "min": 9, "max": 11, "value": "He / Him" },
+      { "min": 12, "max": 14, "value": "She / Her" },
+      { "min": 15, "max": 16, "value": "They / Them" },
+      { "min": 17, "max": 17, "value": "Ey / Em" },
+      { "min": 18, "max": 18, "value": "Ze / Zir" }
+    ]
+  },
+  {
+    "name": "character-age",
+    "formula": "3d6",
+    "table": [
+      { "min": 3, "max": 3, "value": "Child" },
+      { "min": 4, "max": 5, "value": "Adolescent" },
+      { "min": 6, "max": 8, "value": "Young Adult" },
+      { "min": 9, "max": 12, "value": "Adult (Prime)" },
+      { "min": 13, "max": 15, "value": "Middle-Aged" },
+      { "min": 16, "max": 17, "value": "Elderly" },
+      { "min": 18, "max": 18, "value": "Ancient" }
+    ]
+  },
+  {
+    "name": "character-clothing",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 4, "value": "Common/Worker" },
+      { "min": 5, "max": 7, "value": "Traveler" },
+      { "min": 8, "max": 10, "value": "Formal/Clean" },
+      { "min": 11, "max": 13, "value": "Rugged/Outdoor" },
+      { "min": 14, "max": 15, "value": "Layered/Eccentric" },
+      { "min": 16, "max": 17, "value": "Minimalist" },
+      { "min": 18, "max": 19, "value": "Wealthy/Ornate" },
+      { "min": 20, "max": 20, "value": "Disheveled" }
+    ]
+  },
+  {
+    "name": "character-voice",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Gravelly/Deep" },
+      { "min": 2, "max": 2, "value": "High-pitched/Piercing" },
+      { "min": 3, "max": 3, "value": "Melodious/Sing-song" },
+      { "min": 4, "max": 4, "value": "Husky/Whispered" },
+      { "min": 5, "max": 5, "value": "Nasal/Sharp" },
+      { "min": 6, "max": 6, "value": "Slow/Drawling" }
+    ]
+  }
+]

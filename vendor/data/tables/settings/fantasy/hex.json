@@ -1,0 +1,803 @@
+[
+  {
+    "name": "terrain",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Forest" },
+      { "min": 2, "max": 2, "value": "Plains" },
+      { "min": 3, "max": 3, "value": "Mountain" },
+      { "min": 4, "max": 4, "value": "Swamp" },
+      { "min": 5, "max": 5, "value": "Island" },
+      { "min": 6, "max": 6, "value": "Desert" },
+      { "min": 7, "max": 7, "value": "Wastelands" },
+      { "min": 8, "max": 8, "value": "Magiclands" }
+    ]
+  },
+  {
+    "name": "terrain-feature",
+    "formula": "1d12",
+    "table": [
+      { "min": 1, "max": 1, "value": "Open Ground (Easy)" },
+      { "min": 2, "max": 2, "value": "Elevated Paths (Easy)" },
+      { "min": 3, "max": 3, "value": "Worn Trails (Easy)" },
+      { "min": 4, "max": 4, "value": "Uneven Terrain (Rough)" },
+      { "min": 5, "max": 5, "value": "Overgrown Passage (Rough)" },
+      { "min": 6, "max": 6, "value": "Slippery Ground (Rough)" },
+      { "min": 7, "max": 7, "value": "Rocky or Cracked Surface (Rough)" },
+      { "min": 8, "max": 8, "value": "Dense Obstacles (Rough)" },
+      { "min": 9, "max": 9, "value": "Hazardous Wildlife (Dangerous)" },
+      { "min": 10, "max": 10, "value": "Environmental Hazard (Dangerous)" },
+      { "min": 11, "max": 11, "value": "Unstable Ground (Dangerous)" },
+      { "min": 12, "max": 12, "value": "Supernatural Distortion (Dangerous)" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-forest",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Plains" },
+      { "min": 4, "max": 5, "value": "Swamp" },
+      { "min": 6, "max": 6, "value": "Mountain" },
+      { "min": 7, "max": 7, "value": "Forest" },
+      { "min": 8, "max": 8, "value": "Magiclands" },
+      { "min": 9, "max": 10, "value": "Wastelands" },
+      { "min": 11, "max": 12, "value": "Island" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-plains",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Forest" },
+      { "min": 4, "max": 5, "value": "Desert" },
+      { "min": 6, "max": 6, "value": "Mountain" },
+      { "min": 7, "max": 7, "value": "Plains" },
+      { "min": 8, "max": 8, "value": "Swamp" },
+      { "min": 9, "max": 10, "value": "Wastelands" },
+      { "min": 11, "max": 12, "value": "Island" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-mountain",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Forest" },
+      { "min": 4, "max": 5, "value": "Plains" },
+      { "min": 6, "max": 6, "value": "Desert" },
+      { "min": 7, "max": 7, "value": "Mountain" },
+      { "min": 8, "max": 8, "value": "Wastelands" },
+      { "min": 9, "max": 10, "value": "Magiclands" },
+      { "min": 11, "max": 12, "value": "Island" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-swamp",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Forest" },
+      { "min": 4, "max": 5, "value": "Plains" },
+      { "min": 6, "max": 6, "value": "Island" },
+      { "min": 7, "max": 7, "value": "Swamp" },
+      { "min": 8, "max": 8, "value": "Magiclands" },
+      { "min": 9, "max": 10, "value": "Wastelands" },
+      { "min": 11, "max": 12, "value": "Desert" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-island",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Plains" },
+      { "min": 4, "max": 5, "value": "Swamp" },
+      { "min": 6, "max": 6, "value": "Forest" },
+      { "min": 7, "max": 7, "value": "Island" },
+      { "min": 8, "max": 8, "value": "Desert" },
+      { "min": 9, "max": 10, "value": "Magiclands" },
+      { "min": 11, "max": 12, "value": "Mountain" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-desert",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Plains" },
+      { "min": 4, "max": 5, "value": "Mountain" },
+      { "min": 6, "max": 6, "value": "Wastelands" },
+      { "min": 7, "max": 7, "value": "Desert" },
+      { "min": 8, "max": 8, "value": "Island" },
+      { "min": 9, "max": 10, "value": "Magiclands" },
+      { "min": 11, "max": 12, "value": "Forest" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-wastelands",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Desert" },
+      { "min": 4, "max": 5, "value": "Mountain" },
+      { "min": 6, "max": 6, "value": "Plains" },
+      { "min": 7, "max": 7, "value": "Wastelands" },
+      { "min": 8, "max": 8, "value": "Swamp" },
+      { "min": 9, "max": 10, "value": "Magiclands" },
+      { "min": 11, "max": 12, "value": "Forest" }
+    ]
+  },
+  {
+    "name": "terrain-adjacent-magiclands",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Forest" },
+      { "min": 4, "max": 5, "value": "Swamp" },
+      { "min": 6, "max": 6, "value": "Mountain" },
+      { "min": 7, "max": 7, "value": "Magiclands" },
+      { "min": 8, "max": 8, "value": "Desert" },
+      { "min": 9, "max": 10, "value": "Wastelands" },
+      { "min": 11, "max": 12, "value": "Plains" }
+    ]
+  },
+  {
+    "name": "discovery-forest-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Track" },
+      { "min": 2, "max": 2, "value": "Avoid" },
+      { "min": 3, "max": 3, "value": "Follow" },
+      { "min": 4, "max": 4, "value": "Discover" },
+      { "min": 5, "max": 5, "value": "Protect" },
+      { "min": 6, "max": 6, "value": "Lose" },
+      { "min": 7, "max": 7, "value": "Encounter" },
+      { "min": 8, "max": 8, "value": "Investigate" },
+      { "min": 9, "max": 9, "value": "Climb" },
+      { "min": 10, "max": 10, "value": "Escape" }
+    ]
+  },
+  {
+    "name": "discovery-forest-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Fresh" },
+      { "min": 2, "max": 2, "value": "Hidden" },
+      { "min": 3, "max": 3, "value": "Whispering" },
+      { "min": 4, "max": 4, "value": "Ancient" },
+      { "min": 5, "max": 5, "value": "Wounded" },
+      { "min": 6, "max": 6, "value": "Twisting" },
+      { "min": 7, "max": 7, "value": "Territorial" },
+      { "min": 8, "max": 8, "value": "Unnatural" },
+      { "min": 9, "max": 9, "value": "Towering" },
+      { "min": 10, "max": 10, "value": "Closing" }
+    ]
+  },
+  {
+    "name": "discovery-forest-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Footprints" },
+      { "min": 2, "max": 2, "value": "Snare" },
+      { "min": 3, "max": 3, "value": "Path" },
+      { "min": 4, "max": 4, "value": "Tree" },
+      { "min": 5, "max": 5, "value": "Animal" },
+      { "min": 6, "max": 6, "value": "Trail" },
+      { "min": 7, "max": 7, "value": "Hunter" },
+      { "min": 8, "max": 8, "value": "Silence" },
+      { "min": 9, "max": 9, "value": "Canopy" },
+      { "min": 10, "max": 10, "value": "Thicket" }
+    ]
+  },
+  {
+    "name": "discovery-plains-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Spot" },
+      { "min": 2, "max": 2, "value": "Cross" },
+      { "min": 3, "max": 3, "value": "Escort" },
+      { "min": 4, "max": 4, "value": "Defend" },
+      { "min": 5, "max": 5, "value": "Follow" },
+      { "min": 6, "max": 6, "value": "Negotiate" },
+      { "min": 7, "max": 7, "value": "Outrun" },
+      { "min": 8, "max": 8, "value": "Observe" },
+      { "min": 9, "max": 9, "value": "Search" },
+      { "min": 10, "max": 10, "value": "Confront" }
+    ]
+  },
+  {
+    "name": "discovery-plains-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Distant" },
+      { "min": 2, "max": 2, "value": "Windswept" },
+      { "min": 3, "max": 3, "value": "Nervous" },
+      { "min": 4, "max": 4, "value": "Exposed" },
+      { "min": 5, "max": 5, "value": "Fading" },
+      { "min": 6, "max": 6, "value": "Uneasy" },
+      { "min": 7, "max": 7, "value": "Relentless" },
+      { "min": 8, "max": 8, "value": "Circling" },
+      { "min": 9, "max": 9, "value": "Abandoned" },
+      { "min": 10, "max": 10, "value": "Charging" }
+    ]
+  },
+  {
+    "name": "discovery-plains-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Riders" },
+      { "min": 2, "max": 2, "value": "Field" },
+      { "min": 3, "max": 3, "value": "Caravan" },
+      { "min": 4, "max": 4, "value": "Camp" },
+      { "min": 5, "max": 5, "value": "Tracks" },
+      { "min": 6, "max": 6, "value": "Truce" },
+      { "min": 7, "max": 7, "value": "Storm" },
+      { "min": 8, "max": 8, "value": "Vultures" },
+      { "min": 9, "max": 9, "value": "Farmstead" },
+      { "min": 10, "max": 10, "value": "Beast" }
+    ]
+  },
+  {
+    "name": "discovery-mountain-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Climb" },
+      { "min": 2, "max": 2, "value": "Navigate" },
+      { "min": 3, "max": 3, "value": "Secure" },
+      { "min": 4, "max": 4, "value": "Investigate" },
+      { "min": 5, "max": 5, "value": "Rescue" },
+      { "min": 6, "max": 6, "value": "Endure" },
+      { "min": 7, "max": 7, "value": "Avoid" },
+      { "min": 8, "max": 8, "value": "Discover" },
+      { "min": 9, "max": 9, "value": "Chase" },
+      { "min": 10, "max": 10, "value": "Survive" }
+    ]
+  },
+  {
+    "name": "discovery-mountain-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Sheer" },
+      { "min": 2, "max": 2, "value": "Treacherous" },
+      { "min": 3, "max": 3, "value": "Narrow" },
+      { "min": 4, "max": 4, "value": "Echoing" },
+      { "min": 5, "max": 5, "value": "Trapped" },
+      { "min": 6, "max": 6, "value": "Biting" },
+      { "min": 7, "max": 7, "value": "Unstable" },
+      { "min": 8, "max": 8, "value": "Forgotten" },
+      { "min": 9, "max": 9, "value": "Fleeing" },
+      { "min": 10, "max": 10, "value": "Sudden" }
+    ]
+  },
+  {
+    "name": "discovery-mountain-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cliff" },
+      { "min": 2, "max": 2, "value": "Pass" },
+      { "min": 3, "max": 3, "value": "Ledge" },
+      { "min": 4, "max": 4, "value": "Cave" },
+      { "min": 5, "max": 5, "value": "Traveler" },
+      { "min": 6, "max": 6, "value": "Cold" },
+      { "min": 7, "max": 7, "value": "Avalanche" },
+      { "min": 8, "max": 8, "value": "Shrine" },
+      { "min": 9, "max": 9, "value": "Figure" },
+      { "min": 10, "max": 10, "value": "Rockfall" }
+    ]
+  },
+  {
+    "name": "discovery-swamp-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Wade" },
+      { "min": 2, "max": 2, "value": "Avoid" },
+      { "min": 3, "max": 3, "value": "Investigate" },
+      { "min": 4, "max": 4, "value": "Follow" },
+      { "min": 5, "max": 5, "value": "Negotiate" },
+      { "min": 6, "max": 6, "value": "Endure" },
+      { "min": 7, "max": 7, "value": "Discover" },
+      { "min": 8, "max": 8, "value": "Escape" },
+      { "min": 9, "max": 9, "value": "Track" },
+      { "min": 10, "max": 10, "value": "Survive" }
+    ]
+  },
+  {
+    "name": "discovery-swamp-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Murky" },
+      { "min": 2, "max": 2, "value": "Sucking" },
+      { "min": 3, "max": 3, "value": "Rotting" },
+      { "min": 4, "max": 4, "value": "Flickering" },
+      { "min": 5, "max": 5, "value": "Paranoid" },
+      { "min": 6, "max": 6, "value": "Swarming" },
+      { "min": 7, "max": 7, "value": "Half-sunk" },
+      { "min": 8, "max": 8, "value": "Grasping" },
+      { "min": 9, "max": 9, "value": "Slithering" },
+      { "min": 10, "max": 10, "value": "Poisonous" }
+    ]
+  },
+  {
+    "name": "discovery-swamp-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Water" },
+      { "min": 2, "max": 2, "value": "Mud" },
+      { "min": 3, "max": 3, "value": "Hut" },
+      { "min": 4, "max": 4, "value": "Lights" },
+      { "min": 5, "max": 5, "value": "Hermit" },
+      { "min": 6, "max": 6, "value": "Insects" },
+      { "min": 7, "max": 7, "value": "Ruins" },
+      { "min": 8, "max": 8, "value": "Vines" },
+      { "min": 9, "max": 9, "value": "Creature" },
+      { "min": 10, "max": 10, "value": "Fumes" }
+    ]
+  },
+  {
+    "name": "discovery-island-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Explore" },
+      { "min": 2, "max": 2, "value": "Repair" },
+      { "min": 3, "max": 3, "value": "Investigate" },
+      { "min": 4, "max": 4, "value": "Negotiate" },
+      { "min": 5, "max": 5, "value": "Secure" },
+      { "min": 6, "max": 6, "value": "Avoid" },
+      { "min": 7, "max": 7, "value": "Discover" },
+      { "min": 8, "max": 8, "value": "Defend" },
+      { "min": 9, "max": 9, "value": "Track" },
+      { "min": 10, "max": 10, "value": "Escape" }
+    ]
+  },
+  {
+    "name": "discovery-island-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Uncharted" },
+      { "min": 2, "max": 2, "value": "Damaged" },
+      { "min": 3, "max": 3, "value": "Signal" },
+      { "min": 4, "max": 4, "value": "Wary" },
+      { "min": 5, "max": 5, "value": "Limited" },
+      { "min": 6, "max": 6, "value": "Encircling" },
+      { "min": 7, "max": 7, "value": "Buried" },
+      { "min": 8, "max": 8, "value": "Isolated" },
+      { "min": 9, "max": 9, "value": "Stranded" },
+      { "min": 10, "max": 10, "value": "Approaching" }
+    ]
+  },
+  {
+    "name": "discovery-island-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Shore" },
+      { "min": 2, "max": 2, "value": "Boat" },
+      { "min": 3, "max": 3, "value": "Fire" },
+      { "min": 4, "max": 4, "value": "Natives" },
+      { "min": 5, "max": 5, "value": "Supplies" },
+      { "min": 6, "max": 6, "value": "Reef" },
+      { "min": 7, "max": 7, "value": "Relic" },
+      { "min": 8, "max": 8, "value": "Camp" },
+      { "min": 9, "max": 9, "value": "Survivor" },
+      { "min": 10, "max": 10, "value": "Storm" }
+    ]
+  },
+  {
+    "name": "discovery-desert-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Endure" },
+      { "min": 2, "max": 2, "value": "Search" },
+      { "min": 3, "max": 3, "value": "Follow" },
+      { "min": 4, "max": 4, "value": "Protect" },
+      { "min": 5, "max": 5, "value": "Investigate" },
+      { "min": 6, "max": 6, "value": "Negotiate" },
+      { "min": 7, "max": 7, "value": "Avoid" },
+      { "min": 8, "max": 8, "value": "Discover" },
+      { "min": 9, "max": 9, "value": "Chase" },
+      { "min": 10, "max": 10, "value": "Escape" }
+    ]
+  },
+  {
+    "name": "discovery-desert-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Scorching" },
+      { "min": 2, "max": 2, "value": "Hidden" },
+      { "min": 3, "max": 3, "value": "Shifting" },
+      { "min": 4, "max": 4, "value": "Cracked" },
+      { "min": 5, "max": 5, "value": "Buried" },
+      { "min": 6, "max": 6, "value": "Thirsty" },
+      { "min": 7, "max": 7, "value": "Blinding" },
+      { "min": 8, "max": 8, "value": "Mirrored" },
+      { "min": 9, "max": 9, "value": "Stolen" },
+      { "min": 10, "max": 10, "value": "Encroaching" }
+    ]
+  },
+  {
+    "name": "discovery-desert-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Heat" },
+      { "min": 2, "max": 2, "value": "Oasis" },
+      { "min": 3, "max": 3, "value": "Dunes" },
+      { "min": 4, "max": 4, "value": "Caravan" },
+      { "min": 5, "max": 5, "value": "Ruins" },
+      { "min": 6, "max": 6, "value": "Nomads" },
+      { "min": 7, "max": 7, "value": "Sandstorm" },
+      { "min": 8, "max": 8, "value": "Mirage" },
+      { "min": 9, "max": 9, "value": "Water" },
+      { "min": 10, "max": 10, "value": "Night Cold" }
+    ]
+  },
+  {
+    "name": "discovery-wastelands-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Scavenge" },
+      { "min": 2, "max": 2, "value": "Avoid" },
+      { "min": 3, "max": 3, "value": "Confront" },
+      { "min": 4, "max": 4, "value": "Investigate" },
+      { "min": 5, "max": 5, "value": "Secure" },
+      { "min": 6, "max": 6, "value": "Escort" },
+      { "min": 7, "max": 7, "value": "Endure" },
+      { "min": 8, "max": 8, "value": "Discover" },
+      { "min": 9, "max": 9, "value": "Defend" },
+      { "min": 10, "max": 10, "value": "Escape" }
+    ]
+  },
+  {
+    "name": "discovery-wastelands-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Twisted" },
+      { "min": 2, "max": 2, "value": "Irradiated" },
+      { "min": 3, "max": 3, "value": "Desperate" },
+      { "min": 4, "max": 4, "value": "Cratered" },
+      { "min": 5, "max": 5, "value": "Failing" },
+      { "min": 6, "max": 6, "value": "Injured" },
+      { "min": 7, "max": 7, "value": "Toxic" },
+      { "min": 8, "max": 8, "value": "Mutated" },
+      { "min": 9, "max": 9, "value": "Makeshift" },
+      { "min": 10, "max": 10, "value": "Collapsing" }
+    ]
+  },
+  {
+    "name": "discovery-wastelands-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Wreckage" },
+      { "min": 2, "max": 2, "value": "Zone" },
+      { "min": 3, "max": 3, "value": "Raiders" },
+      { "min": 4, "max": 4, "value": "Facility" },
+      { "min": 5, "max": 5, "value": "Generator" },
+      { "min": 6, "max": 6, "value": "Survivor" },
+      { "min": 7, "max": 7, "value": "Fallout" },
+      { "min": 8, "max": 8, "value": "Creature" },
+      { "min": 9, "max": 9, "value": "Stronghold" },
+      { "min": 10, "max": 10, "value": "Highway" }
+    ]
+  },
+  {
+    "name": "discovery-magiclands-verb",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Navigate" },
+      { "min": 2, "max": 2, "value": "Contain" },
+      { "min": 3, "max": 3, "value": "Negotiate" },
+      { "min": 4, "max": 4, "value": "Investigate" },
+      { "min": 5, "max": 5, "value": "Survive" },
+      { "min": 6, "max": 6, "value": "Discover" },
+      { "min": 7, "max": 7, "value": "Resist" },
+      { "min": 8, "max": 8, "value": "Repair" },
+      { "min": 9, "max": 9, "value": "Escape" },
+      { "min": 10, "max": 10, "value": "Confront" }
+    ]
+  },
+  {
+    "name": "discovery-magiclands-adjective",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Warped" },
+      { "min": 2, "max": 2, "value": "Unstable" },
+      { "min": 3, "max": 3, "value": "Alien" },
+      { "min": 4, "max": 4, "value": "Living" },
+      { "min": 5, "max": 5, "value": "Reality-bent" },
+      { "min": 6, "max": 6, "value": "Impossible" },
+      { "min": 7, "max": 7, "value": "Enchanting" },
+      { "min": 8, "max": 8, "value": "Fractured" },
+      { "min": 9, "max": 9, "value": "Recursive" },
+      { "min": 10, "max": 10, "value": "Ascendant" }
+    ]
+  },
+  {
+    "name": "discovery-magiclands-noun",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Terrain" },
+      { "min": 2, "max": 2, "value": "Spell" },
+      { "min": 3, "max": 3, "value": "Entity" },
+      { "min": 4, "max": 4, "value": "Structure" },
+      { "min": 5, "max": 5, "value": "Storm" },
+      { "min": 6, "max": 6, "value": "Artifact" },
+      { "min": 7, "max": 7, "value": "Influence" },
+      { "min": 8, "max": 8, "value": "Leyline" },
+      { "min": 9, "max": 9, "value": "Loop" },
+      { "min": 10, "max": 10, "value": "Guardian" }
+    ]
+  },
+  {
+    "name": "fantasy-districts",
+    "formula": "2d8",
+    "table": [
+      { "min": 2, "max": 2, "value": "Noble" },
+      { "min": 3, "max": 3, "value": "Market" },
+      { "min": 4, "max": 4, "value": "Residential" },
+      { "min": 5, "max": 5, "value": "Slums" },
+      { "min": 6, "max": 6, "value": "Garden" },
+      { "min": 7, "max": 7, "value": "Religious" },
+      { "min": 8, "max": 8, "value": "Trade" },
+      { "min": 9, "max": 9, "value": "Central" },
+      { "min": 10, "max": 10, "value": "Admin" },
+      { "min": 11, "max": 11, "value": "Scholar" },
+      { "min": 12, "max": 12, "value": "Entertainment" },
+      { "min": 13, "max": 13, "value": "Crafts" },
+      { "min": 14, "max": 14, "value": "Arcane" },
+      { "min": 15, "max": 15, "value": "Industrial" },
+      { "min": 16, "max": 16, "value": "{fantasy-districts}" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-noble",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Garden" },
+      { "min": 4, "max": 5, "value": "Religious" },
+      { "min": 6, "max": 6, "value": "Admin" },
+      { "min": 7, "max": 7, "value": "Noble" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Scholar" },
+      { "min": 11, "max": 12, "value": "Market" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-market",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Trade" },
+      { "min": 4, "max": 5, "value": "Crafts" },
+      { "min": 6, "max": 6, "value": "Central" },
+      { "min": 7, "max": 7, "value": "Market" },
+      { "min": 8, "max": 8, "value": "Residential" },
+      { "min": 9, "max": 10, "value": "Entertainment" },
+      { "min": 11, "max": 12, "value": "Slums" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-residential",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Garden" },
+      { "min": 4, "max": 5, "value": "Market" },
+      { "min": 6, "max": 6, "value": "Religious" },
+      { "min": 7, "max": 7, "value": "Residential" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Scholar" },
+      { "min": 11, "max": 12, "value": "Slums" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-slums",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Industrial" },
+      { "min": 4, "max": 5, "value": "Crafts" },
+      { "min": 6, "max": 6, "value": "Market" },
+      { "min": 7, "max": 7, "value": "Slums" },
+      { "min": 8, "max": 8, "value": "Residential" },
+      { "min": 9, "max": 10, "value": "Trade" },
+      { "min": 11, "max": 12, "value": "Entertainment" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-garden",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Noble" },
+      { "min": 4, "max": 5, "value": "Residential" },
+      { "min": 6, "max": 6, "value": "Religious" },
+      { "min": 7, "max": 7, "value": "Garden" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Scholar" },
+      { "min": 11, "max": 12, "value": "Admin" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-religious",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Garden" },
+      { "min": 4, "max": 5, "value": "Residential" },
+      { "min": 6, "max": 6, "value": "Scholar" },
+      { "min": 7, "max": 7, "value": "Religious" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Noble" },
+      { "min": 11, "max": 12, "value": "Slums" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-trade",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Industrial" },
+      { "min": 4, "max": 5, "value": "Crafts" },
+      { "min": 6, "max": 6, "value": "Market" },
+      { "min": 7, "max": 7, "value": "Trade" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Slums" },
+      { "min": 11, "max": 12, "value": "Entertainment" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-central",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Market" },
+      { "min": 4, "max": 5, "value": "Admin" },
+      { "min": 6, "max": 6, "value": "Religious" },
+      { "min": 7, "max": 7, "value": "Central" },
+      { "min": 8, "max": 8, "value": "Noble" },
+      { "min": 9, "max": 10, "value": "Trade" },
+      { "min": 11, "max": 12, "value": "Entertainment" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-admin",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Noble" },
+      { "min": 4, "max": 5, "value": "Central" },
+      { "min": 6, "max": 6, "value": "Scholar" },
+      { "min": 7, "max": 7, "value": "Admin" },
+      { "min": 8, "max": 8, "value": "Religious" },
+      { "min": 9, "max": 10, "value": "Market" },
+      { "min": 11, "max": 12, "value": "Industrial" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-scholar",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Garden" },
+      { "min": 4, "max": 5, "value": "Religious" },
+      { "min": 6, "max": 6, "value": "Admin" },
+      { "min": 7, "max": 7, "value": "Scholar" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Noble" },
+      { "min": 11, "max": 12, "value": "Arcane" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-entertainment",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Market" },
+      { "min": 4, "max": 5, "value": "Slums" },
+      { "min": 6, "max": 6, "value": "Central" },
+      { "min": 7, "max": 7, "value": "Entertainment" },
+      { "min": 8, "max": 8, "value": "Trade" },
+      { "min": 9, "max": 10, "value": "Residential" },
+      { "min": 11, "max": 12, "value": "Crafts" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-crafts",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Industrial" },
+      { "min": 4, "max": 5, "value": "Trade" },
+      { "min": 6, "max": 6, "value": "Market" },
+      { "min": 7, "max": 7, "value": "Crafts" },
+      { "min": 8, "max": 8, "value": "Slums" },
+      { "min": 9, "max": 10, "value": "Residential" },
+      { "min": 11, "max": 12, "value": "Arcane" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-arcane",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Scholar" },
+      { "min": 4, "max": 5, "value": "Noble" },
+      { "min": 6, "max": 6, "value": "Admin" },
+      { "min": 7, "max": 7, "value": "Arcane" },
+      { "min": 8, "max": 8, "value": "Central" },
+      { "min": 9, "max": 10, "value": "Crafts" },
+      { "min": 11, "max": 12, "value": "Industrial" }
+    ]
+  },
+  {
+    "name": "fantasy-adjacent-industrial",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Slums" },
+      { "min": 4, "max": 5, "value": "Trade" },
+      { "min": 6, "max": 6, "value": "Crafts" },
+      { "min": 7, "max": 7, "value": "Industrial" },
+      { "min": 8, "max": 8, "value": "Market" },
+      { "min": 9, "max": 10, "value": "Admin" },
+      { "min": 11, "max": 12, "value": "Arcane" }
+    ]
+  },
+  {
+    "name": "fantasy-discovery-verb",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Whisper" },
+      { "min": 2, "max": 2, "value": "Stumble" },
+      { "min": 3, "max": 3, "value": "Observe" },
+      { "min": 4, "max": 4, "value": "Hear" },
+      { "min": 5, "max": 5, "value": "Unearth" },
+      { "min": 6, "max": 6, "value": "Touch" },
+      { "min": 7, "max": 7, "value": "Discover" },
+      { "min": 8, "max": 8, "value": "Smell" },
+      { "min": 9, "max": 9, "value": "Catch" },
+      { "min": 10, "max": 10, "value": "Approach" },
+      { "min": 11, "max": 11, "value": "Follow" },
+      { "min": 12, "max": 12, "value": "Sense" },
+      { "min": 13, "max": 13, "value": "Notice" },
+      { "min": 14, "max": 14, "value": "Listen" },
+      { "min": 15, "max": 15, "value": "Encounter" },
+      { "min": 16, "max": 16, "value": "Trace" },
+      { "min": 17, "max": 17, "value": "Step Over" },
+      { "min": 18, "max": 18, "value": "Glimpse" },
+      { "min": 19, "max": 19, "value": "Feel" },
+      { "min": 20, "max": 20, "value": "Awaken" }
+    ]
+  },
+  {
+    "name": "fantasy-discovery-adjective",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cracked" },
+      { "min": 2, "max": 2, "value": "Silver" },
+      { "min": 3, "max": 3, "value": "Hollow" },
+      { "min": 4, "max": 4, "value": "Chiming" },
+      { "min": 5, "max": 5, "value": "Twisted" },
+      { "min": 6, "max": 6, "value": "Slick" },
+      { "min": 7, "max": 7, "value": "Looming" },
+      { "min": 8, "max": 8, "value": "Bitter" },
+      { "min": 9, "max": 9, "value": "Pale" },
+      { "min": 10, "max": 10, "value": "Broken" },
+      { "min": 11, "max": 11, "value": "Faint" },
+      { "min": 12, "max": 12, "value": "Burning" },
+      { "min": 13, "max": 13, "value": "Tangled" },
+      { "min": 14, "max": 14, "value": "Distant" },
+      { "min": 15, "max": 15, "value": "Withered" },
+      { "min": 16, "max": 16, "value": "Glowing" },
+      { "min": 17, "max": 17, "value": "Ancient" },
+      { "min": 18, "max": 18, "value": "Shifting" },
+      { "min": 19, "max": 19, "value": "Prickling" },
+      { "min": 20, "max": 20, "value": "Dormant" }
+    ]
+  },
+  {
+    "name": "fantasy-discovery-noun",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Idol" },
+      { "min": 2, "max": 2, "value": "Tracks" },
+      { "min": 3, "max": 3, "value": "Tree" },
+      { "min": 4, "max": 4, "value": "Wind" },
+      { "min": 5, "max": 5, "value": "Relic" },
+      { "min": 6, "max": 6, "value": "Stone" },
+      { "min": 7, "max": 7, "value": "Shadow" },
+      { "min": 8, "max": 8, "value": "Smoke" },
+      { "min": 9, "max": 9, "value": "Glimmer" },
+      { "min": 10, "max": 10, "value": "Archway" },
+      { "min": 11, "max": 11, "value": "Light" },
+      { "min": 12, "max": 12, "value": "Echo" },
+      { "min": 13, "max": 13, "value": "Roots" },
+      { "min": 14, "max": 14, "value": "Voice" },
+      { "min": 15, "max": 15, "value": "Traveler" },
+      { "min": 16, "max": 16, "value": "Markings" },
+      { "min": 17, "max": 17, "value": "Threshold" },
+      { "min": 18, "max": 18, "value": "Reflection" },
+      { "min": 19, "max": 19, "value": "Presence" },
+      { "min": 20, "max": 20, "value": "Spirit" }
+    ]
+  }
+]

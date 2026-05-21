@@ -1,0 +1,436 @@
+[
+  {
+    "name": "material-weapon",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "Iron" },
+      { "min": 2, "max": 2, "value": "Silver" },
+      { "min": 3, "max": 3, "value": "Steel" },
+      { "min": 4, "max": 4, "value": "Creature Parts" }
+    ]
+  },
+  {
+    "name": "material-armor",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "Iron" },
+      { "min": 2, "max": 2, "value": "Steel" },
+      { "min": 3, "max": 3, "value": "Leather" },
+      { "min": 4, "max": 4, "value": "Creature Parts" }
+    ]
+  },
+  {
+    "name": "damage-type",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Physical" },
+      { "min": 2, "max": 2, "value": "Psychic" },
+      { "min": 3, "max": 3, "value": "Elemental" },
+      { "min": 4, "max": 4, "value": "Necrotic" },
+      { "min": 5, "max": 5, "value": "Radiant" },
+      { "min": 6, "max": 6, "value": "Shadow" },
+      { "min": 7, "max": 7, "value": "Chaos" },
+      { "min": 8, "max": 8, "value": "Toxic" }
+    ]
+  },
+  {
+    "name": "item-type",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cloak" },
+      { "min": 2, "max": 2, "value": "Helmet/Hat" },
+      { "min": 3, "max": 3, "value": "Guantlet/Gloves" },
+      { "min": 4, "max": 4, "value": "Boots/Shoes" },
+      { "min": 5, "max": 5, "value": "Ring" },
+      { "min": 6, "max": 6, "value": "Necklace" },
+      { "min": 7, "max": 7, "value": "Belt" },
+      { "min": 8, "max": 8, "value": "Container" },
+      { "min": 9, "max": 9, "value": "Kit/Tool" },
+      { "min": 10, "max": 10, "value": "Trinket" }
+    ]
+  },
+  {
+    "name": "consumable-type",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "Food/Meal/Ration" },
+      { "min": 2, "max": 2, "value": "Potion" },
+      { "min": 3, "max": 3, "value": "Ammunition" },
+      { "min": 4, "max": 4, "value": "Scroll" }
+    ]
+  },
+  {
+    "name": "trap-type",
+    "formula": "1d12",
+    "table": [
+      { "min": 1, "max": 1, "value": "Pitfall" },
+      { "min": 2, "max": 2, "value": "Snare" },
+      { "min": 3, "max": 3, "value": "Pressure Plate" },
+      { "min": 4, "max": 4, "value": "Tripwire" },
+      { "min": 5, "max": 5, "value": "Blade Mechanism" },
+      { "min": 6, "max": 6, "value": "Gas Vent" },
+      { "min": 7, "max": 7, "value": "Rune Glyph" },
+      { "min": 8, "max": 8, "value": "Illusion Ward" },
+      { "min": 9, "max": 9, "value": "Explosive Charge" },
+      { "min": 10, "max": 10, "value": "Mimic Trap" },
+      { "min": 11, "max": 11, "value": "Collapsing Zone" },
+      { "min": 12, "max": 12, "value": "Magnetic Lure" }
+    ]
+  },
+  {
+    "name": "trigger-type",
+    "formula": "1d12",
+    "table": [
+      { "min": 1, "max": 1, "value": "when stepped on" },
+      { "min": 2, "max": 2, "value": "when touched" },
+      { "min": 3, "max": 3, "value": "when opened" },
+      { "min": 4, "max": 4, "value": "when a weight is removed" },
+      { "min": 5, "max": 5, "value": "when crossed or passed through" },
+      { "min": 6, "max": 6, "value": "when a specific word is spoken" },
+      { "min": 7, "max": 7, "value": "when a light source is introduced" },
+      { "min": 8, "max": 8, "value": "when a timer expires" },
+      { "min": 9, "max": 9, "value": "when a nearby object is moved" },
+      { "min": 10, "max": 10, "value": "when a magical aura is detected" },
+      { "min": 11, "max": 11, "value": "when an item is picked up" },
+      { "min": 12, "max": 12, "value": "when a line of sight is broken" }
+    ]
+  },
+  {
+    "name": "resource-rarity",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "Common" },
+      { "min": 2, "max": 2, "value": "Uncommon" },
+      { "min": 3, "max": 3, "value": "Rare" },
+      { "min": 4, "max": 4, "value": "Legendary" }
+    ]
+  },
+  {
+    "name": "resource-type",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Ore" },
+      { "min": 2, "max": 2, "value": "Wood" },
+      { "min": 3, "max": 3, "value": "Fiber" },
+      { "min": 4, "max": 4, "value": "Liquid" },
+      { "min": 5, "max": 5, "value": "Plants" },
+      { "min": 6, "max": 6, "value": "Essence" },
+      { "min": 7, "max": 8, "value": "Creature Parts" }
+    ]
+  },
+  {
+    "name": "armor-type",
+    "formula": "1d3",
+    "table": [
+      { "min": 1, "max": 1, "value": "Light Armor" },
+      { "min": 2, "max": 2, "value": "Medium Armor" },
+      { "min": 3, "max": 3, "value": "Heavy Armor" }
+    ]
+  },
+  {
+    "name": "armor-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Reinforced" },
+      { "min": 2, "max": 2, "value": "Enchanted" },
+      { "min": 3, "max": 3, "value": "Weathered" },
+      { "min": 4, "max": 4, "value": "Gleaming" },
+      { "min": 5, "max": 5, "value": "Barbed" },
+      { "min": 6, "max": 6, "value": "Rusty" },
+      { "min": 7, "max": 7, "value": "Polished" },
+      { "min": 8, "max": 8, "value": "Scarred" },
+      { "min": 9, "max": 9, "value": "Ornate" },
+      { "min": 10, "max": 10, "value": "Pristine" },
+      { "min": 11, "max": 11, "value": "Battered" },
+      { "min": 12, "max": 12, "value": "Gilded" },
+      { "min": 13, "max": 13, "value": "Tarnished" },
+      { "min": 14, "max": 14, "value": "Radiant" },
+      { "min": 15, "max": 15, "value": "Shadowed" },
+      { "min": 16, "max": 16, "value": "Ancient" },
+      { "min": 17, "max": 17, "value": "Modern" },
+      { "min": 18, "max": 18, "value": "Flexible" },
+      { "min": 19, "max": 19, "value": "Rigid" },
+      { "min": 20, "max": 20, "value": "Mastercrafted" }
+    ]
+  },
+  {
+    "name": "armor-special",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "grants resistance to fire" },
+      { "min": 2, "max": 2, "value": "increases movement speed" },
+      { "min": 3, "max": 3, "value": "glows in moonlight" },
+      { "min": 4, "max": 4, "value": "whispers ancient secrets" },
+      { "min": 5, "max": 5, "value": "reduces stealth penalties" },
+      { "min": 6, "max": 6, "value": "absorbs magical energy" },
+      { "min": 7, "max": 7, "value": "changes color with the wearer's mood" },
+      { "min": 8, "max": 8, "value": "grants resistance to cold" },
+      { "min": 9, "max": 9, "value": "repels insects and vermin" },
+      { "min": 10, "max": 10, "value": "enhances the wearer's voice" },
+      { "min": 11, "max": 11, "value": "grants resistance to psychic damage" },
+      { "min": 12, "max": 12, "value": "never needs cleaning" },
+      { "min": 13, "max": 13, "value": "stores small items in hidden compartments" },
+      { "min": 14, "max": 14, "value": "grants resistance to poison" },
+      { "min": 15, "max": 15, "value": "emits a faint musical hum" },
+      { "min": 16, "max": 16, "value": "allows the wearer to breathe underwater" },
+      { "min": 17, "max": 17, "value": "grants resistance to lightning" },
+      { "min": 18, "max": 18, "value": "shows the wearer's true form to others" },
+      { "min": 19, "max": 19, "value": "grants resistance to necrotic damage" },
+      { "min": 20, "max": 20, "value": "never rusts or tarnishes" }
+    ]
+  },
+  {
+    "name": "weapon-type",
+    "formula": "1d14",
+    "table": [
+      { "min": 1, "max": 1, "value": "Sword" },
+      { "min": 2, "max": 2, "value": "Axe" },
+      { "min": 3, "max": 3, "value": "Mace" },
+      { "min": 4, "max": 4, "value": "Bow" },
+      { "min": 5, "max": 5, "value": "Crossbow" },
+      { "min": 6, "max": 6, "value": "Staff" },
+      { "min": 7, "max": 7, "value": "Wand" },
+      { "min": 8, "max": 8, "value": "Dagger" },
+      { "min": 9, "max": 9, "value": "Spear" },
+      { "min": 10, "max": 10, "value": "Halberd" },
+      { "min": 11, "max": 11, "value": "Flail" },
+      { "min": 12, "max": 12, "value": "Morningstar" },
+      { "min": 13, "max": 13, "value": "Warhammer" },
+      { "min": 14, "max": 14, "value": "Greatsword" }
+    ]
+  },
+  {
+    "name": "weapon-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Razor-sharp" },
+      { "min": 2, "max": 2, "value": "Heavy" },
+      { "min": 3, "max": 3, "value": "Lightweight" },
+      { "min": 4, "max": 4, "value": "Serrated" },
+      { "min": 5, "max": 5, "value": "Polished" },
+      { "min": 6, "max": 6, "value": "Rusty" },
+      { "min": 7, "max": 7, "value": "Gleaming" },
+      { "min": 8, "max": 8, "value": "Notched" },
+      { "min": 9, "max": 9, "value": "Ornate" },
+      { "min": 10, "max": 10, "value": "Simple" },
+      { "min": 11, "max": 11, "value": "Enchanted" },
+      { "min": 12, "max": 12, "value": "Cursed" },
+      { "min": 13, "max": 13, "value": "Ancient" },
+      { "min": 14, "max": 14, "value": "Modern" },
+      { "min": 15, "max": 15, "value": "Bloodstained" },
+      { "min": 16, "max": 16, "value": "Pristine" },
+      { "min": 17, "max": 17, "value": "Twisted" },
+      { "min": 18, "max": 18, "value": "Straight" },
+      { "min": 19, "max": 19, "value": "Mastercrafted" },
+      { "min": 20, "max": 20, "value": "Crude" }
+    ]
+  },
+  {
+    "name": "weapon-special",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "ignites on impact" },
+      { "min": 2, "max": 2, "value": "never needs sharpening" },
+      { "min": 3, "max": 3, "value": "whispers battle strategies" },
+      { "min": 4, "max": 4, "value": "glows when enemies are near" },
+      { "min": 5, "max": 5, "value": "returns when thrown" },
+      { "min": 6, "max": 6, "value": "drains life from victims" },
+      { "min": 7, "max": 7, "value": "never breaks or dulls" },
+      { "min": 8, "max": 8, "value": "sings when drawn" },
+      { "min": 9, "max": 9, "value": "absorbs the wielder's emotions" },
+      { "min": 10, "max": 10, "value": "leaves no trace of blood" },
+      { "min": 11, "max": 11, "value": "grants the wielder enhanced reflexes" },
+      { "min": 12, "max": 12, "value": "changes form based on the wielder's needs" },
+      { "min": 13, "max": 13, "value": "stores the memories of those it kills" },
+      { "min": 14, "max": 14, "value": "never misses its intended target" },
+      { "min": 15, "max": 15, "value": "grows stronger with each victory" },
+      { "min": 16, "max": 16, "value": "can cut through any material" },
+      { "min": 17, "max": 17, "value": "freezes enemies on contact" },
+      { "min": 18, "max": 18, "value": "shocks enemies with lightning" },
+      { "min": 19, "max": 19, "value": "becomes invisible when not in use" },
+      { "min": 20, "max": 20, "value": "grants the wielder visions of past battles" }
+    ]
+  },
+  {
+    "name": "item-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Elegant" },
+      { "min": 2, "max": 2, "value": "Worn" },
+      { "min": 3, "max": 3, "value": "Pristine" },
+      { "min": 4, "max": 4, "value": "Ornate" },
+      { "min": 5, "max": 5, "value": "Simple" },
+      { "min": 6, "max": 6, "value": "Enchanted" },
+      { "min": 7, "max": 7, "value": "Ancient" },
+      { "min": 8, "max": 8, "value": "Modern" },
+      { "min": 9, "max": 9, "value": "Gilded" },
+      { "min": 10, "max": 10, "value": "Tarnished" },
+      { "min": 11, "max": 11, "value": "Gleaming" },
+      { "min": 12, "max": 12, "value": "Dull" },
+      { "min": 13, "max": 13, "value": "Radiant" },
+      { "min": 14, "max": 14, "value": "Shadowed" },
+      { "min": 15, "max": 15, "value": "Intricate" },
+      { "min": 16, "max": 16, "value": "Crude" },
+      { "min": 17, "max": 17, "value": "Mastercrafted" },
+      { "min": 18, "max": 18, "value": "Mystical" },
+      { "min": 19, "max": 19, "value": "Practical" },
+      { "min": 20, "max": 20, "value": "Exotic" }
+    ]
+  },
+  {
+    "name": "item-special",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "grants the wearer enhanced vision" },
+      { "min": 2, "max": 2, "value": "stores items in an extradimensional space" },
+      { "min": 3, "max": 3, "value": "allows the wearer to understand any language" },
+      { "min": 4, "max": 4, "value": "never gets dirty or damaged" },
+      { "min": 5, "max": 5, "value": "changes appearance based on the wearer's mood" },
+      { "min": 6, "max": 6, "value": "grants the wearer the ability to see in darkness" },
+      { "min": 7, "max": 7, "value": "whispers secrets to the wearer" },
+      { "min": 8, "max": 8, "value": "protects the wearer from mind control" },
+      { "min": 9, "max": 9, "value": "allows the wearer to walk on any surface" },
+      { "min": 10, "max": 10, "value": "grants the wearer enhanced strength" },
+      { "min": 11, "max": 11, "value": "makes the wearer invisible to certain creatures" },
+      { "min": 12, "max": 12, "value": "stores memories of important events" },
+      { "min": 13, "max": 13, "value": "allows the wearer to communicate with animals" },
+      { "min": 14, "max": 14, "value": "grants the wearer resistance to disease" },
+      { "min": 15, "max": 15, "value": "never needs maintenance or repair" },
+      { "min": 16, "max": 16, "value": "adapts to fit any size or shape" },
+      { "min": 17, "max": 17, "value": "grants the wearer the ability to levitate" },
+      { "min": 18, "max": 18, "value": "protects the wearer from scrying" },
+      { "min": 19, "max": 19, "value": "allows the wearer to breathe in any environment" },
+      { "min": 20, "max": 20, "value": "grants the wearer enhanced luck" }
+    ]
+  },
+  {
+    "name": "trap-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Hidden" },
+      { "min": 2, "max": 2, "value": "Obvious" },
+      { "min": 3, "max": 3, "value": "Elaborate" },
+      { "min": 4, "max": 4, "value": "Simple" },
+      { "min": 5, "max": 5, "value": "Ancient" },
+      { "min": 6, "max": 6, "value": "Modern" },
+      { "min": 7, "max": 7, "value": "Magical" },
+      { "min": 8, "max": 8, "value": "Mechanical" },
+      { "min": 9, "max": 9, "value": "Runic" },
+      { "min": 10, "max": 10, "value": "Crude" },
+      { "min": 11, "max": 11, "value": "Sophisticated" },
+      { "min": 12, "max": 12, "value": "Deadly" },
+      { "min": 13, "max": 13, "value": "Non-lethal" },
+      { "min": 14, "max": 14, "value": "Disguised" },
+      { "min": 15, "max": 15, "value": "Visible" },
+      { "min": 16, "max": 16, "value": "Enchanted" },
+      { "min": 17, "max": 17, "value": "Rusty" },
+      { "min": 18, "max": 18, "value": "Pristine" },
+      { "min": 19, "max": 19, "value": "Improvised" },
+      { "min": 20, "max": 20, "value": "Mastercrafted" }
+    ]
+  },
+  {
+    "name": "trap-effect",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "deals physical damage" },
+      { "min": 2, "max": 2, "value": "releases a cloud of poison gas" },
+      { "min": 3, "max": 3, "value": "drops the victim into a pit" },
+      { "min": 4, "max": 4, "value": "fires a volley of arrows" },
+      { "min": 5, "max": 5, "value": "casts a debilitating spell" },
+      { "min": 6, "max": 6, "value": "restrains the victim" },
+      { "min": 7, "max": 7, "value": "teleports the victim to another location" },
+      { "min": 8, "max": 8, "value": "summons hostile creatures" },
+      { "min": 9, "max": 9, "value": "drains the victim's life force" },
+      { "min": 10, "max": 10, "value": "creates an illusion of danger" },
+      { "min": 11, "max": 11, "value": "causes the area to collapse" },
+      { "min": 12, "max": 12, "value": "releases a swarm of insects" },
+      { "min": 13, "max": 13, "value": "curses the victim" },
+      { "min": 14, "max": 14, "value": "seals the victim in a magical prison" },
+      { "min": 15, "max": 15, "value": "transforms the victim into another creature" },
+      { "min": 16, "max": 16, "value": "drains the victim's magical energy" },
+      { "min": 17, "max": 17, "value": "sends the victim to another plane" },
+      { "min": 18, "max": 18, "value": "ages the victim rapidly" },
+      { "min": 19, "max": 19, "value": "swaps the victim's mind with another" },
+      { "min": 20, "max": 20, "value": "erases the victim's memories" }
+    ]
+  },
+  {
+    "name": "consumable-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "Sparkling" },
+      { "min": 2, "max": 2, "value": "Cloudy" },
+      { "min": 3, "max": 3, "value": "Clear" },
+      { "min": 4, "max": 4, "value": "Thick" },
+      { "min": 5, "max": 5, "value": "Fragrant" },
+      { "min": 6, "max": 6, "value": "Foul-smelling" },
+      { "min": 7, "max": 7, "value": "Glowing" },
+      { "min": 8, "max": 8, "value": "Dull" },
+      { "min": 9, "max": 9, "value": "Ancient" },
+      { "min": 10, "max": 10, "value": "Fresh" },
+      { "min": 11, "max": 11, "value": "Preserved" },
+      { "min": 12, "max": 12, "value": "Rotten" },
+      { "min": 13, "max": 13, "value": "Enchanted" },
+      { "min": 14, "max": 14, "value": "Mundane" },
+      { "min": 15, "max": 15, "value": "Exotic" },
+      { "min": 16, "max": 16, "value": "Common" },
+      { "min": 17, "max": 17, "value": "Rare" },
+      { "min": 18, "max": 18, "value": "Mystical" },
+      { "min": 19, "max": 19, "value": "Tainted" },
+      { "min": 20, "max": 20, "value": "Pure" }
+    ]
+  },
+  {
+    "name": "consumable-effect",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "restores health" },
+      { "min": 2, "max": 2, "value": "grants temporary strength" },
+      { "min": 3, "max": 3, "value": "enhances magical abilities" },
+      { "min": 4, "max": 4, "value": "cures diseases" },
+      { "min": 5, "max": 5, "value": "removes curses" },
+      { "min": 6, "max": 6, "value": "grants invisibility" },
+      { "min": 7, "max": 7, "value": "enhances speed" },
+      { "min": 8, "max": 8, "value": "grants flight" },
+      { "min": 9, "max": 9, "value": "restores magical energy" },
+      { "min": 10, "max": 10, "value": "grants resistance to damage" },
+      { "min": 11, "max": 11, "value": "allows breathing underwater" },
+      { "min": 12, "max": 12, "value": "grants night vision" },
+      { "min": 13, "max": 13, "value": "enhances senses" },
+      { "min": 14, "max": 14, "value": "causes temporary transformation" },
+      { "min": 15, "max": 15, "value": "grants telepathy" },
+      { "min": 16, "max": 16, "value": "removes poison" },
+      { "min": 17, "max": 17, "value": "grants luck" },
+      { "min": 18, "max": 18, "value": "enhances memory" },
+      { "min": 19, "max": 19, "value": "grants temporary invulnerability" },
+      { "min": 20, "max": 20, "value": "restores youth" }
+    ]
+  },
+  {
+    "name": "consumable-special",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "but has an unexpected side effect" },
+      { "min": 2, "max": 2, "value": "and leaves a pleasant aftertaste" },
+      { "min": 3, "max": 3, "value": "but only works at night" },
+      { "min": 4, "max": 4, "value": "and grants a permanent minor ability" },
+      { "min": 5, "max": 5, "value": "but causes temporary amnesia" },
+      { "min": 6, "max": 6, "value": "and tastes like the consumer's favorite food" },
+      { "min": 7, "max": 7, "value": "but requires a specific condition to activate" },
+      { "min": 8, "max": 8, "value": "and glows when consumed" },
+      { "min": 9, "max": 9, "value": "but only works once per person" },
+      { "min": 10, "max": 10, "value": "and changes color based on the consumer" },
+      { "min": 11, "max": 11, "value": "but has a delayed effect" },
+      { "min": 12, "max": 12, "value": "and can be shared with others" },
+      { "min": 13, "max": 13, "value": "but causes vivid hallucinations" },
+      { "min": 14, "max": 14, "value": "and grants the ability to see the future briefly" },
+      { "min": 15, "max": 15, "value": "but only works under specific circumstances" },
+      { "min": 16, "max": 16, "value": "and leaves behind a useful residue" },
+      { "min": 17, "max": 17, "value": "but requires a sacrifice to activate" },
+      { "min": 18, "max": 18, "value": "and grants a vision of the past" },
+      { "min": 19, "max": 19, "value": "but causes temporary personality changes" },
+      { "min": 20, "max": 20, "value": "and can be used multiple times if stored properly" }
+    ]
+  }
+]

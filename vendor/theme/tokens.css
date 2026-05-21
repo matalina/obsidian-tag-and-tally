@@ -1,0 +1,158 @@
+/**
+ * Tag and Tally theme tokens only.
+ * Load after Open Props (e.g. @import "open-props/style" or CDN).
+ * Used by docs and any static build that loads Open Props separately.
+ */
+/* ============================================
+   Shared tokens (dark default)
+   ============================================ */
+
+:root {
+  color-scheme: dark;
+
+  /* shared-ui / app */
+  --background-primary: var(--surface-1, #1a1a1a);
+  --background-secondary: var(--surface-2, #242424);
+  --background-modifier-hover: var(--surface-3, #2e2e2e);
+  --background-modifier-border: var(--gray-6, #444);
+  --background-modifier-error: color-mix(in oklch, var(--red-6) 15%, var(--surface-1));
+  --text-normal: var(--gray-1, #e0e0e0);
+  --text-muted: var(--gray-5, #888);
+  --text-error: var(--red-4, #f66);
+  --interactive-accent: var(--blue-5, #6b9fff);
+  --interactive-accent-hover: var(--blue-4, #85b1ff);
+  --text-on-accent: #fff;
+  --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  --result-box-bg: var(--surface-2, #2a2a2a);
+  --result-box-border: var(--gray-6, #444);
+
+  /* docs / obsidian-theme naming */
+  --bg-color: var(--surface-1, #1a1a1a);
+  --bg-dot-color: var(--gray-8, #2d2d2d);
+  --text-color: var(--gray-1, #e9ecef);
+  --text-muted: var(--gray-4, #adb5bd);
+  --border-color: var(--gray-6, #495057);
+  --navbar-bg: var(--gray-9, #212529);
+  --sidebar-bg: var(--surface-2, #1e1e1e);
+  --footer-bg: var(--surface-2, #1e1e1e);
+  --accent-color: var(--blue-5, #0d6efd);
+  --bold-color: var(--red-4, #ef4444);
+  --italic-color: var(--orange-4, #f59e0b);
+}
+
+.theme-light {
+  --background-primary: var(--surface-1, #ffffff);
+  --background-secondary: var(--surface-2, #f8f9fa);
+  --background-modifier-hover: var(--gray-2, #e8e8e8);
+  --background-modifier-border: var(--gray-5, #dee2e6);
+  --text-normal: var(--gray-8, #212529);
+  --text-muted: var(--gray-6, #6c757d);
+  --interactive-accent: var(--blue-6, #0d6efd);
+  --interactive-accent-hover: var(--blue-5, #0d6efd);
+
+  --bg-color: #ffffff;
+  --bg-dot-color: var(--gray-3, #e5e7eb);
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --navbar-bg: #ffffff;
+  --sidebar-bg: #f8f9fa;
+  --footer-bg: #f8f9fa;
+  --accent-color: #0d6efd;
+  --bold-color: #dc2626;
+  --italic-color: #d97706;
+  --result-box-bg: #f5f5f5;
+  --result-box-border: #e5e5e5;
+}
+
+[data-bs-theme="light"] {
+  color-scheme: light;
+  --background-primary: var(--surface-1, #ffffff);
+  --background-secondary: var(--surface-2, #f8f9fa);
+  --background-modifier-hover: var(--gray-2, #e8e8e8);
+  --background-modifier-border: var(--gray-5, #dee2e6);
+  --text-normal: var(--gray-8, #212529);
+  --text-muted: var(--gray-6, #6c757d);
+  --interactive-accent: var(--blue-6, #0d6efd);
+  --interactive-accent-hover: var(--blue-5, #0d6efd);
+
+  --bg-color: #ffffff;
+  --bg-dot-color: var(--gray-3, #e5e7eb);
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --navbar-bg: #ffffff;
+  --sidebar-bg: #f8f9fa;
+  --footer-bg: #f8f9fa;
+  --accent-color: #0d6efd;
+  --bold-color: #dc2626;
+  --italic-color: #d97706;
+  --result-box-bg: #f5f5f5;
+  --result-box-border: #e5e5e5;
+}
+
+.theme-dark {
+  --background-primary: var(--surface-1, #1a1a1a);
+  --background-secondary: var(--surface-2, #1e1e1e);
+  --background-modifier-hover: var(--surface-3, #2e2e2e);
+  --background-modifier-border: var(--gray-6, #495057);
+  --text-normal: var(--gray-1, #e9ecef);
+  --text-muted: var(--gray-4, #adb5bd);
+  --interactive-accent: var(--blue-5, #0d6efd);
+  --interactive-accent-hover: var(--blue-4, #0d6efd);
+
+  --bg-color: #1a1a1a;
+  --bg-dot-color: #2d2d2d;
+  --text-color: #e9ecef;
+  --text-muted: #adb5bd;
+  --border-color: #495057;
+  --navbar-bg: #000000;
+  --sidebar-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
+  --accent-color: #0d6efd;
+  --bold-color: #ef4444;
+  --italic-color: #f59e0b;
+  --result-box-bg: var(--surface-2, #2a2a2a);
+  --result-box-border: var(--gray-6, #444);
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+  --background-primary: var(--surface-1, #1a1a1a);
+  --background-secondary: var(--surface-2, #1e1e1e);
+  --background-modifier-border: var(--gray-6, #495057);
+  --text-normal: var(--gray-1, #e9ecef);
+  --text-muted: var(--gray-4, #adb5bd);
+
+  --bg-color: #1a1a1a;
+  --bg-dot-color: #2d2d2d;
+  --text-color: #e9ecef;
+  --border-color: #495057;
+  --navbar-bg: #000000;
+  --sidebar-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
+  --result-box-bg: var(--surface-2, #2a2a2a);
+  --result-box-border: var(--gray-6, #444);
+}
+
+/* Only use system preference when user has not set a theme (no data-bs-theme on root) */
+@media (prefers-color-scheme: light) {
+  :root:not([data-bs-theme]) {
+    --background-primary: var(--surface-1, #f5f5f5);
+    --background-secondary: #fff;
+    --background-modifier-hover: var(--gray-2, #e8e8e8);
+    --background-modifier-border: var(--gray-5, #ccc);
+    --text-normal: var(--gray-8, #333);
+    --text-muted: var(--gray-6, #666);
+
+    --bg-color: #ffffff;
+    --bg-dot-color: var(--gray-3, #e5e7eb);
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --navbar-bg: #ffffff;
+    --sidebar-bg: #f8f9fa;
+    --footer-bg: #f8f9fa;
+    --result-box-bg: #f5f5f5;
+    --result-box-border: #e5e5e5;
+  }
+}

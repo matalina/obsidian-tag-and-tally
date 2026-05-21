@@ -1,0 +1,441 @@
+[
+  {
+    "name": "resolution-types",
+    "types": [
+      {
+        "id": "oracle",
+        "label": "Oracle",
+        "description": "For yes/no questions with likelihood modifiers"
+      },
+      {
+        "id": "task",
+        "label": "Task",
+        "description": "For general task resolution"
+      },
+      {
+        "id": "combat opening",
+        "label": "Combat: Opening",
+        "description": "Phase 1 — who has advantage; outcome affects your Tactical Maneuver"
+      },
+      {
+        "id": "combat maneuver",
+        "label": "Combat: Tactical Maneuver",
+        "description": "Phase 2 — set up the scene; outcome affects Attack and Counter rolls"
+      },
+      {
+        "id": "combat strike",
+        "label": "Combat: Attack",
+        "description": "Phase 3 — attempt your plan; outcome affects Resolution"
+      },
+      {
+        "id": "combat counter",
+        "label": "Combat: Counter",
+        "description": "Phase 4 — creature counters; you roll defense; outcome affects Resolution"
+      },
+      {
+        "id": "combat outcome",
+        "label": "Combat: Resolution",
+        "description": "Phase 5 — final outcome and wound"
+      },
+      {
+        "id": "spellcasting",
+        "label": "Spellcasting",
+        "description": "For spellcasting attempts"
+      },
+      {
+        "id": "harvesting",
+        "label": "Harvesting",
+        "description": "For harvesting resources"
+      },
+      {
+        "id": "crafting",
+        "label": "Crafting",
+        "description": "For crafting items"
+      },
+      {
+        "id": "augmenting",
+        "label": "Augmenting",
+        "description": "For augmenting items"
+      },
+      {
+        "id": "salvaging",
+        "label": "Salvaging",
+        "description": "For salvaging materials"
+      },
+      {
+        "id": "you approach npc",
+        "label": "You Approach NPC",
+        "description": "For interactions when you approach NPC"
+      },
+      {
+        "id": "npc approaches you",
+        "label": "NPC Approaches You",
+        "description": "For interactions when an NPC approaches you"
+      },
+      {
+        "id": "debt collection",
+        "label": "Debt Collection",
+        "description": "For collecting debts"
+      },
+      {
+        "id": "navigation",
+        "label": "Navigation",
+        "description": "For navigation checks"
+      },
+      {
+        "id": "secrets",
+        "label": "Secrets",
+        "description": "For discovering secrets. Uses base DC 15 (level 5) with likelihood modifier, like Oracle and Insights."
+      },
+      {
+        "id": "tracking",
+        "label": "Tracking",
+        "description": "For tracking targets, creatures, or people"
+      },
+      {
+        "id": "quest",
+        "label": "Quest",
+        "description": "For quest resolution rolls"
+      },
+      {
+        "id": "insights",
+        "label": "Insights",
+        "description": "For discovering insights (Subject/Modifier). Always uses level 5 (DC 15)."
+      },
+      {
+        "id": "yes no",
+        "label": "Yes/No",
+        "description": "Roll 1d6 — even = Yes, odd = No. No DC, level, or likelihood."
+      }
+    ]
+  },
+  {
+    "name": "resolution-details",
+    "details": {
+      "combat opening": {
+        "Fail, and": "Hindered by 2",
+        "Fail, but": "Hindered by 1, but the enemy is surprised",
+        "Success, but": "Ease by 1, but take a strain",
+        "Success": "Ease by 1",
+        "Success, and": "Ease by 2"
+      },
+      "combat maneuver": {
+        "Fail, and": "Your actions failed, and you are hindered by 1",
+        "Fail, but": "Your actions failed, but nothing bad happens",
+        "Success, but": "Your actions succeeded, but you are hindered by 1",
+        "Success": "Your actions succeed and the tags are applied universally",
+        "Success, and": "Your actions succeed and your next actions are eased by 1"
+      },
+      "combat strike": {
+        "Fail, and": "Disaster strikes.\nHinder 2 steps",
+        "Fail, but": "Missed, but kept guard.\nNo Modifier",
+        "Success, but": "Hit, but left an opening.\nHinder 1 step",
+        "Success": "Clean strike.\nEase 1 step",
+        "Success, and": "Devastating blow.\nEase 2 steps"
+      },
+      "combat counter": {
+        "Fail, and": "Caught off guard, defenses shattered.\nHinder 2 steps",
+        "Fail, but": "Forced to retreat, but kept your shield up.\nNo Modifier",
+        "Success, but": "Blocked the blow, but the impact was jarring.\nHinder 1 step",
+        "Success": "Perfect parry or dodge.\nEase 1 step",
+        "Success, and": "Counter-parry creates a massive opening.\nEase 2 steps"
+      },
+      "combat outcome": {
+        "Fail, and": "Crushing Defeat.\nLasting Scar",
+        "Fail, but": "Driven back/Escaped.\nDebilitating Injury",
+        "Success, but": "Messy Victory.\nLingering Trauma",
+        "Success": "Clear Victory.\nStrain",
+        "Success, and": "Flawless dominance.\nUnscathed"
+      },
+      "spellcasting": {
+        "Fail, and": "Fail, and Roll on the Mishap table",
+        "Fail, but": "The spell fails, but nothing backfires or goes wrong",
+        "Success, but": "Success, but it backfires and hinders all rolls until the end of your next turn",
+        "Success": "The spell goes off exactly as you expected",
+        "Success, and": "Successfully cast the spell and it eases the next roll by 1"
+      },
+      "you approach npc": {
+        "Fail, and": "The NPC is insulted. Decrease permanent Disposition 1 step.",
+        "Fail, but": "You don't get what you want, but you learn why (gain an Insight).",
+        "Success, but": "You succeed, but the NPC's Attitude drops 1 step for the next interaction.",
+        "Success": "You achieve your intent.",
+        "Success, and": "You succeed and leave a lasting impression. Increase permanent Disposition 1 step."
+      },
+      "npc approaches you": {
+        "Fail, and": "Caught Off Guard: You lose all leverage immediately.",
+        "Fail, but": "Damage Control: You are on the defensive, but you spot a weakness or a hidden detail—gain an Insight.",
+        "Success, but": "Tense Standoff: You hold your ground, but the effort is draining. Attitude drops 1 step as they grow frustrated by your resilience.",
+        "Success": "Poise: You handle the approach perfectly.",
+        "Success, and": "Total Control: You flip the script. Permanent Disposition increases 1 step."
+      },
+      "debt collection": {
+        "Fail, and": "Collectors come knocking and they come looking for blood (Combat encounter)",
+        "Fail, but": "Collectors come knocking but are understanding",
+        "Success, but": "Collectors offer an alternative payment method -- do this for me, and I'll let you off (Negotiations)",
+        "Success": "--",
+        "Success, and": "Collectors are feeling generous. Instead of hindered by two wealth check, hinder your check at the end of the session by 1 to see if you clear your debt."
+      },
+      "harvesting": {
+        "Fail, and": "You failed to harvest the item and destroyed the resource",
+        "Fail, but": "You failed to harvest the item but the node is intact",
+        "Success, but": "Successfully harvested the item but it made harvesting more difficult, your next harvest check is hindered by 1",
+        "Success": "Successfully harvested the item",
+        "Success, and": "Successfully harvested the item and your next harvest check is eased by 1"
+      },
+      "crafting": {
+        "Fail, and": "You failed to craft the item and you lose the materials",
+        "Fail, but": "You failed to craft the item but you didn't lose any materials in the process",
+        "Success, but": "Successfully crafted the item but it made crafting more difficult, your next craft check is hindered by 1",
+        "Success": "Successfully crafted the item",
+        "Success, and": "Successfully crafted the item and your next craft check is eased by 1"
+      },
+      "augmenting": {
+        "Fail, and": "You failed to augment the item and you lose the raw material.",
+        "Fail, but": "You failed to augment the item but you didn't lose any materials in the process",
+        "Success, but": "Successfully augmented the item but it made augmenting more difficult, your next augment check is hindered by 1",
+        "Success": "Successfully augmented the item",
+        "Success, and": "Successfully augmented the item and your next augment check is eased by 1"
+      },
+      "salvaging": {
+        "Fail, and": "You failed to salvage the item and destroyed it",
+        "Fail, but": "You failed to salvage the item but it was not damaged",
+        "Success, but": "Successfully salvaged the item but it made salvaging more difficult, your next salvage check is hindered by 1",
+        "Success": "Successfully salvaged the item",
+        "Success, and": "Successfully salvaged the item and your next salvage check is eased by 1"
+      },
+      "navigation": {
+        "Fail, and": "You failed to navigate, and you are completely lost",
+        "Fail, but": "You failed to navigate, but you've found an insight to point you in the right direction",
+        "Success, but": "You successfully navigate, but you aren't sure you are going in the right direction",
+        "Success": "You successfully navigate",
+        "Success, and": "You successfully navigate and find proof you are heading in the right direction"
+      },
+      "secrets": {
+        "Fail, and": "You find find and trigger a trap.",
+        "Fail, but": "You find a trap, but it is not triggered",
+        "Success, but": "You find a secret but its trapped",
+        "Success": "You found a secret",
+        "Success, and": "You found 2 secrets"
+      },
+      "tracking": {
+        "Fail, and": "You lost the trail completely and have no idea where your target went",
+        "Fail, but": "You lost the trail, but you've found an insight about where your target might be heading",
+        "Success, but": "You're tracking your target, but you aren't sure if you're following the right trail",
+        "Success": "You successfully track your target",
+        "Success, and": "You successfully track your target and find proof of their exact location or recent activity"
+      },
+      "quest": {
+        "Fail, and": "The goal is lost or ruined. You gain a permanent negative reputation tag in this region and the Countdown tally of a related quest fills by 2.",
+        "Fail, but": "You fail to achieve the goal, but you salvage an Insight or Resource from the wreckage. You cannot attempt this specific quest again for 1d4 sessions.",
+        "Success, but": "You achieve the goal, but at a high cost. You gain the reward, but you also take a Lingering Trauma wound or a new Flaw/Debt tag.",
+        "Success": "Clean victory. You gain the intended reward and 1 new positive tag related to your achievement.",
+        "Success, and": "Overwhelming success. You gain the reward, a new tag, and you may immediately clear one Countdown mark on a different active quest."
+      },
+      "insights": {
+        "Fail, and": "No insight. And mark 1 Countdown tally on an active quest.",
+        "Fail, but": "No mechanical insight. But you gain a narrative detail (flavor/mood).",
+        "Success, but": "Found a Trace. Roll for Subject/Modifier. Mark 1 tally.",
+        "Success": "Found a Clear Lead. Roll for Subject/Modifier. Mark 2 tallies.",
+        "Success, and": "Found a Breakthrough. Roll for Subject/Modifier. Mark 3 tallies."
+      }
+    }
+  },
+  {
+    "name": "resolution-combat-opening",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nHindered by 2", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nHindered by 1, but the enemy is surprised", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nEase by 1, but take a strain", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nEase by 1", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nEase by 2", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-combat-maneuver",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYour actions failed, and you are hindered by 1", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYour actions failed, but nothing bad happens", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYour actions succeeded, but you are hindered by 1", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nYour actions succeed and the tags are applied universally", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nYour actions succeed and your next actions are eased by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-combat-strike",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nDisaster strikes.\nHinder 2 steps", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nMissed, but kept guard.\nNo Modifier", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nHit, but left an opening.\nHinder 1 step", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nClean strike.\nEase 1 step", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nDevastating blow.\nEase 2 steps", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-combat-counter",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nCaught off guard, defenses shattered.\nHinder 2 steps", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nForced to retreat, but kept your shield up.\nNo Modifier", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nBlocked the blow, but the impact was jarring.\nHinder 1 step", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nPerfect parry or dodge.\nEase 1 step", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nCounter-parry creates a massive opening.\nEase 2 steps", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-combat-outcome",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nCrushing Defeat.\nLasting Scar", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nDriven back/Escaped.\nDebilitating Injury", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nMessy Victory.\nLingering Trauma", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nClear Victory.\nStrain", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nFlawless dominance.\nUnscathed", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-spellcasting",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nFail, and Roll on the Mishap table", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nThe spell fails, but nothing backfires or goes wrong", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nSuccess, but it backfires and hinders all rolls until the end of your next turn", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nThe spell goes off exactly as you expected", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nSuccessfully cast the spell and it eases the next roll by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-you-approach-npc",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nThe NPC is insulted. Decrease permanent Disposition 1 step.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou don't get what you want, but you learn why (gain an Insight).", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYou succeed, but the NPC's Attitude drops 1 step for the next interaction.", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nYou achieve your intent.", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nYou succeed and leave a lasting impression. Increase permanent Disposition 1 step.", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-npc-approaches-you",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nCaught Off Guard: You lose all leverage immediately.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nDamage Control: You are on the defensive, but you spot a weakness or a hidden detail—gain an Insight.", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nTense Standoff: You hold your ground, but the effort is draining. Attitude drops 1 step as they grow frustrated by your resilience.", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nPoise: You handle the approach perfectly.", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nTotal Control: You flip the script. Permanent Disposition increases 1 step.", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-debt-collection",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nCollectors come knocking and they come looking for blood (Combat encounter)", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nCollectors come knocking but are understanding", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nCollectors offer an alternative payment method -- do this for me, and I'll let you off (Negotiations)", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\n--", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nCollectors are feeling generous. Instead of hindered by two wealth check, hinder your check at the end of the session by 1 to see if you clear your debt.", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-harvesting",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou failed to harvest the item and destroyed the resource", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou failed to harvest the item but the node is intact", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nSuccessfully harvested the item but it made harvesting more difficult, your next harvest check is hindered by 1", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nSuccessfully harvested the item", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nSuccessfully harvested the item and your next harvest check is eased by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-crafting",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou failed to craft the item and you lose the materials", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou failed to craft the item but you didn't lose any materials in the process", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nSuccessfully crafted the item but it made crafting more difficult, your next craft check is hindered by 1", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nSuccessfully crafted the item", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nSuccessfully crafted the item and your next craft check is eased by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-augmenting",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou failed to augment the item and you lose the raw material.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou failed to augment the item but you didn't lose any materials in the process", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nSuccessfully augmented the item but it made augmenting more difficult, your next augment check is hindered by 1", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nSuccessfully augmented the item", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nSuccessfully augmented the item and your next augment check is eased by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-salvaging",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou failed to salvage the item and destroyed it", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou failed to salvage the item but it was not damaged", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nSuccessfully salvaged the item but it made salvaging more difficult, your next salvage check is hindered by 1", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nSuccessfully salvaged the item", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nSuccessfully salvaged the item and your next salvage check is eased by 1", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-navigation",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou failed to navigate, and you are completely lost", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou failed to navigate, but you've found an insight to point you in the right direction", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYou successfully navigate, but you aren't sure you are going in the right direction", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nYou successfully navigate", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nYou successfully navigate and find proof you are heading in the right direction", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-secrets",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou find find and trigger a trap.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou find a trap, but it is not triggered", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYou find a secret but its trapped", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nYou found a secret", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nYou found 2 secrets", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-tracking",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nYou lost the trail completely and have no idea where your target went", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou lost the trail, but you've found an insight about where your target might be heading", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYou're tracking your target, but you aren't sure if you're following the right trail", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nYou successfully track your target", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nYou successfully track your target and find proof of their exact location or recent activity", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-quest",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nThe goal is lost or ruined. You gain a permanent negative reputation tag in this region and the Countdown tally of a related quest fills by 2.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nYou fail to achieve the goal, but you salvage an Insight or Resource from the wreckage. You cannot attempt this specific quest again for 1d4 sessions.", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nYou achieve the goal, but at a high cost. You gain the reward, but you also take a Lingering Trauma wound or a new Flaw/Debt tag.", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nClean victory. You gain the intended reward and 1 new positive tag related to your achievement.", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nOverwhelming success. You gain the reward, a new tag, and you may immediately clear one Countdown mark on a different active quest.", "formula": "DC+5+" }
+    ]
+  },
+  {
+    "name": "resolution-insights",
+    "formula": "1d20",
+    "table": [
+      { "min": "1", "max": "1", "value": "Fail, and\nNo insight. And mark 1 Countdown tally on an active quest.", "formula": "1" },
+      { "min": "2", "max": "DC-6", "value": "Fail, but\nNo mechanical insight. But you gain a narrative detail (flavor/mood).", "formula": "2 to DC-6" },
+      { "min": "DC-5", "max": "DC-1", "value": "Success, but\nFound a Trace. Roll for Subject/Modifier. Mark 1 tally.", "formula": "DC-5 to DC-1" },
+      { "min": "DC", "max": "DC+4", "value": "Success\nFound a Clear Lead. Roll for Subject/Modifier. Mark 2 tallies.", "formula": "DC to DC+4" },
+      { "min": "DC+5", "max": "DC+5+", "value": "Success, and\nFound a Breakthrough. Roll for Subject/Modifier. Mark 3 tallies.", "formula": "DC+5+" }
+    ]
+  }
+]

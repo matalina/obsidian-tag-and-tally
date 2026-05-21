@@ -1,0 +1,39 @@
+[
+  {
+    "name": "dungeon-contents",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 3, "value": "Nothing" },
+      { "min": 4, "max": 5, "value": "Trap" },
+      { "min": 5, "max": 9, "value": "1d4 Level 3 Creatures" },
+      { "min": 10, "max": 11, "value": "Ally NPC" },
+      { "min": 12, "max": 15, "value": "Rival NPC" },
+      { "min": 16, "max": 17, "value": "Trick/First Encounter" },
+      { "min": 13, "max": 20, "value": "Survivor" }
+    ]
+  },
+  {
+    "name": "dungeon-door",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Regular unlocked door" },
+      { "min": 2, "max": 2, "value": "Regular locked door" },
+      { "min": 3, "max": 3, "value": "Trapped regular door" },
+      { "min": 4, "max": 4, "value": "Reinforced unlocked door" },
+      { "min": 5, "max": 5, "value": "Reinforced locked door" },
+      { "min": 6, "max": 6, "value": "Trapped reinforced door" }
+    ]
+  },
+  {
+    "name": "dungeon-secrets",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 2, "value": "Hidden Door" },
+      { "min": 3, "max": 3, "value": "Hidden Chest" },
+      { "min": 4, "max": 4, "value": "Hidden Room" },
+      { "min": 5, "max": 10, "value": "Nothing" },
+      { "min": 11, "max": 11, "value": "Dungeon Secret" },
+      { "min": 12, "max": 12, "value": "World Secret" }
+    ]
+  }
+]

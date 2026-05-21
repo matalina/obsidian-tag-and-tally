@@ -1,0 +1,11 @@
+/* Shared theme (Open Props + design tokens) */
+@import "../vendor/theme/theme.css";
+
+/* Shared-ui component styles (ResultBox, tabs, etc.) */
+@import "../vendor/shared-ui/shared-ui.css";
+
+/* Existing plugin styles (widgets, text-mapper, etc.) */
+@import "../styles.css";
+
+/* Integrated AI chat styles */
+@import "./ai/ai.css";

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "npc-interaction-drift",
+    "formula": "2d6",
+    "table": [
+      { "min": 2, "max": 3, "value": "Down 2 steps" },
+      { "min": 4, "max": 5, "value": "Down 1 step" },
+      { "min": 6, "max": 8, "value": "No change" },
+      { "min": 9, "max": 10, "value": "Up 1 step" },
+      { "min": 11, "max": 12, "value": "Up 2 steps" }
+    ]
+  },
+  {
+    "name": "you-approach-pathways",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Offering Aid: Can I help you (the NPC) with something?" },
+      { "min": 2, "max": 2, "value": "Trade: Do you have wares or goods to sell?" },
+      { "min": 3, "max": 3, "value": "Streetwise: Have you heard any rumors?" },
+      { "min": 4, "max": 4, "value": "Interrogation: Do you know anything about a specific topic?" },
+      { "min": 5, "max": 5, "value": "Eavesdropping: Listen in on a conversation." },
+      { "min": 6, "max": 6, "value": "Networking: Can you introduce me to ...?" },
+      { "min": 7, "max": 7, "value": "Intimidation: Try to forcibly make an NPC do something." },
+      { "min": 8, "max": 8, "value": "Contracting: I want to hire/consult with you." },
+      { "min": 9, "max": 9, "value": "Restoration: Trying to get into their good graces." },
+      { "min": 10, "max": 10, "value": "Advisor: What would you do in ...?" }
+    ]
+  },
+  {
+    "name": "npc-approach-pathways",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cold Call: Can you help me?" },
+      { "min": 2, "max": 2, "value": "Ambush: I'm going to hurt you!" },
+      { "min": 3, "max": 3, "value": "Debt Collector: You owe me!" },
+      { "min": 4, "max": 4, "value": "Fan: Oh, hey, I know you!" },
+      { "min": 5, "max": 5, "value": "Warning: There's trouble ahead." },
+      { "min": 6, "max": 6, "value": "Mistaken Identity: I thought you were someone else." }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "id": "tag-and-tally",
+  "name": "Tag and Tally",
+  "version": "0.1.36",
+  "minAppVersion": "1.4.0",
+  "description": "Run Tag and Tally tabletop RPG sessions in your vault — dice resolution, an in-vault rulebook, NPC generator, random tables, and decks.",
+  "author": "Alicia Wilkerson",
+  "authorUrl": "https://github.com/matalina",
+  "isDesktopOnly": false
+}

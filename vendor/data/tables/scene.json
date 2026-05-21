@@ -1,0 +1,309 @@
+[
+  {
+    "name": "scene-type",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Confrontation" },
+      { "min": 2, "max": 2, "value": "Discovery" },
+      { "min": 3, "max": 3, "value": "Connection" },
+      { "min": 4, "max": 4, "value": "Reflection" },
+      { "min": 5, "max": 5, "value": "Transition" },
+      { "min": 6, "max": 6, "value": "Complication" },
+      { "min": 7, "max": 7, "value": "Flashback" },
+      { "min": 8, "max": 8, "value": "Preparation" }
+    ]
+  },
+  {
+    "name": "scene-descriptor",
+    "formula": "1d36",
+    "table": [
+      { "min": 1, "max": 1, "value": "Tense" },
+      { "min": 2, "max": 2, "value": "Quiet" },
+      { "min": 3, "max": 3, "value": "Chaotic" },
+      { "min": 4, "max": 4, "value": "Melancholy" },
+      { "min": 5, "max": 5, "value": "Urgent" },
+      { "min": 6, "max": 6, "value": "Stark" },
+      { "min": 7, "max": 7, "value": "Dreamlike" },
+      { "min": 8, "max": 8, "value": "Grim" },
+      { "min": 9, "max": 9, "value": "Surreal" },
+      { "min": 10, "max": 10, "value": "Wistful" },
+      { "min": 11, "max": 11, "value": "Heated" },
+      { "min": 12, "max": 12, "value": "Bleak" },
+      { "min": 13, "max": 13, "value": "Hopeful" },
+      { "min": 14, "max": 14, "value": "Conflicted" },
+      { "min": 15, "max": 15, "value": "Gritty" },
+      { "min": 16, "max": 16, "value": "Haunting" },
+      { "min": 17, "max": 17, "value": "Brutal" },
+      { "min": 18, "max": 18, "value": "Mysterious" },
+      { "min": 19, "max": 19, "value": "Isolated" },
+      { "min": 20, "max": 20, "value": "Joyful" },
+      { "min": 21, "max": 21, "value": "Foreboding" },
+      { "min": 22, "max": 22, "value": "Twisted" },
+      { "min": 23, "max": 23, "value": "Unsettling" },
+      { "min": 24, "max": 24, "value": "Fleeting" },
+      { "min": 25, "max": 25, "value": "Reverent" },
+      { "min": 26, "max": 26, "value": "Personal" },
+      { "min": 27, "max": 27, "value": "Cryptic" },
+      { "min": 28, "max": 28, "value": "Claustrophobic" },
+      { "min": 29, "max": 29, "value": "Disorienting" },
+      { "min": 30, "max": 30, "value": "Poetic" },
+      { "min": 31, "max": 31, "value": "Ominous" },
+      { "min": 32, "max": 32, "value": "Bittersweet" },
+      { "min": 33, "max": 33, "value": "Triumphant" },
+      { "min": 34, "max": 34, "value": "Raw" },
+      { "min": 35, "max": 35, "value": "Cold" },
+      { "min": 36, "max": 36, "value": "Hollow" }
+    ]
+  },
+  {
+    "name": "scene-confrontation",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "forces a hard decision" },
+      { "min": 2, "max": 2, "value": "escalates beyond control" },
+      { "min": 3, "max": 3, "value": "tests your resolve or principles" },
+      { "min": 4, "max": 4, "value": "flips the power dynamic" },
+      { "min": 5, "max": 5, "value": "reveals an unexpected truth" },
+      { "min": 6, "max": 6, "value": "leaves scars—physical or emotional" }
+    ]
+  },
+  {
+    "name": "scene-discovery",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "shifts what you thought you knew" },
+      { "min": 2, "max": 2, "value": "reveals a hidden path or opportunity" },
+      { "min": 3, "max": 3, "value": "raises more questions than answers" },
+      { "min": 4, "max": 4, "value": "exposes a secret long buried" },
+      { "min": 5, "max": 5, "value": "uncovers a vital insight" },
+      { "min": 6, "max": 6, "value": "changes how you see someone or something" }
+    ]
+  },
+  {
+    "name": "scene-connection",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "deepens a bond" },
+      { "min": 2, "max": 2, "value": "exposes a fracture in trust" },
+      { "min": 3, "max": 3, "value": "sparks something new and uncertain" },
+      { "min": 4, "max": 4, "value": "tests loyalty or affection" },
+      { "min": 5, "max": 5, "value": "offers healing or forgiveness" },
+      { "min": 6, "max": 6, "value": "puts everything at risk emotionally" }
+    ]
+  },
+  {
+    "name": "scene-reflection",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "reframes a past event" },
+      { "min": 2, "max": 2, "value": "reveals internal conflict" },
+      { "min": 3, "max": 3, "value": "strengthens your sense of purpose" },
+      { "min": 4, "max": 4, "value": "confronts you with regret" },
+      { "min": 5, "max": 5, "value": "brings clarity through memory" },
+      { "min": 6, "max": 6, "value": "leaves you changed in subtle ways" }
+    ]
+  },
+  {
+    "name": "scene-transition",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "marks the end of something important" },
+      { "min": 2, "max": 2, "value": "shifts the environment or setting" },
+      { "min": 3, "max": 3, "value": "tests what you're willing to carry forward" },
+      { "min": 4, "max": 4, "value": "reveals a crossroads or fork in the path" },
+      { "min": 5, "max": 5, "value": "interrupts something mid-motion" },
+      { "min": 6, "max": 6, "value": "offers a moment of breath before the plunge" }
+    ]
+  },
+  {
+    "name": "scene-complication",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "throws a wrench into your plan" },
+      { "min": 2, "max": 2, "value": "draws new attention or danger" },
+      { "min": 3, "max": 3, "value": "entangles you with someone unexpected" },
+      { "min": 4, "max": 4, "value": "changes the stakes dramatically" },
+      { "min": 5, "max": 5, "value": "forces you to improvise fast" },
+      { "min": 6, "max": 6, "value": "delays what felt inevitable" }
+    ]
+  },
+  {
+    "name": "scene-flashback",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "reopens an old wound" },
+      { "min": 2, "max": 2, "value": "explains a present behavior" },
+      { "min": 3, "max": 3, "value": "uncovers a long-held secret" },
+      { "min": 4, "max": 4, "value": "mirrors your current situation" },
+      { "min": 5, "max": 5, "value": "alters how you remember things" },
+      { "min": 6, "max": 6, "value": "ties you to something unresolved" }
+    ]
+  },
+  {
+    "name": "scene-preparation",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "reveals doubt beneath your confidence" },
+      { "min": 2, "max": 2, "value": "grants an unexpected advantage" },
+      { "min": 3, "max": 3, "value": "exposes a flaw in the plan" },
+      { "min": 4, "max": 4, "value": "builds tension before the storm" },
+      { "min": 5, "max": 5, "value": "reinforces your focus or drive" },
+      { "min": 6, "max": 6, "value": "costs you something to be ready" }
+    ]
+  },
+  {
+    "name": "season",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Spring" },
+      { "min": 2, "max": 2, "value": "Summer" },
+      { "min": 3, "max": 3, "value": "Fall" },
+      { "min": 4, "max": 4, "value": "Winter" },
+      { "min": 5, "max": 5, "value": "Natural Disaster" },
+      { "min": 6, "max": 6, "value": "Artificial Disaster" }
+    ]
+  },
+  {
+    "name": "tier1-scene",
+    "formula": "1d4+2",
+    "table": [
+      { "min": 3, "max": 3, "value": "Demanding" },
+      { "min": 4, "max": 4, "value": "Difficult" },
+      { "min": 5, "max": 5, "value": "Challenging" },
+      { "min": 6, "max": 6, "value": "Intimidating" }
+    ]
+  },
+  {
+    "name": "tier2-scene",
+    "formula": "1d6+2",
+    "table": [
+      { "min": 3, "max": 3, "value": "Demanding" },
+      { "min": 4, "max": 4, "value": "Difficult" },
+      { "min": 5, "max": 5, "value": "Challenging" },
+      { "min": 6, "max": 6, "value": "Intimidating" },
+      { "min": 7, "max": 7, "value": "Formidable" },
+      { "min": 8, "max": 8, "value": "Heroic" }
+    ]
+  },
+  {
+    "name": "tier3-scene",
+    "formula": "1d8+2",
+    "table": [
+      { "min": 3, "max": 3, "value": "Demanding" },
+      { "min": 4, "max": 4, "value": "Difficult" },
+      { "min": 5, "max": 5, "value": "Challenging" },
+      { "min": 6, "max": 6, "value": "Intimidating" },
+      { "min": 7, "max": 7, "value": "Formidable" },
+      { "min": 8, "max": 8, "value": "Heroic" },
+      { "min": 9, "max": 9, "value": "Immortal" },
+      { "min": 10, "max": 10, "value": "Divine" }
+    ]
+  },
+  {
+    "name": "tier4-scene",
+    "formula": "1d10+2",
+    "table": [
+      { "min": 3, "max": 3, "value": "Demanding" },
+      { "min": 4, "max": 4, "value": "Difficult" },
+      { "min": 5, "max": 5, "value": "Challenging" },
+      { "min": 6, "max": 6, "value": "Intimidating" },
+      { "min": 7, "max": 7, "value": "Formidable" },
+      { "min": 8, "max": 8, "value": "Heroic" },
+      { "min": 9, "max": 9, "value": "Immortal" },
+      { "min": 10, "max": 12, "value": "Divine" }
+    ]
+  },
+  {
+    "name": "natural-disaster",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Wildfire" },
+      { "min": 2, "max": 2, "value": "Flood" },
+      { "min": 3, "max": 3, "value": "Drought" },
+      { "min": 4, "max": 4, "value": "Hurriane" },
+      { "min": 5, "max": 5, "value": "Earthquake" },
+      { "min": 6, "max": 6, "value": "Blight" },
+      { "min": 7, "max": 7, "value": "Volcanic Erruption" },
+      { "min": 8, "max": 8, "value": "Blizzard" }
+    ]
+  },
+  {
+    "name": "artificial-disaster",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Dimensional Tear" },
+      { "min": 2, "max": 2, "value": "Environmental Collapse" },
+      { "min": 3, "max": 3, "value": "Temporal Anomaly" },
+      { "min": 4, "max": 4, "value": "Energy Surge" },
+      { "min": 5, "max": 5, "value": "Memory Distortion" },
+      { "min": 6, "max": 6, "value": "Mechanical Breakdown" },
+      { "min": 7, "max": 7, "value": "Biohazard Release" },
+      { "min": 8, "max": 8, "value": "Signal Blackout" }
+    ]
+  },
+  {
+    "name": "weather",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Clear skies" },
+      { "min": 2, "max": 2, "value": "Light clouds" },
+      { "min": 3, "max": 3, "value": "Strong winds" },
+      { "min": 4, "max": 4, "value": "Overcast" },
+      { "min": 5, "max": 5, "value": "Light rain or drizzle" },
+      { "min": 6, "max": 6, "value": "Heavy rain" },
+      { "min": 7, "max": 7, "value": "Thunderstorm" },
+      { "min": 8, "max": 8, "value": "Foggy" },
+      { "min": 9, "max": 9, "value": "Extreme heat" },
+      { "min": 10, "max": 10, "value": "Sudden cold snap" }
+    ]
+  },
+  {
+    "name": "time-of-day",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Dawn" },
+      { "min": 2, "max": 2, "value": "Dusk" },
+      { "min": 3, "max": 3, "value": "Midnight" },
+      { "min": 4, "max": 4, "value": "Highnoon" },
+      { "min": 5, "max": 5, "value": "Twilight" },
+      { "min": 6, "max": 6, "value": "Morning" },
+      { "min": 7, "max": 7, "value": "Afternoon" },
+      { "min": 8, "max": 8, "value": "Late Night" }
+    ]
+  },
+  {
+    "name": "phase-of-the-moon",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "New Moon" },
+      { "min": 2, "max": 2, "value": "Waxing Crescent" },
+      { "min": 3, "max": 3, "value": "First Quarter" },
+      { "min": 4, "max": 4, "value": "Waxing Gibbous" },
+      { "min": 5, "max": 5, "value": "Full Moon" },
+      { "min": 6, "max": 6, "value": "Waning Gibbous" },
+      { "min": 7, "max": 7, "value": "Last Quarter" },
+      { "min": 8, "max": 8, "value": "Waning Crescent" }
+    ]
+  },
+  {
+    "name": "direction",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "1" },
+      { "min": 2, "max": 2, "value": "2" },
+      { "min": 3, "max": 3, "value": "3" },
+      { "min": 4, "max": 4, "value": "4" },
+      { "min": 5, "max": 5, "value": "5" },
+      { "min": 6, "max": 6, "value": "6" }
+    ]
+  },
+  {
+    "name": "distance",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 2, "value": "Short" },
+      { "min": 3, "max": 4, "value": "Standard" },
+      { "min": 5, "max": 6, "value": "Long" }
+    ]
+  }
+]

@@ -1,0 +1,902 @@
+[
+  {
+    "name": "wound-damage",
+    "formula": "1d8",
+    "table": [
+      { "min": 1, "max": 1, "value": "Physical" },
+      { "min": 2, "max": 2, "value": "Psychic" },
+      { "min": 3, "max": 3, "value": "Elemental" },
+      { "min": 4, "max": 4, "value": "Necrotic" },
+      { "min": 5, "max": 5, "value": "Radiant" },
+      { "min": 6, "max": 6, "value": "Shadow" },
+      { "min": 7, "max": 7, "value": "Chaos" },
+      { "min": 8, "max": 8, "value": "Toxic" }
+    ]
+  },
+  {
+    "name": "wound-physical-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Bruised ribs" },
+      { "min": 2, "max": 2, "value": "Sprained wrist" },
+      { "min": 3, "max": 3, "value": "Winded" },
+      { "min": 4, "max": 4, "value": "Mild cut" },
+      { "min": 5, "max": 5, "value": "Sore muscles" },
+      { "min": 6, "max": 6, "value": "Battered" }
+    ]
+  },
+  {
+    "name": "wound-physical-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Deep cut" },
+      { "min": 2, "max": 2, "value": "Concussion" },
+      { "min": 3, "max": 3, "value": "Nasty burn" },
+      { "min": 4, "max": 4, "value": "Dislocated joint" },
+      { "min": 5, "max": 5, "value": "Broken nose" },
+      { "min": 6, "max": 6, "value": "Swollen eye" }
+    ]
+  },
+  {
+    "name": "wound-physical-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Fractured bone" },
+      { "min": 2, "max": 2, "value": "Torn muscle" },
+      { "min": 3, "max": 3, "value": "Internal bleeding" },
+      { "min": 4, "max": 4, "value": "Nerve damage" },
+      { "min": 5, "max": 5, "value": "Cracked ribs" },
+      { "min": 6, "max": 6, "value": "Deep puncture wound" }
+    ]
+  },
+  {
+    "name": "wound-physical-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Crippled limb" },
+      { "min": 2, "max": 2, "value": "Loss of fingers/toes" },
+      { "min": 3, "max": 3, "value": "Severe limp" },
+      { "min": 4, "max": 4, "value": "Organ damage" },
+      { "min": 5, "max": 5, "value": "Partial blindness/deafness" },
+      { "min": 6, "max": 6, "value": "Missing limb" }
+    ]
+  },
+  {
+    "name": "wound-psychic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Distracted thoughts" },
+      { "min": 2, "max": 2, "value": "Irritability" },
+      { "min": 3, "max": 3, "value": "Difficulty focusing" },
+      { "min": 4, "max": 4, "value": "Mood swings" },
+      { "min": 5, "max": 5, "value": "Nervousness" },
+      { "min": 6, "max": 6, "value": "Restlessness" }
+    ]
+  },
+  {
+    "name": "wound-psychic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Recurring nightmares" },
+      { "min": 2, "max": 2, "value": "Persistent anxiety" },
+      { "min": 3, "max": 3, "value": "Flashbacks" },
+      { "min": 4, "max": 4, "value": "Insomnia" },
+      { "min": 5, "max": 5, "value": "Trust issues" },
+      { "min": 6, "max": 6, "value": "Self-doubt" }
+    ]
+  },
+  {
+    "name": "wound-psychic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Panic attacks" },
+      { "min": 2, "max": 2, "value": "Phobia" },
+      { "min": 3, "max": 3, "value": "Emotional numbness" },
+      { "min": 4, "max": 4, "value": "Depression" },
+      { "min": 5, "max": 5, "value": "Dissociation" },
+      { "min": 6, "max": 6, "value": "Identity Crisis" }
+    ]
+  },
+  {
+    "name": "wound-psychic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Paranoia" },
+      { "min": 2, "max": 2, "value": "Loss of confidence" },
+      { "min": 3, "max": 3, "value": "Loss of empathy" },
+      { "min": 4, "max": 4, "value": "Cynicism" },
+      { "min": 5, "max": 5, "value": "Trust Issues" },
+      { "min": 6, "max": 6, "value": "Amnesia" }
+    ]
+  },
+  {
+    "name": "wound-elemental-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Singed hair" },
+      { "min": 2, "max": 2, "value": "Bruised by force" },
+      { "min": 3, "max": 3, "value": "Frostbitten fingers" },
+      { "min": 4, "max": 4, "value": "Shocked by static" },
+      { "min": 5, "max": 5, "value": "Eyes irritated by dust" },
+      { "min": 6, "max": 6, "value": "Skin blistered by heat or acid" }
+    ]
+  },
+  {
+    "name": "wound-elemental-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Persistent coughing" },
+      { "min": 2, "max": 2, "value": "Joints ache constantly" },
+      { "min": 3, "max": 3, "value": "Numb extremities" },
+      { "min": 4, "max": 4, "value": "Nerve damage causes twitching" },
+      { "min": 5, "max": 5, "value": "Blurred vision" },
+      { "min": 6, "max": 6, "value": "Nasty chemical burns" }
+    ]
+  },
+  {
+    "name": "wound-elemental-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Lungs scarred by heat" },
+      { "min": 2, "max": 2, "value": "Bones weakened/brittle" },
+      { "min": 3, "max": 3, "value": "Circulation permanently impaired" },
+      { "min": 4, "max": 4, "value": "Muscle control weakened" },
+      { "min": 5, "max": 5, "value": "Light sensitivity" },
+      { "min": 6, "max": 6, "value": "Thick Scarred Flesh" }
+    ]
+  },
+  {
+    "name": "wound-elemental-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Suffers chronic breathing issues" },
+      { "min": 2, "max": 2, "value": "One limb permanently stiff or fragile" },
+      { "min": 3, "max": 3, "value": "Prone to severe cold sensitivity" },
+      { "min": 4, "max": 4, "value": "One hand partially paralyzed" },
+      { "min": 5, "max": 5, "value": "Partial or full blindness in one eye" },
+      { "min": 6, "max": 6, "value": "Flesh necrosis" }
+    ]
+  },
+  {
+    "name": "wound-necrotic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Skin turns pale" },
+      { "min": 2, "max": 2, "value": "Sudden fatigue" },
+      { "min": 3, "max": 3, "value": "Faint black veins" },
+      { "min": 4, "max": 4, "value": "Teeth ache" },
+      { "min": 5, "max": 5, "value": "Tingling in limbs" },
+      { "min": 6, "max": 6, "value": "Echoes of whispers" }
+    ]
+  },
+  {
+    "name": "wound-necrotic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cold to the touch" },
+      { "min": 2, "max": 2, "value": "Persistent muscle aches" },
+      { "min": 3, "max": 3, "value": "Flesh is slow to mend" },
+      { "min": 4, "max": 4, "value": "Brittle nails or hair" },
+      { "min": 5, "max": 5, "value": "Vision flickers between life and death" },
+      { "min": 6, "max": 6, "value": "Shadow clings unnaturally" }
+    ]
+  },
+  {
+    "name": "wound-necrotic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Circulation weakens" },
+      { "min": 2, "max": 2, "value": "Chronic weakness" },
+      { "min": 3, "max": 3, "value": "Permanent nerve damage" },
+      { "min": 4, "max": 4, "value": "Weakened immune system" },
+      { "min": 5, "max": 5, "value": "Partial organ failure" },
+      { "min": 6, "max": 6, "value": "Soul partially consumed" }
+    ]
+  },
+  {
+    "name": "wound-necrotic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Necrotized limb" },
+      { "min": 2, "max": 2, "value": "Slowed Recovery" },
+      { "min": 3, "max": 3, "value": "Dead Flesh" },
+      { "min": 4, "max": 4, "value": "Prone to frequent illness and infections" },
+      { "min": 5, "max": 5, "value": "Missing or rotting extremities" },
+      { "min": 6, "max": 6, "value": "Presence unnerves the living" }
+    ]
+  },
+  {
+    "name": "wound-radiant-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Eyes strained" },
+      { "min": 2, "max": 2, "value": "Skin feels raw" },
+      { "min": 3, "max": 3, "value": "Numb limbs" },
+      { "min": 4, "max": 4, "value": "Burning sensation" },
+      { "min": 5, "max": 5, "value": "Ringing in ears" },
+      { "min": 6, "max": 6, "value": "Heart races unnaturally" }
+    ]
+  },
+  {
+    "name": "wound-radiant-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Light sensitivity" },
+      { "min": 2, "max": 2, "value": "Skin permanently tender" },
+      { "min": 3, "max": 3, "value": "Glowing veins that fade slowly" },
+      { "min": 4, "max": 4, "value": "Phantom pain in injured areas" },
+      { "min": 5, "max": 5, "value": "Echoes of divine voices" },
+      { "min": 6, "max": 6, "value": "Feels detached from the mortal world" }
+    ]
+  },
+  {
+    "name": "wound-radiant-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Partial blindness" },
+      { "min": 2, "max": 2, "value": "Flesh burns too easily" },
+      { "min": 3, "max": 3, "value": "Nerve over-sensitivity" },
+      { "min": 4, "max": 4, "value": "Flesh weakens, bruises easily" },
+      { "min": 5, "max": 5, "value": "Frequent migraines" },
+      { "min": 6, "max": 6, "value": "Touch disrupts magic around them" }
+    ]
+  },
+  {
+    "name": "wound-radiant-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Blinded" },
+      { "min": 2, "max": 2, "value": "Sunlight vulnerability" },
+      { "min": 3, "max": 3, "value": "Uncontrolled muscle spasms in bright light" },
+      { "min": 4, "max": 4, "value": "Continually glowing scars" },
+      { "min": 5, "max": 5, "value": "Tinnitis" },
+      { "min": 6, "max": 6, "value": "Healing magic resistence" }
+    ]
+  },
+  {
+    "name": "wound-shadow-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Cold shivers" },
+      { "min": 2, "max": 2, "value": "Dizziness" },
+      { "min": 3, "max": 3, "value": "Overwhelmed by dread" },
+      { "min": 4, "max": 4, "value": "Mind feels clouded" },
+      { "min": 5, "max": 5, "value": "Eyes are bloodshot" },
+      { "min": 6, "max": 6, "value": "Vision blackens" }
+    ]
+  },
+  {
+    "name": "wound-shadow-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Persistent whispering voices" },
+      { "min": 2, "max": 2, "value": "Intense feeling of isolation" },
+      { "min": 3, "max": 3, "value": "Heart beats erratically" },
+      { "min": 4, "max": 4, "value": "Fear of light or brightness" },
+      { "min": 5, "max": 5, "value": "Disturbing feeling of being followed" },
+      { "min": 6, "max": 6, "value": "Constant sense of being watched" }
+    ]
+  },
+  {
+    "name": "wound-shadow-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Loss of warmth or sensation" },
+      { "min": 2, "max": 2, "value": "Vision distorted by shadows" },
+      { "min": 3, "max": 3, "value": "Breathing becomes shallow" },
+      { "min": 4, "max": 4, "value": "Loss of time perception" },
+      { "min": 5, "max": 5, "value": "Limbs lose coordination" },
+      { "min": 6, "max": 6, "value": "Reduced physical strength" }
+    ]
+  },
+  {
+    "name": "wound-shadow-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Unidentifiable Pain" },
+      { "min": 2, "max": 2, "value": "Permanent shadow around the body, causing constant unease and discomfort" },
+      { "min": 3, "max": 3, "value": "Humming darkness, disturbing other living beings nearby" },
+      { "min": 4, "max": 4, "value": "Short Term Memory Loss" },
+      { "min": 5, "max": 5, "value": "Vision Problems" },
+      { "min": 6, "max": 6, "value": "Unnerving Presence" }
+    ]
+  },
+  {
+    "name": "wound-chaos-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Uncontrollable laughter" },
+      { "min": 2, "max": 2, "value": "Mind races" },
+      { "min": 3, "max": 3, "value": "Hallucinations" },
+      { "min": 4, "max": 4, "value": "Sudden bursts of energy" },
+      { "min": 5, "max": 5, "value": "Eyes constantly shifting in color" },
+      { "min": 6, "max": 6, "value": "Distorted body sensations" }
+    ]
+  },
+  {
+    "name": "wound-chaos-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Perception of reality flickers" },
+      { "min": 2, "max": 2, "value": "Thoughts jumbled and random" },
+      { "min": 3, "max": 3, "value": "Speech patterns become erratic" },
+      { "min": 4, "max": 4, "value": "Reality bends around them" },
+      { "min": 5, "max": 5, "value": "Experience intense déjà vu" },
+      { "min": 6, "max": 6, "value": "Touch feels wrong or misplaced" }
+    ]
+  },
+  {
+    "name": "wound-chaos-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Body flickers or phases" },
+      { "min": 2, "max": 2, "value": "Sudden body alterations" },
+      { "min": 3, "max": 3, "value": "Unstable magic surges" },
+      { "min": 4, "max": 4, "value": "Erratic emotional outbursts" },
+      { "min": 5, "max": 5, "value": "Sudden involuntary transformations" },
+      { "min": 6, "max": 6, "value": "Spontaneous teleports" }
+    ]
+  },
+  {
+    "name": "wound-chaos-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Body randomly shifts in shape, causing pain and confusion" },
+      { "min": 2, "max": 2, "value": "Arms or legs occasionally become unnaturally elongated or shortened" },
+      { "min": 3, "max": 3, "value": "One hand or foot glows faintly and uncontrollably" },
+      { "min": 4, "max": 4, "value": "Mood Swings" },
+      { "min": 5, "max": 5, "value": "Occasionally bursts into a creature form for short periods, losing control" },
+      { "min": 6, "max": 6, "value": "Body becomes intangible or transparent at random" }
+    ]
+  },
+  {
+    "name": "wound-toxic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Nausea" },
+      { "min": 2, "max": 2, "value": "Cold sweats" },
+      { "min": 3, "max": 3, "value": "Shivering" },
+      { "min": 4, "max": 4, "value": "Muscle cramps" },
+      { "min": 5, "max": 5, "value": "Faint dizziness" },
+      { "min": 6, "max": 6, "value": "Sudden weakness" }
+    ]
+  },
+  {
+    "name": "wound-toxic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Persistent stomach cramps" },
+      { "min": 2, "max": 2, "value": "Faint taste of bitterness" },
+      { "min": 3, "max": 3, "value": "Skin becomes itchy and flushed" },
+      { "min": 4, "max": 4, "value": "Skin turns sickly yellow" },
+      { "min": 5, "max": 5, "value": "Vivid hallucinations" },
+      { "min": 6, "max": 6, "value": "Body feels distant or detached" }
+    ]
+  },
+  {
+    "name": "wound-toxic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Poison interrupts metabolism" },
+      { "min": 2, "max": 2, "value": "Blood toxicity" },
+      { "min": 3, "max": 3, "value": "Severe internal damage" },
+      { "min": 4, "max": 4, "value": "Nervous system failure" },
+      { "min": 5, "max": 5, "value": "Mental disorientation" },
+      { "min": 6, "max": 6, "value": "Sepsis or blood poisoning" }
+    ]
+  },
+  {
+    "name": "wound-toxic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "Constantly weak" },
+      { "min": 2, "max": 2, "value": "Internal organ damage" },
+      { "min": 3, "max": 3, "value": "Heart or lungs permanently weakened" },
+      { "min": 4, "max": 4, "value": "Weakened limb" },
+      { "min": 5, "max": 5, "value": "Memory loss or confusion" },
+      { "min": 6, "max": 6, "value": "Constant fever or chills" }
+    ]
+  },
+  {
+    "name": "wound-descriptor",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "ugly" },
+      { "min": 2, "max": 2, "value": "fading" },
+      { "min": 3, "max": 3, "value": "angry" },
+      { "min": 4, "max": 4, "value": "pulsing" },
+      { "min": 5, "max": 5, "value": "deep" },
+      { "min": 6, "max": 6, "value": "raw" },
+      { "min": 7, "max": 7, "value": "tender" },
+      { "min": 8, "max": 8, "value": "painful" },
+      { "min": 9, "max": 9, "value": "throbbing" },
+      { "min": 10, "max": 10, "value": "old" },
+      { "min": 11, "max": 11, "value": "fresh" },
+      { "min": 12, "max": 12, "value": "healing" },
+      { "min": 13, "max": 13, "value": "infected" },
+      { "min": 14, "max": 14, "value": "bleeding" },
+      { "min": 15, "max": 15, "value": "swollen" },
+      { "min": 16, "max": 16, "value": "discolored" },
+      { "min": 17, "max": 17, "value": "twisted" },
+      { "min": 18, "max": 18, "value": "numb" },
+      { "min": 19, "max": 19, "value": "sensitive" },
+      { "min": 20, "max": 20, "value": "weeping" }
+    ]
+  },
+  {
+    "name": "wound-type-of-mark",
+    "formula": "1d12",
+    "table": [
+      { "min": 1, "max": 1, "value": "scar" },
+      { "min": 2, "max": 2, "value": "bruise" },
+      { "min": 3, "max": 3, "value": "burn" },
+      { "min": 4, "max": 4, "value": "cut" },
+      { "min": 5, "max": 5, "value": "wound" },
+      { "min": 6, "max": 6, "value": "gash" },
+      { "min": 7, "max": 7, "value": "laceration" },
+      { "min": 8, "max": 8, "value": "puncture" },
+      { "min": 9, "max": 9, "value": "abrasion" },
+      { "min": 10, "max": 10, "value": "mark" },
+      { "min": 11, "max": 11, "value": "injury" },
+      { "min": 12, "max": 12, "value": "lesion" }
+    ]
+  },
+  {
+    "name": "wound-body-part",
+    "formula": "1d20",
+    "table": [
+      { "min": 1, "max": 1, "value": "left arm" },
+      { "min": 2, "max": 2, "value": "right arm" },
+      { "min": 3, "max": 3, "value": "left leg" },
+      { "min": 4, "max": 4, "value": "right leg" },
+      { "min": 5, "max": 5, "value": "chest" },
+      { "min": 6, "max": 6, "value": "face" },
+      { "min": 7, "max": 7, "value": "back" },
+      { "min": 8, "max": 8, "value": "shoulder" },
+      { "min": 9, "max": 9, "value": "hand" },
+      { "min": 10, "max": 10, "value": "foot" },
+      { "min": 11, "max": 11, "value": "head" },
+      { "min": 12, "max": 12, "value": "neck" },
+      { "min": 13, "max": 13, "value": "side" },
+      { "min": 14, "max": 14, "value": "stomach" },
+      { "min": 15, "max": 15, "value": "knee" },
+      { "min": 16, "max": 16, "value": "elbow" },
+      { "min": 17, "max": 17, "value": "wrist" },
+      { "min": 18, "max": 18, "value": "ankle" },
+      { "min": 19, "max": 19, "value": "ribs" },
+      { "min": 20, "max": 20, "value": "hip" }
+    ]
+  },
+  {
+    "name": "wound-detriment-physical-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "slows movement" },
+      { "min": 2, "max": 2, "value": "hinders physical actions" },
+      { "min": 3, "max": 3, "value": "reduces carrying capacity" },
+      { "min": 4, "max": 4, "value": "causes pain on exertion" },
+      { "min": 5, "max": 5, "value": "weakens grip" },
+      { "min": 6, "max": 6, "value": "hinders balance" }
+    ]
+  },
+  {
+    "name": "wound-detriment-physical-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly slows movement" },
+      { "min": 2, "max": 2, "value": "hinders all physical actions" },
+      { "min": 3, "max": 3, "value": "reduces accuracy" },
+      { "min": 4, "max": 4, "value": "weakens strength" },
+      { "min": 5, "max": 5, "value": "hinders coordination" },
+      { "min": 6, "max": 6, "value": "causes persistent pain" }
+    ]
+  },
+  {
+    "name": "wound-detriment-physical-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts movement" },
+      { "min": 2, "max": 2, "value": "prevents use of affected limb" },
+      { "min": 3, "max": 3, "value": "severely reduces accuracy" },
+      { "min": 4, "max": 4, "value": "halts healing" },
+      { "min": 5, "max": 5, "value": "weakens all physical actions" },
+      { "min": 6, "max": 6, "value": "causes debilitating pain" }
+    ]
+  },
+  {
+    "name": "wound-detriment-physical-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently slows movement" },
+      { "min": 2, "max": 2, "value": "permanently reduces accuracy" },
+      { "min": 3, "max": 3, "value": "permanently weakens strength" },
+      { "min": 4, "max": 4, "value": "permanently hinders physical actions" },
+      { "min": 5, "max": 5, "value": "permanently reduces carrying capacity" },
+      { "min": 6, "max": 6, "value": "permanently limits mobility" }
+    ]
+  },
+  {
+    "name": "wound-detriment-psychic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders concentration" },
+      { "min": 2, "max": 2, "value": "reduces mental clarity" },
+      { "min": 3, "max": 3, "value": "weakens willpower" },
+      { "min": 4, "max": 4, "value": "hinders social interactions" },
+      { "min": 5, "max": 5, "value": "causes mental fatigue" },
+      { "min": 6, "max": 6, "value": "reduces focus" }
+    ]
+  },
+  {
+    "name": "wound-detriment-psychic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly hinders concentration" },
+      { "min": 2, "max": 2, "value": "weakens all mental actions" },
+      { "min": 3, "max": 3, "value": "hinders spellcasting" },
+      { "min": 4, "max": 4, "value": "reduces perception" },
+      { "min": 5, "max": 5, "value": "weakens memory" },
+      { "min": 6, "max": 6, "value": "hinders decision making" }
+    ]
+  },
+  {
+    "name": "wound-detriment-psychic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts concentration" },
+      { "min": 2, "max": 2, "value": "prevents spellcasting" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all mental actions" },
+      { "min": 5, "max": 5, "value": "causes mental breakdown" },
+      { "min": 6, "max": 6, "value": "hinders all social interactions" }
+    ]
+  },
+  {
+    "name": "wound-detriment-psychic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently hinders concentration" },
+      { "min": 2, "max": 2, "value": "permanently weakens mental actions" },
+      { "min": 3, "max": 3, "value": "permanently reduces perception" },
+      { "min": 4, "max": 4, "value": "permanently hinders spellcasting" },
+      { "min": 5, "max": 5, "value": "permanently weakens willpower" },
+      { "min": 6, "max": 6, "value": "permanently limits mental clarity" }
+    ]
+  },
+  {
+    "name": "wound-detriment-elemental-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders movement in affected area" },
+      { "min": 2, "max": 2, "value": "reduces resistance to element" },
+      { "min": 3, "max": 3, "value": "causes elemental sensitivity" },
+      { "min": 4, "max": 4, "value": "weakens affected limb" },
+      { "min": 5, "max": 5, "value": "hinders fine motor control" },
+      { "min": 6, "max": 6, "value": "causes persistent discomfort" }
+    ]
+  },
+  {
+    "name": "wound-detriment-elemental-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly reduces resistance to element" },
+      { "min": 2, "max": 2, "value": "hinders all actions in affected area" },
+      { "min": 3, "max": 3, "value": "weakens affected body systems" },
+      { "min": 4, "max": 4, "value": "reduces accuracy" },
+      { "min": 5, "max": 5, "value": "causes chronic pain" },
+      { "min": 6, "max": 6, "value": "hinders coordination" }
+    ]
+  },
+  {
+    "name": "wound-detriment-elemental-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts use of affected area" },
+      { "min": 2, "max": 2, "value": "prevents resistance to element" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens affected body systems" },
+      { "min": 5, "max": 5, "value": "causes severe elemental sensitivity" },
+      { "min": 6, "max": 6, "value": "hinders all physical actions" }
+    ]
+  },
+  {
+    "name": "wound-detriment-elemental-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently reduces resistance to element" },
+      { "min": 2, "max": 2, "value": "permanently weakens affected area" },
+      { "min": 3, "max": 3, "value": "permanently hinders movement" },
+      { "min": 4, "max": 4, "value": "permanently limits affected body systems" },
+      { "min": 5, "max": 5, "value": "permanently causes elemental vulnerability" },
+      { "min": 6, "max": 6, "value": "permanently reduces accuracy" }
+    ]
+  },
+  {
+    "name": "wound-detriment-necrotic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "slows natural healing" },
+      { "min": 2, "max": 2, "value": "weakens life force" },
+      { "min": 3, "max": 3, "value": "hinders recovery" },
+      { "min": 4, "max": 4, "value": "reduces vitality" },
+      { "min": 5, "max": 5, "value": "causes fatigue" },
+      { "min": 6, "max": 6, "value": "weakens constitution" }
+    ]
+  },
+  {
+    "name": "wound-detriment-necrotic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly slows healing" },
+      { "min": 2, "max": 2, "value": "weakens all body systems" },
+      { "min": 3, "max": 3, "value": "hinders natural recovery" },
+      { "min": 4, "max": 4, "value": "reduces resistance to disease" },
+      { "min": 5, "max": 5, "value": "weakens life force" },
+      { "min": 6, "max": 6, "value": "causes persistent weakness" }
+    ]
+  },
+  {
+    "name": "wound-detriment-necrotic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts natural healing" },
+      { "min": 2, "max": 2, "value": "prevents recovery" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all body systems" },
+      { "min": 5, "max": 5, "value": "causes organ failure" },
+      { "min": 6, "max": 6, "value": "severely weakens life force" }
+    ]
+  },
+  {
+    "name": "wound-detriment-necrotic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently slows healing" },
+      { "min": 2, "max": 2, "value": "permanently weakens life force" },
+      { "min": 3, "max": 3, "value": "permanently reduces vitality" },
+      { "min": 4, "max": 4, "value": "permanently weakens body systems" },
+      { "min": 5, "max": 5, "value": "permanently reduces resistance to disease" },
+      { "min": 6, "max": 6, "value": "permanently limits recovery" }
+    ]
+  },
+  {
+    "name": "wound-detriment-radiant-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders dark vision" },
+      { "min": 2, "max": 2, "value": "causes light sensitivity" },
+      { "min": 3, "max": 3, "value": "weakens shadow magic" },
+      { "min": 4, "max": 4, "value": "reduces stealth" },
+      { "min": 5, "max": 5, "value": "hinders concealment" },
+      { "min": 6, "max": 6, "value": "causes divine interference" }
+    ]
+  },
+  {
+    "name": "wound-detriment-radiant-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly hinders dark vision" },
+      { "min": 2, "max": 2, "value": "weakens shadow magic" },
+      { "min": 3, "max": 3, "value": "reduces accuracy in darkness" },
+      { "min": 4, "max": 4, "value": "hinders all stealth actions" },
+      { "min": 5, "max": 5, "value": "causes severe light sensitivity" },
+      { "min": 6, "max": 6, "value": "weakens dark-aligned abilities" }
+    ]
+  },
+  {
+    "name": "wound-detriment-radiant-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts dark vision" },
+      { "min": 2, "max": 2, "value": "prevents shadow magic" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all dark-aligned actions" },
+      { "min": 5, "max": 5, "value": "causes blindness in darkness" },
+      { "min": 6, "max": 6, "value": "prevents stealth" }
+    ]
+  },
+  {
+    "name": "wound-detriment-radiant-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently hinders dark vision" },
+      { "min": 2, "max": 2, "value": "permanently weakens shadow magic" },
+      { "min": 3, "max": 3, "value": "permanently reduces stealth" },
+      { "min": 4, "max": 4, "value": "permanently causes light sensitivity" },
+      { "min": 5, "max": 5, "value": "permanently weakens dark-aligned abilities" },
+      { "min": 6, "max": 6, "value": "permanently limits concealment" }
+    ]
+  },
+  {
+    "name": "wound-detriment-shadow-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders light-based actions" },
+      { "min": 2, "max": 2, "value": "weakens radiant magic" },
+      { "min": 3, "max": 3, "value": "reduces perception in light" },
+      { "min": 4, "max": 4, "value": "causes shadow sensitivity" },
+      { "min": 5, "max": 5, "value": "hinders visibility" },
+      { "min": 6, "max": 6, "value": "weakens divine magic" }
+    ]
+  },
+  {
+    "name": "wound-detriment-shadow-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly weakens radiant magic" },
+      { "min": 2, "max": 2, "value": "hinders all light-based actions" },
+      { "min": 3, "max": 3, "value": "reduces accuracy in bright light" },
+      { "min": 4, "max": 4, "value": "weakens divine abilities" },
+      { "min": 5, "max": 5, "value": "causes severe shadow sensitivity" },
+      { "min": 6, "max": 6, "value": "hinders perception" }
+    ]
+  },
+  {
+    "name": "wound-detriment-shadow-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts radiant magic" },
+      { "min": 2, "max": 2, "value": "prevents light-based actions" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all divine abilities" },
+      { "min": 5, "max": 5, "value": "causes blindness in bright light" },
+      { "min": 6, "max": 6, "value": "prevents visibility in light" }
+    ]
+  },
+  {
+    "name": "wound-detriment-shadow-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently weakens radiant magic" },
+      { "min": 2, "max": 2, "value": "permanently hinders light-based actions" },
+      { "min": 3, "max": 3, "value": "permanently reduces perception in light" },
+      { "min": 4, "max": 4, "value": "permanently weakens divine abilities" },
+      { "min": 5, "max": 5, "value": "permanently causes shadow sensitivity" },
+      { "min": 6, "max": 6, "value": "permanently limits visibility" }
+    ]
+  },
+  {
+    "name": "wound-detriment-chaos-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders spellcasting control" },
+      { "min": 2, "max": 2, "value": "causes unpredictable magic" },
+      { "min": 3, "max": 3, "value": "weakens magical stability" },
+      { "min": 4, "max": 4, "value": "reduces magical accuracy" },
+      { "min": 5, "max": 5, "value": "hinders concentration" },
+      { "min": 6, "max": 6, "value": "causes reality distortion" }
+    ]
+  },
+  {
+    "name": "wound-detriment-chaos-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly hinders spellcasting" },
+      { "min": 2, "max": 2, "value": "weakens all magical actions" },
+      { "min": 3, "max": 3, "value": "causes severe magical instability" },
+      { "min": 4, "max": 4, "value": "reduces control over magic" },
+      { "min": 5, "max": 5, "value": "hinders reality perception" },
+      { "min": 6, "max": 6, "value": "weakens magical focus" }
+    ]
+  },
+  {
+    "name": "wound-detriment-chaos-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts controlled spellcasting" },
+      { "min": 2, "max": 2, "value": "prevents magical stability" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all magical abilities" },
+      { "min": 5, "max": 5, "value": "causes reality breakdown" },
+      { "min": 6, "max": 6, "value": "prevents magical control" }
+    ]
+  },
+  {
+    "name": "wound-detriment-chaos-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently hinders spellcasting" },
+      { "min": 2, "max": 2, "value": "permanently weakens magical stability" },
+      { "min": 3, "max": 3, "value": "permanently reduces magical control" },
+      { "min": 4, "max": 4, "value": "permanently weakens magical abilities" },
+      { "min": 5, "max": 5, "value": "permanently causes reality distortion" },
+      { "min": 6, "max": 6, "value": "permanently limits magical focus" }
+    ]
+  },
+  {
+    "name": "wound-detriment-toxic-strain",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "slows healing" },
+      { "min": 2, "max": 2, "value": "weakens constitution" },
+      { "min": 3, "max": 3, "value": "hinders recovery" },
+      { "min": 4, "max": 4, "value": "reduces resistance to poison" },
+      { "min": 5, "max": 5, "value": "causes fatigue" },
+      { "min": 6, "max": 6, "value": "weakens immune system" }
+    ]
+  },
+  {
+    "name": "wound-detriment-toxic-lingering-trauma",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "significantly slows healing" },
+      { "min": 2, "max": 2, "value": "weakens all body systems" },
+      { "min": 3, "max": 3, "value": "hinders natural recovery" },
+      { "min": 4, "max": 4, "value": "reduces resistance to disease" },
+      { "min": 5, "max": 5, "value": "weakens constitution" },
+      { "min": 6, "max": 6, "value": "causes persistent weakness" }
+    ]
+  },
+  {
+    "name": "wound-detriment-toxic-debilitating-injury",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "halts natural healing" },
+      { "min": 2, "max": 2, "value": "prevents recovery" },
+      { "min": 3, "max": 3, "value": "halts healing" },
+      { "min": 4, "max": 4, "value": "weakens all body systems" },
+      { "min": 5, "max": 5, "value": "causes organ failure" },
+      { "min": 6, "max": 6, "value": "severely weakens immune system" }
+    ]
+  },
+  {
+    "name": "wound-detriment-toxic-lasting-scar",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "permanently slows healing" },
+      { "min": 2, "max": 2, "value": "permanently weakens constitution" },
+      { "min": 3, "max": 3, "value": "permanently reduces vitality" },
+      { "min": 4, "max": 4, "value": "permanently weakens body systems" },
+      { "min": 5, "max": 5, "value": "permanently reduces resistance to poison" },
+      { "min": 6, "max": 6, "value": "permanently limits recovery" }
+    ]
+  },
+  {
+    "name": "wound-blood-magic-descriptor",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "weeping" },
+      { "min": 2, "max": 2, "value": "necrotic" },
+      { "min": 3, "max": 3, "value": "pale" },
+      { "min": 4, "max": 4, "value": "rhythmic" },
+      { "min": 5, "max": 5, "value": "jagged" },
+      { "min": 6, "max": 6, "value": "cold" }
+    ]
+  },
+  {
+    "name": "wound-blood-magic-mark",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "obsidian vein" },
+      { "min": 2, "max": 2, "value": "sunken brand" },
+      { "min": 3, "max": 3, "value": "spiderweb bruise" },
+      { "min": 4, "max": 4, "value": "pulsing scar" },
+      { "min": 5, "max": 5, "value": "crystalline fissure" },
+      { "min": 6, "max": 6, "value": "silver-black stain" }
+    ]
+  },
+  {
+    "name": "wound-blood-magic-body-part",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "the casting hand" },
+      { "min": 2, "max": 2, "value": "the chest" },
+      { "min": 3, "max": 3, "value": "the throat" },
+      { "min": 4, "max": 4, "value": "the temples" },
+      { "min": 5, "max": 5, "value": "the forearm" },
+      { "min": 6, "max": 6, "value": "the eyes" }
+    ]
+  },
+  {
+    "name": "wound-blood-magic-detriment",
+    "formula": "1d6",
+    "table": [
+      { "min": 1, "max": 1, "value": "hinders fine motor skills" },
+      { "min": 2, "max": 2, "value": "hinders all physical tasks" },
+      { "min": 3, "max": 3, "value": "hinders all social interactions" },
+      { "min": 4, "max": 4, "value": "hinders all mental tasks" },
+      { "min": 5, "max": 5, "value": "hinders all spellcasting" },
+      { "min": 6, "max": 6, "value": "hinders all senses" }
+    ]
+  }
+]

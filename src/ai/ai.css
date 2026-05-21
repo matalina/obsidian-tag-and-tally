@@ -1,0 +1,395 @@
+/* Match rulebook / documentation view: Obsidian sidebars often use user-select: none; re-enable for copy/paste */
+.tag-tally-ai-chat-view .tag-tally-ai-chat,
+.tag-tally-ai-chat-view .tag-tally-ai-chat-messages,
+.tag-tally-ai-chat-view .tag-tally-ai-msg,
+.tag-tally-ai-chat-view .tag-tally-ai-msg-body,
+.tag-tally-ai-chat-view .tag-tally-ai-status {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+.tag-tally-ai-chat-view .tag-tally-ai-input {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+.tag-tally-ai-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tag-tally-ai-chat-header {
+  padding: var(--size-4-2);
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-weight: var(--font-semibold);
+}
+
+.tag-tally-ai-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--size-4-2);
+  font-size: var(--font-ui-small);
+}
+
+.tag-tally-ai-msg {
+  margin-bottom: var(--size-4-3);
+  padding: var(--size-4-2);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+}
+
+.tag-tally-ai-msg-user {
+  background: var(--background-modifier-hover);
+}
+
+.tag-tally-ai-msg-role {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  margin-bottom: var(--size-4-1);
+}
+
+.tag-tally-ai-msg-body {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.tag-tally-ai-tool-results:empty {
+  display: none;
+}
+
+details.tag-tally-ai-tool-result {
+  margin: 0 0 var(--size-4-2);
+  padding: var(--size-4-2);
+  border-left: 3px solid var(--interactive-accent);
+  background: var(--background-primary);
+  border-radius: var(--radius-s);
+  font-size: var(--font-ui-small);
+}
+
+.tag-tally-ai-tool-result-summary {
+  display: flex;
+  align-items: baseline;
+  gap: var(--size-4-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.tag-tally-ai-tool-result-summary::-webkit-details-marker {
+  display: none;
+}
+
+.tag-tally-ai-tool-result-summary::before {
+  content: "▸";
+  display: inline-block;
+  width: 0.8em;
+  color: var(--text-muted);
+  transition: transform 120ms ease-out;
+}
+
+details.tag-tally-ai-tool-result[open] > .tag-tally-ai-tool-result-summary::before {
+  transform: rotate(90deg);
+}
+
+.tag-tally-ai-tool-result-label {
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.tag-tally-ai-tool-result-preview {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.tag-tally-ai-tool-result-body {
+  margin-top: var(--size-4-2);
+}
+
+.tag-tally-ai-tool-result-body > .markdown-preview-view,
+.tag-tally-ai-tool-result-body.markdown-preview-view {
+  padding: 0;
+}
+
+.tag-tally-ai-tool-result-body p:first-child {
+  margin-top: 0;
+}
+
+.tag-tally-ai-tool-result-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Plain assistant text (errors / cancel), not markdown */
+.tag-tally-ai-msg-plain {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Obsidian markdown preview in sidebar */
+.tag-tally-ai-msg-body .tag-tally-ai-md-root {
+  font-size: var(--font-ui-small);
+}
+
+.tag-tally-ai-msg-body .tag-tally-ai-md-root img,
+.tag-tally-ai-msg-body .tag-tally-ai-md-root video {
+  max-width: 100%;
+  height: auto;
+}
+
+.tag-tally-ai-msg-body .tag-tally-ai-md-root table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tag-tally-ai-msg-body pre {
+  position: relative;
+  padding-top: 1.85rem;
+  margin: 0.5rem 0;
+}
+
+.tag-tally-ai-code-copy {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  z-index: 1;
+  font-size: var(--font-ui-smaller);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tag-tally-ai-code-copy:hover {
+  color: var(--text-normal);
+  border-color: var(--interactive-accent);
+}
+
+.tag-tally-ai-chat-input-row {
+  display: flex;
+  gap: var(--size-4-2);
+  padding: var(--size-4-2);
+  border-top: 1px solid var(--background-modifier-border);
+  align-items: flex-end;
+}
+
+/* Only .tag-tally-ai-chat-messages should flex-grow; this wrapper must not or it
+   splits height with the messages area and leaves a huge gap above the textarea. */
+.tag-tally-ai-input-wrap {
+  position: relative;
+  flex-shrink: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.tag-tally-ai-mention-popover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+  z-index: 50;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tag-tally-ai-mention-list {
+  overflow-y: auto;
+  max-height: 12rem;
+}
+
+.tag-tally-ai-mention-empty {
+  padding: var(--size-4-2) var(--size-4-3);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.tag-tally-ai-mention-item {
+  padding: var(--size-4-1) var(--size-4-2);
+  cursor: pointer;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.tag-tally-ai-mention-item:last-child {
+  border-bottom: none;
+}
+
+.tag-tally-ai-mention-item--selected {
+  background: var(--background-modifier-hover);
+}
+
+.tag-tally-ai-mention-item-label {
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+}
+
+.tag-tally-ai-mention-item-path {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.tag-tally-ai-chat-input-row textarea {
+  flex: 1;
+  min-height: 4rem;
+  resize: vertical;
+}
+
+.tag-tally-ai-toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--size-4-2);
+  padding: 0 var(--size-4-2) var(--size-4-2);
+  min-width: 0;
+}
+
+.tag-tally-ai-toolbar .tag-tally-button,
+.tag-tally-ai-chat-input-row .tag-tally-button {
+  width: auto;
+  flex: 0 0 auto;
+}
+
+/* Flat control appearance to match .tag-tally-main-content tabs: thin border only, no shadow/outline. */
+.tag-tally-ai-chat-view .tag-tally-select,
+.tag-tally-ai-chat-view .tag-tally-button {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid var(--gray-3, var(--background-modifier-border)) !important;
+}
+.tag-tally-ai-chat-view .tag-tally-select:focus,
+.tag-tally-ai-chat-view .tag-tally-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tag-tally-ai-gm-select {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 18em;
+  min-height: 2rem;
+  font-size: var(--font-ui-small);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag-tally-ai-status {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  padding: 0 var(--size-4-2);
+  min-height: 1.5rem;
+}
+
+.tag-tally-ai-status-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+}
+
+.tag-tally-ai-status-row--active .tag-tally-ai-thinking-dots {
+  opacity: 1;
+}
+
+.tag-tally-ai-thinking-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  opacity: 0.85;
+}
+
+.tag-tally-ai-thinking-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--interactive-accent);
+  animation: tag-tally-ai-dot-pulse 1.05s ease-in-out infinite;
+}
+
+.tag-tally-ai-thinking-dot:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.tag-tally-ai-thinking-dot:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.tag-tally-ai-thinking-dot:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes tag-tally-ai-dot-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.tag-tally-ai-status-msg {
+  color: var(--text-normal);
+  flex: 1;
+  min-width: 0;
+}
+
+.tag-tally-ai-status-sep {
+  opacity: 0.6;
+  user-select: none;
+}
+
+.tag-tally-ai-status-elapsed {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  min-width: 3.25rem;
+  text-align: right;
+}
+
+.tag-tally-ai-msg-meta {
+  margin-top: var(--size-4-2);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Inline AI command pending badge — replaces the sentinel comment in live preview
+ * and reading view while the AI call is in flight. */
+.tag-tally-ai-pending {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 999px;
+  background: #fdf4ff;
+  color: #a21caf;
+  border: 1px solid #f5d0fe;
+  font-size: var(--font-ui-smaller);
+  font-style: italic;
+  line-height: 1.3;
+  white-space: nowrap;
+  animation: tag-tally-ai-pending-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes tag-tally-ai-pending-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}

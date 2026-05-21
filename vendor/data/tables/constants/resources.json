@@ -1,0 +1,696 @@
+{
+  "essenceResources": {
+    "airEssence": {
+      "name": "Air Essence",
+      "rarity": "Rare",
+      "descriptor": "whispering",
+      "resourceType": "Essence",
+      "special": "shimmers with invisible currents"
+    },
+    "earthEssence": {
+      "name": "Earth Essence",
+      "rarity": "Rare",
+      "descriptor": "dense",
+      "resourceType": "Essence",
+      "special": "feels immovably solid"
+    },
+    "waterEssence": {
+      "name": "Water Essence",
+      "rarity": "Rare",
+      "descriptor": "fluid",
+      "resourceType": "Essence",
+      "special": "ripples with shifting depth"
+    },
+    "fireEssence": {
+      "name": "Fire Essence",
+      "rarity": "Rare",
+      "descriptor": "burning",
+      "resourceType": "Essence",
+      "special": "glows with inner heat"
+    },
+    "lifeEssence": {
+      "name": "Life Essence",
+      "rarity": "Rare",
+      "descriptor": "vital",
+      "resourceType": "Essence",
+      "special": "pulses with raw vitality"
+    },
+    "deathEssence": {
+      "name": "Death Essence",
+      "rarity": "Rare",
+      "descriptor": "cold",
+      "resourceType": "Essence",
+      "special": "saps warmth and vigor"
+    },
+    "mindEssence": {
+      "name": "Mind Essence",
+      "rarity": "Rare",
+      "descriptor": "intricate",
+      "resourceType": "Essence",
+      "special": "thrums with thought and awareness"
+    },
+    "timeEssence": {
+      "name": "Time Essence",
+      "rarity": "Rare",
+      "descriptor": "fluid",
+      "resourceType": "Essence",
+      "special": "shifts subtly out of sync"
+    },
+    "spaceEssence": {
+      "name": "Space Essence",
+      "rarity": "Rare",
+      "descriptor": "distorting",
+      "resourceType": "Essence",
+      "special": "bends perception around it"
+    },
+    "soundEssence": {
+      "name": "Sound Essence",
+      "rarity": "Rare",
+      "descriptor": "vibrating",
+      "resourceType": "Essence",
+      "special": "echoes faintly in silence"
+    },
+    "illusionEssence": {
+      "name": "Illusion Essence",
+      "rarity": "Rare",
+      "descriptor": "shimmering",
+      "resourceType": "Essence",
+      "special": "flickers between forms"
+    },
+    "shadowEssence": {
+      "name": "Shadow Essence",
+      "rarity": "Rare",
+      "descriptor": "darkened",
+      "resourceType": "Essence",
+      "special": "absorbs nearby light"
+    },
+    "lightEssence": {
+      "name": "Light Essence",
+      "rarity": "Rare",
+      "descriptor": "luminous",
+      "resourceType": "Essence",
+      "special": "glows softly in darkness"
+    }
+  },
+  "organicCreatureParts": {
+    "eye": {
+      "name": "Eye",
+      "rarity": "Common",
+      "descriptor": "keen",
+      "resourceType": "Creature Parts",
+      "special": "captures light precisely"
+    },
+    "bone": {
+      "name": "Bone",
+      "rarity": "Common",
+      "descriptor": "sturdy",
+      "resourceType": "Creature Parts",
+      "special": "resists breaking under force"
+    },
+    "flesh": {
+      "name": "Flesh",
+      "rarity": "Common",
+      "descriptor": "supple",
+      "resourceType": "Creature Parts",
+      "special": "stretches without tearing"
+    },
+    "claw": {
+      "name": "Claw",
+      "rarity": "Common",
+      "descriptor": "hardened",
+      "resourceType": "Creature Parts",
+      "special": "retains its sharpness"
+    },
+    "horn": {
+      "name": "Horn",
+      "rarity": "Uncommon",
+      "descriptor": "dense",
+      "resourceType": "Creature Parts",
+      "special": "can withstand heavy impact"
+    },
+    "heart": {
+      "name": "Heart",
+      "rarity": "Rare",
+      "descriptor": "vital",
+      "resourceType": "Creature Parts",
+      "special": "pulses with life energy"
+    },
+    "brain": {
+      "name": "Brain",
+      "rarity": "Legendary",
+      "descriptor": "complex",
+      "resourceType": "Creature Parts",
+      "special": "holds extraordinary instinct and memory"
+    },
+    "hair": {
+      "name": "Hair",
+      "rarity": "Common",
+      "descriptor": "flexible",
+      "resourceType": "Creature Parts",
+      "special": "shimmers in light"
+    },
+    "teeth": {
+      "name": "Teeth",
+      "rarity": "Common",
+      "descriptor": "hardened",
+      "resourceType": "Creature Parts",
+      "special": "retains a sharp edge"
+    },
+    "liver": {
+      "name": "Liver",
+      "rarity": "Uncommon",
+      "descriptor": "dense",
+      "resourceType": "Creature Parts",
+      "special": "filters impurities efficiently"
+    },
+    "hide": {
+      "name": "Hide",
+      "rarity": "Uncommon",
+      "descriptor": "tough",
+      "resourceType": "Creature Parts",
+      "special": "resists cuts and abrasions"
+    },
+    "pincer": {
+      "name": "Pincer",
+      "rarity": "Uncommon",
+      "descriptor": "strong",
+      "resourceType": "Creature Parts",
+      "special": "closes with great force"
+    },
+    "stinger": {
+      "name": "Stinger",
+      "rarity": "Rare",
+      "descriptor": "barbed",
+      "resourceType": "Creature Parts",
+      "special": "retains venom after removal"
+    },
+    "scales": {
+      "name": "Scales",
+      "rarity": "Rare",
+      "descriptor": "overlapping",
+      "resourceType": "Creature Parts",
+      "special": "deflects impacts effectively"
+    }
+  },
+  "glandFluidCreatureParts": {
+    "blood": {
+      "name": "Blood",
+      "rarity": "Common",
+      "descriptor": "vital",
+      "resourceType": "Creature Parts",
+      "special": "pulses with life"
+    },
+    "ichor": {
+      "name": "Ichor",
+      "rarity": "Common",
+      "descriptor": "ethereal",
+      "resourceType": "Creature Parts",
+      "special": "shimmers strangely"
+    },
+    "acid": {
+      "name": "Acid",
+      "rarity": "Uncommon",
+      "descriptor": "corrosive",
+      "resourceType": "Creature Parts",
+      "special": "bubbles subtly"
+    },
+    "undyingHeart": {
+      "name": "Undying Heart",
+      "rarity": "Rare",
+      "descriptor": "resilient",
+      "resourceType": "Creature Parts",
+      "special": "beats even in death"
+    },
+    "congealedBlood": {
+      "name": "Congealed Blood",
+      "rarity": "Uncommon",
+      "descriptor": "thickened",
+      "resourceType": "Creature Parts",
+      "special": "retains its form even when removed from the body"
+    },
+    "undyingFlesh": {
+      "name": "Undying Flesh",
+      "rarity": "Rare",
+      "descriptor": "resilient",
+      "resourceType": "Creature Parts",
+      "special": "remains intact long after death"
+    },
+    "gland": {
+      "name": "Gland",
+      "rarity": "Common",
+      "descriptor": "secretory",
+      "resourceType": "Creature Parts",
+      "special": "produces subtle compounds"
+    },
+    "mucus": {
+      "name": "Mucus",
+      "rarity": "Common",
+      "descriptor": "slimy",
+      "resourceType": "Creature Parts",
+      "special": "sticks lightly to surfaces"
+    },
+    "vesicle": {
+      "name": "Vesicle",
+      "rarity": "Uncommon",
+      "descriptor": "fragile",
+      "resourceType": "Creature Parts",
+      "special": "swells under pressure"
+    },
+    "breathSac": {
+      "name": "Breath Sac",
+      "rarity": "Rare",
+      "descriptor": "elastic",
+      "resourceType": "Creature Parts",
+      "special": "expands and contracts smoothly"
+    }
+  },
+  "constructCreatureParts": {
+    "gears": {
+      "name": "Gears",
+      "rarity": "Common",
+      "descriptor": "precision",
+      "resourceType": "Creature Parts",
+      "special": "moves smoothly under strain"
+    },
+    "oil": {
+      "name": "Oil",
+      "rarity": "Common",
+      "descriptor": "viscous",
+      "resourceType": "Creature Parts",
+      "special": "shines when light hits it"
+    },
+    "plating": {
+      "name": "Plating",
+      "rarity": "Uncommon",
+      "descriptor": "reinforced",
+      "resourceType": "Creature Parts",
+      "special": "resists wear and tear"
+    },
+    "lifespark": {
+      "name": "Lifespark",
+      "rarity": "Rare",
+      "descriptor": "volatile",
+      "resourceType": "Creature Parts",
+      "special": "flickers unpredictably"
+    },
+    "instructions": {
+      "name": "Instructions",
+      "rarity": "Legendary",
+      "descriptor": "coded",
+      "resourceType": "Creature Parts",
+      "special": "contains intricate operational knowledge"
+    },
+    "stone": {
+      "name": "Stone",
+      "rarity": "Rare",
+      "descriptor": "dense",
+      "resourceType": "Creature Parts",
+      "special": "withstands heavy impact"
+    }
+  },
+  "magicalCreatureParts": {
+    "primalHeart": {
+      "name": "Primal Heart",
+      "rarity": "Legendary",
+      "descriptor": "arcane",
+      "resourceType": "Creature Parts",
+      "special": "thrums with raw magical energy"
+    },
+    "volatileMote": {
+      "name": "Volatile Mote",
+      "rarity": "Uncommon",
+      "descriptor": "flickering",
+      "resourceType": "Creature Parts",
+      "special": "shifts unpredictably in energy"
+    },
+    "primordialDust": {
+      "name": "Primordial Dust",
+      "rarity": "Uncommon",
+      "descriptor": "ancient",
+      "resourceType": "Creature Parts",
+      "special": "resonates with elemental forces"
+    },
+    "core": {
+      "name": "Core",
+      "rarity": "Rare",
+      "descriptor": "pulsing",
+      "resourceType": "Creature Parts",
+      "special": "radiates concentrated essence"
+    },
+    "etherealIchor": {
+      "name": "Ethereal Ichor",
+      "rarity": "Rare",
+      "descriptor": "luminous",
+      "resourceType": "Creature Parts",
+      "special": "flows like liquid light"
+    },
+    "psyche": {
+      "name": "Psyche",
+      "rarity": "Legendary",
+      "descriptor": "complex",
+      "resourceType": "Creature Parts",
+      "special": "contains consciousness beyond the physical"
+    },
+    "mainEye": {
+      "name": "Main Eye",
+      "rarity": "Legendary",
+      "descriptor": "all-seeing",
+      "resourceType": "Creature Parts",
+      "special": "perceives beyond normal sight"
+    },
+    "titanHeart": {
+      "name": "Titan Heart",
+      "rarity": "Legendary",
+      "descriptor": "immense",
+      "resourceType": "Creature Parts",
+      "special": "beats with unstoppable force"
+    },
+    "primeBone": {
+      "name": "Prime Bone",
+      "rarity": "Legendary",
+      "descriptor": "dense",
+      "resourceType": "Creature Parts",
+      "special": "stores the creature's primal strength"
+    },
+    "soul": {
+      "name": "Soul",
+      "rarity": "Legendary",
+      "descriptor": "ethereal",
+      "resourceType": "Creature Parts",
+      "special": "lingers with undying presence"
+    }
+  },
+  "plantCreatureParts": {
+    "leaves": {
+      "name": "Leaves",
+      "rarity": "Common",
+      "descriptor": "veined",
+      "resourceType": "Creature Parts",
+      "special": "rustles with a subtle life"
+    },
+    "roots": {
+      "name": "Roots",
+      "rarity": "Common",
+      "descriptor": "fibrous",
+      "resourceType": "Creature Parts",
+      "special": "clings firmly to surfaces"
+    },
+    "bark": {
+      "name": "Bark",
+      "rarity": "Uncommon",
+      "descriptor": "toughened",
+      "resourceType": "Creature Parts",
+      "special": "resists tearing and abrasion"
+    },
+    "seeds": {
+      "name": "Seeds",
+      "rarity": "Uncommon",
+      "descriptor": "resilient",
+      "resourceType": "Creature Parts",
+      "special": "survives harsh conditions"
+    },
+    "pollen": {
+      "name": "Pollen",
+      "rarity": "Rare",
+      "descriptor": "dusty",
+      "resourceType": "Creature Parts",
+      "special": "carries latent vitality"
+    }
+  },
+  "oreResources": {
+    "copper": {
+      "name": "Copper",
+      "rarity": "Common",
+      "descriptor": "conductive",
+      "resourceType": "Ore",
+      "special": "is easy to shape"
+    },
+    "iron": {
+      "name": "Iron",
+      "rarity": "Uncommon",
+      "descriptor": "resilient",
+      "resourceType": "Ore",
+      "special": "holds an edge well"
+    },
+    "mythril": {
+      "name": "Mythril",
+      "rarity": "Rare",
+      "descriptor": "lightweight",
+      "resourceType": "Ore",
+      "special": "is exceptionally strong"
+    },
+    "adamantine": {
+      "name": "Adamantine",
+      "rarity": "Legendary",
+      "descriptor": "balanced",
+      "resourceType": "Ore",
+      "special": "is nearly indestructible"
+    },
+    "silver": {
+      "name": "Silver",
+      "rarity": "Common",
+      "descriptor": "radiant",
+      "resourceType": "Ore",
+      "special": "reflects hostile magic"
+    },
+    "gold": {
+      "name": "Gold",
+      "rarity": "Uncommon",
+      "descriptor": "malleable",
+      "resourceType": "Ore",
+      "special": "amplifies enchantments"
+    },
+    "platinum": {
+      "name": "Platinum",
+      "rarity": "Rare",
+      "descriptor": "immutable",
+      "resourceType": "Ore",
+      "special": "anchors powerful magic"
+    },
+    "aetherium": {
+      "name": "Aetherium",
+      "rarity": "Legendary",
+      "descriptor": "transcendent",
+      "resourceType": "Ore",
+      "special": "stabilizes magic"
+    }
+  },
+  "woodResources": {
+    "oak": {
+      "name": "Oak",
+      "rarity": "Common",
+      "descriptor": "sturdy",
+      "resourceType": "Wood",
+      "special": "resists splintering"
+    },
+    "pine": {
+      "name": "Pine",
+      "rarity": "Common",
+      "descriptor": "flexible",
+      "resourceType": "Wood",
+      "special": "is easy to work"
+    },
+    "ironwood": {
+      "name": "Ironwood",
+      "rarity": "Uncommon",
+      "descriptor": "dense",
+      "resourceType": "Wood",
+      "special": "is as strong as metal"
+    },
+    "heartwood": {
+      "name": "Heartwood",
+      "rarity": "Rare",
+      "descriptor": "vital",
+      "resourceType": "Wood",
+      "special": "retains living essence"
+    },
+    "elderwood": {
+      "name": "Elderwood",
+      "rarity": "Legendary",
+      "descriptor": "ancient",
+      "resourceType": "Wood",
+      "special": "remembers"
+    }
+  },
+  "fiberResources": {
+    "cotton": {
+      "name": "Cotton",
+      "rarity": "Common",
+      "descriptor": "soft",
+      "resourceType": "Fiber",
+      "special": "is easy to spin"
+    },
+    "flax": {
+      "name": "Flax",
+      "rarity": "Common",
+      "descriptor": "durable",
+      "resourceType": "Fiber",
+      "special": "that is strong"
+    },
+    "spidersilk": {
+      "name": "Spidersilk",
+      "rarity": "Uncommon",
+      "descriptor": "tensile",
+      "resourceType": "Fiber",
+      "special": "is stronger than leather"
+    },
+    "twineleafe": {
+      "name": "Twineleafe",
+      "rarity": "Rare",
+      "descriptor": "flexible",
+      "resourceType": "Fiber",
+      "special": "bends without breaking"
+    },
+    "moonthread": {
+      "name": "Moonthread",
+      "rarity": "Legendary",
+      "descriptor": "luminous",
+      "resourceType": "Fiber",
+      "special": "retains ambient magic"
+    }
+  },
+  "liquidResources": {
+    "water": {
+      "name": "Water",
+      "rarity": "Common",
+      "descriptor": "clear",
+      "resourceType": "Liquid",
+      "special": "forms the basis of life"
+    },
+    "alcohol": {
+      "name": "Alcohol",
+      "rarity": "Common",
+      "descriptor": "volatile",
+      "resourceType": "Liquid",
+      "special": "burns easily"
+    },
+    "acidLiquid": {
+      "name": "Acid",
+      "rarity": "Uncommon",
+      "descriptor": "corrosive",
+      "resourceType": "Liquid",
+      "special": "reacts violently"
+    },
+    "essenceLiquid": {
+      "name": "Essence",
+      "rarity": "Rare",
+      "descriptor": "mystical",
+      "resourceType": "Liquid",
+      "special": "holds latent magic"
+    },
+    "aether": {
+      "name": "Aether",
+      "rarity": "Legendary",
+      "descriptor": "luminous",
+      "resourceType": "Liquid",
+      "special": "channels raw magic"
+    }
+  },
+  "plantResources": {
+    "wildflowers": {
+      "name": "Wildflowers",
+      "rarity": "Common",
+      "descriptor": "soothing",
+      "resourceType": "Plants",
+      "special": "eases minor aches"
+    },
+    "herbs": {
+      "name": "Herbs",
+      "rarity": "Common",
+      "descriptor": "refreshing",
+      "resourceType": "Plants",
+      "special": "revitalizes the senses"
+    },
+    "rootstock": {
+      "name": "Rootstock",
+      "rarity": "Uncommon",
+      "descriptor": "calming",
+      "resourceType": "Plants",
+      "special": "promotes mental clarity"
+    },
+    "silverleaf": {
+      "name": "Silverleaf",
+      "rarity": "Rare",
+      "descriptor": "restorative",
+      "resourceType": "Plants",
+      "special": "accelerates healing"
+    },
+    "lifebloom": {
+      "name": "Lifebloom",
+      "rarity": "Legendary",
+      "descriptor": "vital",
+      "resourceType": "Plants",
+      "special": "heals grievous wounds"
+    },
+    "berries": {
+      "name": "Berries",
+      "rarity": "Common",
+      "descriptor": "toxic",
+      "resourceType": "Plants",
+      "special": "cause mild illness"
+    },
+    "nightshade": {
+      "name": "Nightshade",
+      "rarity": "Common",
+      "descriptor": "venoumous",
+      "resourceType": "Plants",
+      "special": "induces weakness"
+    },
+    "hemlock": {
+      "name": "Hemlock",
+      "rarity": "Uncommon",
+      "descriptor": "potent",
+      "resourceType": "Plants",
+      "special": "causes hallucinations"
+    },
+    "deathbloom": {
+      "name": "Deathbloom",
+      "rarity": "Rare",
+      "descriptor": "deadly",
+      "resourceType": "Plants",
+      "special": "can kill swiftly"
+    },
+    "soulvine": {
+      "name": "Soulvine",
+      "rarity": "Legendary",
+      "descriptor": "cursed",
+      "resourceType": "Plants",
+      "special": "drains vitality"
+    },
+    "fungi": {
+      "name": "Fungi",
+      "rarity": "Common",
+      "descriptor": "mystical",
+      "resourceType": "Plants",
+      "special": "enhances minor spells"
+    },
+    "wyrdroot": {
+      "name": "Wyrdroot",
+      "rarity": "Common",
+      "descriptor": "enchanted",
+      "resourceType": "Plants",
+      "special": "amplifies spellcasting"
+    },
+    "mistbark": {
+      "name": "Mistbark",
+      "rarity": "Uncommon",
+      "descriptor": "elemental",
+      "resourceType": "Plants",
+      "special": "enhances the elements"
+    },
+    "heartbloom": {
+      "name": "Heartbloom",
+      "rarity": "Rare",
+      "descriptor": "arcane",
+      "resourceType": "Plants",
+      "special": "stores ambient magic"
+    },
+    "aetherstem": {
+      "name": "Aetherstem",
+      "rarity": "Legendary",
+      "descriptor": "ethereal",
+      "resourceType": "Plants",
+      "special": "channels latent currents"
+    }
+  }
+}

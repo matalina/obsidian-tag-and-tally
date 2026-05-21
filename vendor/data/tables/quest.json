@@ -1,0 +1,118 @@
+[
+  {
+    "name": "quest-type",
+    "formula": "1d10",
+    "table": [
+      { "min": 1, "max": 1, "value": "Find" },
+      { "min": 2, "max": 2, "value": "Collect" },
+      { "min": 3, "max": 3, "value": "Hunt" },
+      { "min": 4, "max": 4, "value": "Investigate" },
+      { "min": 5, "max": 5, "value": "Deliver" },
+      { "min": 6, "max": 6, "value": "Destroy" },
+      { "min": 7, "max": 7, "value": "Explore" },
+      { "min": 8, "max": 8, "value": "Build" },
+      { "min": 9, "max": 9, "value": "Influence" },
+      { "min": 10, "max": 10, "value": "Infiltrate" }
+    ]
+  },
+  {
+    "name": "quest-objective-find",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "An Object" },
+      { "min": 2, "max": 2, "value": "A Person" },
+      { "min": 3, "max": 3, "value": "A Place" },
+      { "min": 4, "max": 4, "value": "Information" }
+    ]
+  },
+  {
+    "name": "quest-objective-collect",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "Objects" },
+      { "min": 2, "max": 2, "value": "Resources" },
+      { "min": 3, "max": 3, "value": "Information" },
+      { "min": 4, "max": 4, "value": "Contacts" }
+    ]
+  },
+  {
+    "name": "quest-objective-hunt",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Person" },
+      { "min": 2, "max": 2, "value": "A Faction" },
+      { "min": 3, "max": 3, "value": "A Creature" },
+      { "min": 4, "max": 4, "value": "A Threat" }
+    ]
+  },
+  {
+    "name": "quest-objective-investigate",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Mystery" },
+      { "min": 2, "max": 2, "value": "A Place" },
+      { "min": 3, "max": 3, "value": "A Secret" },
+      { "min": 4, "max": 4, "value": "A Phenomenon" }
+    ]
+  },
+  {
+    "name": "quest-objective-deliver",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Person" },
+      { "min": 2, "max": 2, "value": "An Object" },
+      { "min": 3, "max": 3, "value": "A Message" },
+      { "min": 4, "max": 4, "value": "A Creature" }
+    ]
+  },
+  {
+    "name": "quest-objective-destroy",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Person" },
+      { "min": 2, "max": 2, "value": "A Creature" },
+      { "min": 3, "max": 3, "value": "A Location" },
+      { "min": 4, "max": 4, "value": "A Faction" }
+    ]
+  },
+  {
+    "name": "quest-objective-explore",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "The Region" },
+      { "min": 2, "max": 2, "value": "A Place" },
+      { "min": 3, "max": 3, "value": "A Secret" },
+      { "min": 4, "max": 4, "value": "A Phenomenon" }
+    ]
+  },
+  {
+    "name": "quest-objective-build",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Place" },
+      { "min": 2, "max": 2, "value": "A Faction" },
+      { "min": 3, "max": 3, "value": "An Artifact/Device" },
+      { "min": 4, "max": 4, "value": "A Relationship" }
+    ]
+  },
+  {
+    "name": "quest-objective-influence",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Person" },
+      { "min": 2, "max": 2, "value": "A Faction" },
+      { "min": 3, "max": 3, "value": "An Outcome" },
+      { "min": 4, "max": 4, "value": "A Relationship" }
+    ]
+  },
+  {
+    "name": "quest-objective-infiltrate",
+    "formula": "1d4",
+    "table": [
+      { "min": 1, "max": 1, "value": "A Place" },
+      { "min": 2, "max": 2, "value": "A Faction" },
+      { "min": 3, "max": 3, "value": "An Operation" },
+      { "min": 4, "max": 4, "value": "A System" }
+    ]
+  }
+]
