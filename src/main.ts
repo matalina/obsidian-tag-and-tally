@@ -40,7 +40,7 @@ import { ResolveWidget, RESOLVE_REGEX } from './resolution/resolve';
 import { AiChatView, VIEW_TYPE_AI_CHAT } from './ai/chatView';
 import { DEFAULT_AI_SETTINGS, mergeAiSettings, type AiPluginSettings } from './ai/settings';
 import { PromptManager } from './ai/promptManager';
-import { AI_REGEX, kickOffAi, spliceMarker, type AiCommand } from './ai/inline';
+import { AI_REGEX, isAiCommand, kickOffAi, spliceMarker, type AiCommand } from './ai/inline';
 import { aiInlineExtension } from './ai/inlineLive';
 import { textReplacementExtension, runTextReplacement } from './replacements/extension';
 import type { EditorView } from '@codemirror/view';
@@ -563,7 +563,7 @@ export default class TextMapperPlugin extends Plugin {
         });
       }
 
-      // Handle ai:summary or ai:eval (with optional :gm-name)
+      // Handle ai:* commands (with optional :gm-name)
       if (AI_REGEX.test(mdText)) {
         const pill = document.createElement('span');
         pill.className = 'tag-tally-ai-pending';
@@ -579,8 +579,8 @@ export default class TextMapperPlugin extends Plugin {
     const m = mdText.match(AI_REGEX);
     if (!m) return;
     const rawCommand = m[1].toLowerCase();
-    if (rawCommand !== 'summary' && rawCommand !== 'eval') return;
-    const command = rawCommand as AiCommand;
+    if (!isAiCommand(rawCommand)) return;
+    const command: AiCommand = rawCommand;
 
     let fileContent: string;
     try {
@@ -755,7 +755,7 @@ export default class TextMapperPlugin extends Plugin {
           });
         }
 
-        // Process ai:summary / ai:eval widgets
+        // Process ai:* widgets
         if (AI_REGEX.test(mdText)) {
           const pill = document.createElement('span');
           pill.className = 'tag-tally-ai-pending';

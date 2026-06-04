@@ -12,6 +12,8 @@ export interface AiPluginSettings {
   maxSearchMatches: number;
   summaryPromptFile: string;
   evalPromptFile: string;
+  askPromptFile: string;
+  rulePromptFile: string;
 }
 
 export const DEFAULT_AI_SETTINGS: AiPluginSettings = {
@@ -26,6 +28,8 @@ export const DEFAULT_AI_SETTINGS: AiPluginSettings = {
   maxSearchMatches: 40,
   summaryPromptFile: "summary",
   evalPromptFile: "eval",
+  askPromptFile: "ask",
+  rulePromptFile: "rule",
 };
 
 export function mergeAiSettings(raw: unknown): AiPluginSettings {

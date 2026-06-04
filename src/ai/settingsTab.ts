@@ -153,7 +153,7 @@ export function renderAiSettings(
 
   containerEl.createEl("h3", { text: "Inline AI commands" });
   containerEl.createEl("p", {
-    text: "The `ai:summary` and `ai:eval` inline commands always send a built-in base prompt (marker location, resolution-block format, character-context awareness). The files below supply the user-style portion (length, tone, output format) appended after the base. Files are looked up in the system prompt folder (default: _system/prompts); if a file isn't found, a built-in default user-style prompt is used.",
+    text: "The inline `ai:*` commands always send a built-in base prompt (marker location, resolution-block format, character-context awareness, etc.). The files below supply the user-style portion (length, tone, output format) appended after the base. Files are looked up in the system prompt folder (default: _system/prompts); if a file isn't found, a built-in default user-style prompt is used.",
     cls: "setting-item-description",
   });
 
@@ -183,6 +183,36 @@ export function renderAiSettings(
         .setValue(plugin.aiSettings.evalPromptFile)
         .onChange(async (v) => {
           plugin.aiSettings.evalPromptFile = v.trim() || "eval";
+          await plugin.saveAiSettings();
+        }),
+    );
+
+  new Setting(containerEl)
+    .setName("Ask prompt filename")
+    .setDesc(
+      "Filename (without .md) inside the system prompt folder supplying the user-style portion of `ai:ask`. The question is the paragraph immediately above the marker; the rest of the note is sent as context.",
+    )
+    .addText((text) =>
+      text
+        .setPlaceholder("ask")
+        .setValue(plugin.aiSettings.askPromptFile)
+        .onChange(async (v) => {
+          plugin.aiSettings.askPromptFile = v.trim() || "ask";
+          await plugin.saveAiSettings();
+        }),
+    );
+
+  new Setting(containerEl)
+    .setName("Rule prompt filename")
+    .setDesc(
+      "Filename (without .md) inside the system prompt folder supplying the user-style portion of `ai:rule`. The question is the paragraph immediately above the marker; the bundled Tag & Tally rulebook is sent as context (the rest of the note is NOT sent).",
+    )
+    .addText((text) =>
+      text
+        .setPlaceholder("rule")
+        .setValue(plugin.aiSettings.rulePromptFile)
+        .onChange(async (v) => {
+          plugin.aiSettings.rulePromptFile = v.trim() || "rule";
           await plugin.saveAiSettings();
         }),
     );

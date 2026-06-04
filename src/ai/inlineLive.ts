@@ -15,6 +15,7 @@ import type TextMapperPlugin from "../main";
 import {
   AI_REGEX,
   AiCommand,
+  isAiCommand,
   buildInflightKey,
   isBacktickInflight,
   kickOffAi,
@@ -94,8 +95,8 @@ class AiInlinePlugin implements PluginValue {
           this.fired.add(key);
 
           const rawCommand = m[1].toLowerCase();
-          if (rawCommand !== "summary" && rawCommand !== "eval") return;
-          const command = rawCommand as AiCommand;
+          if (!isAiCommand(rawCommand)) return;
+          const command: AiCommand = rawCommand;
 
           const docText = view.state.doc.toString();
           const snapshot = spliceMarker(docText, fullFrom, text.length, command);

@@ -7,7 +7,7 @@ export const SENTENCE_TEMPLATES: Record<string, string> = {
     '**{creature-name-prefix} {creature-name-[creature-type]}** ({creature-disposition} {creature-descriptor} {creature-type}): This creature {creature-motivation} and attacks with {creature-attack-choice-[damage-type]} for {damage-type} damage. It features a unique ability to {creature-special-ability-[creature-type]}. It {creature-strength-[creature-type]} and {creature-weakness-[creature-type]}.',
   Quest: '{quest-type} {quest-objective-[quest-type]}',
   'NPC/Character':
-    '**Name** is a {(theme)-descriptor} {(theme)-species} {(theme)-type-[option]} who {(theme)-does-something}. They are motivated {character-motivation} and have a goal {character-goal}. In combat, they deal {wound-damage} damage with {character-attack-choice}, but they {character-secret}.',
+    '**Name** is a {(theme)-descriptor} {(theme)-species} {(theme)-type-[option]} who {(theme)-does-something}. They are motivated by {character-motivation} and want to {character-goal}. In combat, they deal {wound-damage} damage with {character-attack-choice}, but they {character-secret}.',
   Species:
     'This species is a {character-species-aged} {character-species-descriptor} people who {character-species-cultural-trait} and {character-species-feature}.',
   Type: 'This type is a {fantasy-descriptor} {fantasy-type} who {fantasy-does-something}.',
@@ -200,11 +200,10 @@ export function resolveTableReference(
       }
     }
 
-    // Special handling for does-something: fantasy and modern use verb + something separately
-    // Only monster-hunter uses the single does-something table
+    // does-something: fantasy and modern roll the shared d100 specialization table.
+    // Only monster-hunter uses its own does-something table.
     if (tableName === 'does-something' && (theme === 'fantasy' || theme === 'modern')) {
-      // Return a special marker that will be handled in generation
-      return theme === 'fantasy' ? '__FANTASY_VERB_SOMETHING__' : '__MODERN_VERB_SOMETHING__';
+      return 'does-something';
     }
 
     // Try theme-specific table
@@ -254,13 +253,10 @@ export function resolveTableReference(
     }
   }
 
-  // Fantasy and modern does-something use verb + something separately (for already-resolved tables)
-  // Only monster-hunter uses the single does-something table
-  if (tableRef === 'fantasy-does-something') {
-    return '__FANTASY_VERB_SOMETHING__';
-  }
-  if (tableRef === 'modern-does-something') {
-    return '__MODERN_VERB_SOMETHING__';
+  // Fantasy and modern does-something roll the shared d100 specialization table (for already-resolved tables)
+  // Only monster-hunter uses its own does-something table
+  if (tableRef === 'fantasy-does-something' || tableRef === 'modern-does-something') {
+    return 'does-something';
   }
 
   // Special handling for fantasy-type: combines class, profession, and criminal tables
@@ -406,7 +402,13 @@ export function generateCharacterName(theme: string): string {
           pattern = pattern.replace(match[0], `[Error: npc-name-part-${partNum}]`);
         }
       }
-      return pattern;
+      // Parts are concatenated, which can leave mid-word capitals (e.g. "KaelDrae").
+      // Normalize each name word to lowercase, then capitalize its first letter.
+      return pattern
+        .toLowerCase()
+        .split(/\s+/)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
     } catch (error) {
       console.error('Error generating fantasy name:', error);
       return 'Name';
@@ -559,8 +561,8 @@ export function generateSentence(
     template = template.replace(/\[option\]/g, npcOption);
   }
 
-  // Generate character name only for NPC/Character sentences (npcOption is set); items keep literal **Name**
-  if (template.includes('**Name**') && npcOption !== undefined) {
+  // Generate character name for NPC/Character sentences (the only template containing **Name**)
+  if (template.includes('**Name**')) {
     const characterName = generateCharacterName(theme);
     // Add ** markers around the name since template has **Name**
     template = template.replace(/\*\*Name\*\*/g, `**${characterName}**`);
@@ -692,40 +694,6 @@ export function generateSentence(
         replacements.set(ref.index, value);
         resolvedValues.set(ref.ref, 'human');
         continue;
-      }
-
-      // Special handling for fantasy verb + something (combine two tables)
-      if (tableName === '__FANTASY_VERB_SOMETHING__') {
-        try {
-          const verbResult = store.random('fantasy-verb');
-          const somethingResult = store.random('fantasy-something');
-          let value = `${verbResult.result.toLowerCase()} ${somethingResult.result.toLowerCase()}`;
-          value = `[${value}]`;
-          replacements.set(ref.index, value);
-          resolvedValues.set(ref.ref, `${verbResult.result} ${somethingResult.result}`);
-          continue;
-        } catch (error) {
-          console.error('Error rolling fantasy verb/something:', error);
-          replacements.set(ref.index, `[Error: fantasy-verb/something]`);
-          continue;
-        }
-      }
-
-      // Special handling for modern verb + something (combine two tables)
-      if (tableName === '__MODERN_VERB_SOMETHING__') {
-        try {
-          const verbResult = store.random('modern-verb');
-          const somethingResult = store.random('modern-something');
-          let value = `${verbResult.result.toLowerCase()} ${somethingResult.result.toLowerCase()}`;
-          value = `[${value}]`;
-          replacements.set(ref.index, value);
-          resolvedValues.set(ref.ref, `${verbResult.result} ${somethingResult.result}`);
-          continue;
-        } catch (error) {
-          console.error('Error rolling modern verb/something:', error);
-          replacements.set(ref.index, `[Error: modern-verb/something]`);
-          continue;
-        }
       }
 
       // Special handling for fantasy-type: randomly select one of class, profession, or criminal
@@ -922,30 +890,30 @@ export function generateSentence(
         }
       }
 
-      // Special handling for character-goal: combines verb + noun into single tag
+      // Special handling for character-goal: generates a quest (quest-type + matching objective)
       if (tableName === '__CHARACTER_GOAL__') {
         try {
-          const verbResult = store.random('character-goal-verb');
-          const nounResult = store.random('character-goal-noun');
-          const combined = `${verbResult.result} ${nounResult.result}`;
+          const typeResult = store.random('quest-type');
+          const objectiveTable = `quest-objective-${typeResult.result.toLowerCase().replace(/\s+/g, '-')}`;
+          const objectiveResult = store.random(objectiveTable);
+          const combined = `${typeResult.result} ${objectiveResult.result}`;
           let value = combined.toLowerCase();
           value = `[${value}]`;
           replacements.set(ref.index, value);
           resolvedValues.set(ref.ref, combined);
           continue;
         } catch (error) {
-          console.error('Error rolling character goal:', error);
+          console.error('Error rolling character goal quest:', error);
           replacements.set(ref.index, `[Error: character-goal]`);
           continue;
         }
       }
 
-      // Special handling for character-secret: combines verb + noun into single tag
+      // Special handling for character-secret: rolls the single d6 secret-tag table
       if (tableName === '__CHARACTER_SECRET__') {
         try {
-          const verbResult = store.random('character-secret-verb');
-          const nounResult = store.random('character-secret-noun');
-          const combined = `${verbResult.result} ${nounResult.result}`;
+          const secretResult = store.random('character-secret');
+          const combined = secretResult.result;
           let value = combined.toLowerCase();
           value = `[${value}]`;
           replacements.set(ref.index, value);
@@ -1626,8 +1594,8 @@ export function generateSentenceWithTags(
     template = template.replace(/\[option\]/g, npcOption);
   }
 
-  // Generate character name only for NPC/Character sentences (npcOption is set); items keep literal **Name**
-  if (template.includes('**Name**') && npcOption !== undefined) {
+  // Generate character name for NPC/Character sentences (the only template containing **Name**)
+  if (template.includes('**Name**')) {
     const characterName = generateCharacterName(theme);
     // Add ** markers around the name since template has **Name**
     template = template.replace(/\*\*Name\*\*/g, `**${characterName}**`);
@@ -1765,40 +1733,6 @@ export function generateSentenceWithTags(
         continue;
       }
 
-      // Special handling for fantasy verb + something (combine two tables)
-      if (tableName === '__FANTASY_VERB_SOMETHING__') {
-        try {
-          const verbResult = store.random('fantasy-verb');
-          const somethingResult = store.random('fantasy-something');
-          let value = `${verbResult.result.toLowerCase()} ${somethingResult.result.toLowerCase()}`;
-          value = `[${value}]`;
-          replacements.set(ref.index, value);
-          resolvedValues.set(ref.ref, `${verbResult.result} ${somethingResult.result}`);
-          continue;
-        } catch (error) {
-          console.error('Error rolling fantasy verb/something:', error);
-          replacements.set(ref.index, `[error]`);
-          continue;
-        }
-      }
-
-      // Special handling for modern verb + something (combine two tables)
-      if (tableName === '__MODERN_VERB_SOMETHING__') {
-        try {
-          const verbResult = store.random('modern-verb');
-          const somethingResult = store.random('modern-something');
-          let value = `${verbResult.result.toLowerCase()} ${somethingResult.result.toLowerCase()}`;
-          value = `[${value}]`;
-          replacements.set(ref.index, value);
-          resolvedValues.set(ref.ref, `${verbResult.result} ${somethingResult.result}`);
-          continue;
-        } catch (error) {
-          console.error('Error rolling modern verb/something:', error);
-          replacements.set(ref.index, `[error]`);
-          continue;
-        }
-      }
-
       // Special handling for fantasy-type: randomly select one of class, profession, or criminal
       if (tableName === '__FANTASY_TYPE_COMBINED__') {
         try {
@@ -1921,30 +1855,30 @@ export function generateSentenceWithTags(
         }
       }
 
-      // Special handling for character-goal: combines verb + noun into single tag
+      // Special handling for character-goal: generates a quest (quest-type + matching objective)
       if (tableName === '__CHARACTER_GOAL__') {
         try {
-          const verbResult = store.random('character-goal-verb');
-          const nounResult = store.random('character-goal-noun');
-          const combined = `${verbResult.result} ${nounResult.result}`;
+          const typeResult = store.random('quest-type');
+          const objectiveTable = `quest-objective-${typeResult.result.toLowerCase().replace(/\s+/g, '-')}`;
+          const objectiveResult = store.random(objectiveTable);
+          const combined = `${typeResult.result} ${objectiveResult.result}`;
           let value = combined.toLowerCase();
           value = `[${value}]`;
           replacements.set(ref.index, value);
           resolvedValues.set(ref.ref, combined);
           continue;
         } catch (error) {
-          console.error('Error rolling character goal:', error);
+          console.error('Error rolling character goal quest:', error);
           replacements.set(ref.index, `[error]`);
           continue;
         }
       }
 
-      // Special handling for character-secret: combines verb + noun into single tag
+      // Special handling for character-secret: rolls the single d6 secret-tag table
       if (tableName === '__CHARACTER_SECRET__') {
         try {
-          const verbResult = store.random('character-secret-verb');
-          const nounResult = store.random('character-secret-noun');
-          const combined = `${verbResult.result} ${nounResult.result}`;
+          const secretResult = store.random('character-secret');
+          const combined = secretResult.result;
           let value = combined.toLowerCase();
           value = `[${value}]`;
           replacements.set(ref.index, value);

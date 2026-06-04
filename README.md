@@ -48,6 +48,17 @@ You also choose how much of your vault the AI is allowed to see, via **AI settin
 - **Specific folders** — restrict access to one or more folders you pick.
 - **Specific files** — restrict access to an explicit list of files.
 
+### Inline AI commands
+
+Besides the chat sidebar, you can run the AI from inside any note by dropping in a short inline code span and letting it resolve in place. When the marker scrolls into view in Live Preview, the plugin runs it against your local model, shows an "AI generating…" pill while it works, and then replaces the marker with an `> [!ai]` callout holding the result. Like the sidebar, these stay inert until you have configured a local model.
+
+- **Summary** (`ai:summary`) — drop `ai:summary` after a stretch of notes to get a quick bulleted recap of everything above the marker. The reply is inserted as a **Summary** callout.
+- **Eval** (`ai:eval`) — put `ai:eval` below a dice/resolution block to turn the mechanical outcome into prose. It finds the last resolution block before the marker and narrates what happens in the fiction. The reply is inserted as an **Evaluation** callout.
+- **Ask** (`ai:ask`) — write a question as a normal paragraph, then put `ai:ask` as an inline code span on the line below it. The paragraph directly above the marker is treated as the question and the rest of the note is sent along as context, so the answer is grounded in what you have already written. The reply is inserted as an **Answer** callout. You can append a saved GM personality by name — e.g. `ai:ask:Guildmaster` — to colour the tone.
+- **Rule** (`ai:rule`) — put `ai:rule` below a rules question to answer it from the **bundled Tag and Tally rulebook** rather than from your note. The plugin fuzzy-searches the rulebook for the pages most relevant to your question, answers only from those pages (and cites the section), and reproduces any game-sentence templates word-for-word. The reply is inserted as a **Rule** callout.
+
+All four commands run through the same local model and access rules as the chat sidebar, and any of them will fold in a character summary when the note's frontmatter has a `character` key. You can tailor the length and tone of each reply by creating a prompt note and pointing the matching setting at it — **AI settings → Summary prompt filename** (default `summary`), **Eval prompt filename** (default `eval`), **Ask prompt filename** (default `ask`), and **Rule prompt filename** (default `rule`).
+
 ## Permissions and privacy
 
 The plugin reuses Obsidian's vault API for all file access and stays within the rules an Obsidian community plugin is expected to follow. A few specifics that may show up in plugin reviews or security scans:
