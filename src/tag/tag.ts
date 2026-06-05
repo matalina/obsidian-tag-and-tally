@@ -196,9 +196,9 @@ export class TagWidget {
     }
 
     toDOM(): HTMLElement {
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-tag");
-        this.el.style.cursor = "pointer";
+        this.el.setCssStyles({ cursor: "pointer" });
 
         const box = this.el.createEl("span");
         box.classList.add("tag-tally-tag-box");
@@ -217,7 +217,7 @@ export class TagWidget {
         // If flag is present, add hidden class and make box position relative
         if (this.flag) {
             box.classList.add("tag-tally-tag-hidden");
-            box.style.position = "relative";
+            box.setCssStyles({ position: "relative" });
         }
 
         // Type icon (skip for label type)
@@ -230,7 +230,7 @@ export class TagWidget {
             }
             // Hide icon if flag is present
             if (this.flag) {
-                iconContainer.style.color = "transparent";
+                iconContainer.setCssStyles({ color: "transparent" });
             }
         }
 
@@ -241,7 +241,7 @@ export class TagWidget {
             tierEl.textContent = `T${this.tier}`;
             // Hide tier if flag is present
             if (this.flag) {
-                tierEl.style.color = "transparent";
+                tierEl.setCssStyles({ color: "transparent" });
             }
         }
 
@@ -258,14 +258,14 @@ export class TagWidget {
                 labelEl.textContent = labelText;
                 // Hide text if flag is present
                 if (this.flag) {
-                    labelEl.style.color = "transparent";
+                    labelEl.setCssStyles({ color: "transparent" });
                 }
                 
                 const colonEl = box.createEl("span");
                 colonEl.textContent = ": ";
                 // Hide colon if flag is present
                 if (this.flag) {
-                    colonEl.style.color = "transparent";
+                    colonEl.setCssStyles({ color: "transparent" });
                 }
                 
                 const valueEl = box.createEl("span");
@@ -273,7 +273,7 @@ export class TagWidget {
                 valueEl.textContent = valueText;
                 // Hide value if flag is present
                 if (this.flag) {
-                    valueEl.style.color = "transparent";
+                    valueEl.setCssStyles({ color: "transparent" });
                 }
             } else {
                 // Fallback if format doesn't match
@@ -282,7 +282,7 @@ export class TagWidget {
                 textEl.textContent = this.tagText;
                 // Hide text if flag is present
                 if (this.flag) {
-                    textEl.style.color = "transparent";
+                    textEl.setCssStyles({ color: "transparent" });
                 }
             }
         } else {
@@ -291,7 +291,7 @@ export class TagWidget {
             textEl.textContent = this.tagText;
             // Hide text if flag is present
             if (this.flag) {
-                textEl.style.color = "transparent";
+                textEl.setCssStyles({ color: "transparent" });
             }
         }
 
@@ -303,7 +303,7 @@ export class TagWidget {
             setIcon(tallyEl, tallyIconName);
             // Hide tally icon if flag is present
             if (this.flag) {
-                tallyEl.style.color = "transparent";
+                tallyEl.setCssStyles({ color: "transparent" });
             }
         }
 
@@ -314,7 +314,7 @@ export class TagWidget {
             setIcon(tempEl, "triangle-dashed");
             // Hide temporary icon if flag is present
             if (this.flag) {
-                tempEl.style.color = "transparent";
+                tempEl.setCssStyles({ color: "transparent" });
             }
         }
 
@@ -337,7 +337,7 @@ export class TagWidget {
 
     private restoreForEditing() {
         // Create a code element with the original text
-        const codeEl = document.createElement("code");
+        const codeEl = activeDocument.createElement("code");
         codeEl.textContent = this.originalText.slice(1, -1); // Remove backticks
         
         // Replace the widget with the code element
@@ -349,7 +349,7 @@ export class TagWidget {
             codeEl.focus();
             
             // Select all text for easy editing
-            const range = document.createRange();
+            const range = activeDocument.createRange();
             range.selectNodeContents(codeEl);
             const selection = window.getSelection();
             selection?.removeAllRanges();

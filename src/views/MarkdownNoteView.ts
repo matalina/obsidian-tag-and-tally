@@ -51,9 +51,9 @@ export class MarkdownNoteView extends ItemView {
     async renderContent(): Promise<void> {
         const container = this.containerEl.children[1] as HTMLElement;
         container.empty();
-        container.style.width = "100%";
-        container.style.height = "100%";
-        container.style.overflow = "auto";
+        container.setCssStyles({ width: "100%" });
+        container.setCssStyles({ height: "100%" });
+        container.setCssStyles({ overflow: "auto" });
 
         // If no file path is set, show placeholder
         if (!this.filePath) {
@@ -106,7 +106,7 @@ export class MarkdownNoteView extends ItemView {
                 markdown,
                 markdownContainer,
                 this.filePath,
-                this.plugin
+                this
             );
         } catch (error) {
             console.error('Error loading markdown note:', error);

@@ -27,7 +27,7 @@ export function renderTextReplacementSettings(
 
   plugin.settings.textReplacements.forEach((row, idx) => {
     const setting = new Setting(containerEl);
-    setting.controlEl.style.gap = "var(--size-2-2)";
+    setting.controlEl.setCssStyles({ gap: "var(--size-2-2)" });
     setting
       .addText((t) =>
         t

@@ -1,6 +1,6 @@
 {
   "name": "obsidian-tag-and-tally",
-  "version": "0.1.36",
+  "version": "0.1.40",
   "description": "Run Tag and Tally tabletop RPG sessions in your vault — dice resolution, an in-vault rulebook, NPC generator, random tables, and decks.",
   "main": "main.js",
   "type": "module",
@@ -8,6 +8,7 @@
     "dev": "vite build --watch",
     "build": "vite build",
     "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint src vendor",
     "push": "bash scripts/push-to-vault.sh",
     "check": "node scripts/check.mjs",
     "publish": "bash scripts/publish.sh"
@@ -29,16 +30,24 @@
   },
   "homepage": "https://github.com/matalina/obsidian-tag-and-tally#readme",
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@eslint/json": "0.14.0",
     "@types/node": "^20.11.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.30.1",
+    "eslint-plugin-obsidianmd": "^0.3.0",
     "obsidian": "1.4.11",
     "tslib": "2.3.1",
     "typescript": "~5.6.0",
+    "typescript-eslint": "^8.35.1",
     "vite": "^6.0.3",
     "vue-tsc": "^2.1.0"
   },
   "dependencies": {
     "@codemirror/language": "^6.12.1",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.34.1",
+    "@lezer/common": "^1.2.3",
     "@dice-roller/rpg-dice-roller": "^5.5.1",
     "fuse.js": "^7.1.0",
     "lucide-vue-next": "^0.460.0",

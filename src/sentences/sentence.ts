@@ -160,7 +160,7 @@ export class SentenceWidget {
 
     // Create a plain span element with just text (not a code element)
     // This completely removes the code block and replaces it with plain text
-    const el = document.createElement('span');
+    const el = activeDocument.createElement('span');
     el.className = 'tag-tally-sentence';
     el.textContent = result;
     // Mark as processed so it won't be processed again

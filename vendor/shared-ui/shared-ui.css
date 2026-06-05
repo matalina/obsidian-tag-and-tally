@@ -531,6 +531,26 @@
 .callout[data-callout="arc"] .callout-title-icon svg {
   display: none;
 }
+/*
+ * Cursor affordances for the generated text-mapper SVG.
+ * Portable CSS classes (no Obsidian setCssStyles) so the same composable works
+ * in the web app and the plugin. Applied via classList in useTextMapper.ts.
+ */
+.text-mapper-pannable {
+  cursor: grab;
+}
+
+.text-mapper-pannable.is-dragging {
+  cursor: grabbing;
+}
+
+.text-mapper-clickable {
+  cursor: pointer;
+}
+
+.text-mapper-hidden {
+  display: none;
+}
 
 .tag-tally-icon[data-v-4b4857b6] {
   display: inline-flex;

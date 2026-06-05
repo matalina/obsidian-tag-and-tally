@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
     ATTRIBUTES_REGEX,
     PATH_ATTRIBUTES_REGEX,
@@ -233,7 +232,7 @@ export class TextMapperParser {
         spline.start = match![5];
 
         let rest = line;
-        // eslint-disable-next-line no-constant-condition
+        // eslint-disable-next-line no-constant-condition -- segment scanner; exits via break when the line is consumed
         while (true) {
             let segment: string;
             [segment, rest] = this.splitPathSegments(rest);

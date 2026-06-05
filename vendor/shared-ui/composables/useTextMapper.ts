@@ -126,7 +126,7 @@ export function useTextMapper(): UseTextMapperReturn {
         dragStartY = e.clientY;
         dragStartPanX = panX;
         dragStartPanY = panY;
-        svgDomElement.style.cursor = "grabbing";
+        svgDomElement.classList.add("is-dragging");
     }
 
     function handleMouseMove(e: MouseEvent) {
@@ -145,7 +145,7 @@ export function useTextMapper(): UseTextMapperReturn {
     function handleMouseUp() {
         if (!isDragging || !svgDomElement) return;
         isDragging = false;
-        svgDomElement.style.cursor = "grab";
+        svgDomElement.classList.remove("is-dragging");
     }
 
     function handleTouchStart(e: TouchEvent) {
@@ -216,7 +216,7 @@ export function useTextMapper(): UseTextMapperReturn {
             : `faction-overlays-${parser.value.id}`;
         const el = svgDomElement.querySelector(`#${fid}`) as SVGGElement | null;
         if (el) {
-            el.style.display = factionOverlaysVisible.value ? "" : "none";
+            el.classList.toggle("text-mapper-hidden", !factionOverlaysVisible.value);
         }
     }
 
@@ -262,7 +262,7 @@ export function useTextMapper(): UseTextMapperReturn {
         }
 
         if (svgDomElement) {
-            svgDomElement.style.cursor = "grab";
+            svgDomElement.classList.add("text-mapper-pannable");
             updateViewBox();
             applyFactionOverlayVisibility();
             setupEventHandlers(svgDomElement);
@@ -410,7 +410,7 @@ export function useTextMapper(): UseTextMapperReturn {
             const g = document.createElementNS(SVG_NS, "g");
             g.setAttribute("class", "hex-note-indicator");
             g.setAttribute("data-hex", hexCoord);
-            g.style.cursor = "pointer";
+            g.classList.add("text-mapper-clickable");
             g.setAttribute("transform",
                 `translate(${(iconX - iconSize / 2).toFixed(1)}, ${(iconY - iconSize / 2).toFixed(1)})`);
 
@@ -481,7 +481,7 @@ export function useTextMapper(): UseTextMapperReturn {
 
             const hasLink = coordKey in links;
 
-            textEl.style.cursor = "pointer";
+            textEl.classList.add("text-mapper-clickable");
             if (hasLink) {
                 textEl.setAttribute("fill", "var(--interactive-accent, #0969da)");
                 textEl.setAttribute("text-decoration", "underline");

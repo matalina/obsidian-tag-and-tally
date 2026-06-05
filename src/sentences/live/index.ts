@@ -122,7 +122,7 @@ class SentencePlugin implements PluginValue {
 
                 // Replace the code block with the result
                 // Use setTimeout to ensure it happens after decoration building
-                setTimeout(() => {
+                window.setTimeout(() => {
                   try {
                     const mod = {
                       from: from,

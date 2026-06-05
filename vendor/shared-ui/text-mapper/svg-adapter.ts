@@ -1,4 +1,5 @@
 const SVG_NS = "http://www.w3.org/2000/svg";
+const XLINK_NS = "http://www.w3.org/1999/xlink";
 
 export interface SvgNode {
     createSvg(tag: string, options?: { attr?: Record<string, string | number> }): SvgNode;
@@ -7,9 +8,15 @@ export interface SvgNode {
 }
 
 function appendParsedSvg(parent: Element, svg: string): void {
-    const wrapped = `<svg xmlns="${SVG_NS}">${svg}</svg>`;
+    // The wrapper MUST declare xmlns:xlink — many defs use `xlink:href` (e.g.
+    // <use xlink:href="#level">). Without it, image/svg+xml (strict XML) parsing
+    // fails on the undefined prefix and ALL icon defs are silently dropped.
+    const wrapped = `<svg xmlns="${SVG_NS}" xmlns:xlink="${XLINK_NS}">${svg}</svg>`;
     const doc = new DOMParser().parseFromString(wrapped, "image/svg+xml");
     const root = doc.documentElement;
+    if (root.querySelector("parsererror")) {
+        console.error("text-mapper: failed to parse SVG defs", root.textContent);
+    }
     while (root.firstChild) parent.appendChild(root.firstChild);
 }
 

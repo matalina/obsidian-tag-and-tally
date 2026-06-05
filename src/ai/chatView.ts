@@ -176,7 +176,7 @@ export class AiChatView extends ItemView {
     this.statusRowEl = this.statusEl.createDiv({
       cls: "tag-tally-ai-status-row",
     });
-    this.statusRowEl.style.display = "none";
+    this.statusRowEl.setCssStyles({ display: "none" });
     this.statusDotsEl = this.statusRowEl.createDiv({
       cls: "tag-tally-ai-thinking-dots",
     });
@@ -228,14 +228,14 @@ export class AiChatView extends ItemView {
     this.mentionPopoverEl = this.inputWrapEl.createDiv({
       cls: "tag-tally-ai-mention-popover",
     });
-    this.mentionPopoverEl.style.display = "none";
+    this.mentionPopoverEl.setCssStyles({ display: "none" });
     this.mentionListEl = this.mentionPopoverEl.createDiv({
       cls: "tag-tally-ai-mention-list",
     });
     this.slashPopoverEl = this.inputWrapEl.createDiv({
       cls: "tag-tally-ai-mention-popover tag-tally-ai-slash-popover",
     });
-    this.slashPopoverEl.style.display = "none";
+    this.slashPopoverEl.setCssStyles({ display: "none" });
     this.slashListEl = this.slashPopoverEl.createDiv({
       cls: "tag-tally-ai-mention-list",
     });
@@ -312,7 +312,7 @@ export class AiChatView extends ItemView {
         Math.max(0, cands.length - 1),
       );
       this.renderSlashCandidates(cands);
-      this.slashPopoverEl.style.display = "block";
+      this.slashPopoverEl.setCssStyles({ display: "block" });
       return;
     }
     this.hideSlashPopover();
@@ -340,11 +340,11 @@ export class AiChatView extends ItemView {
       Math.max(0, cands.length - 1),
     );
     this.renderMentionCandidates(cands);
-    this.mentionPopoverEl.style.display = "block";
+    this.mentionPopoverEl.setCssStyles({ display: "block" });
   }
 
   private hideSlashPopover(): void {
-    this.slashPopoverEl.style.display = "none";
+    this.slashPopoverEl.setCssStyles({ display: "none" });
     this.slashListEl.empty();
     this.slashQuerySig = "";
   }
@@ -450,7 +450,7 @@ export class AiChatView extends ItemView {
   }
 
   private hideMentionPopover(): void {
-    this.mentionPopoverEl.style.display = "none";
+    this.mentionPopoverEl.setCssStyles({ display: "none" });
     this.mentionListEl.empty();
     this.mentionQuerySig = "";
   }
@@ -564,7 +564,7 @@ export class AiChatView extends ItemView {
 
   private hideWorkingStatus(): void {
     this.stopThinkingClock();
-    this.statusRowEl.style.display = "none";
+    this.statusRowEl.setCssStyles({ display: "none" });
     this.statusRowEl.removeClass("tag-tally-ai-status-row--active");
   }
 
@@ -589,7 +589,7 @@ export class AiChatView extends ItemView {
 
   private showWorkingStatus(message: string): void {
     this.statusMsgEl.setText(message);
-    this.statusRowEl.style.display = "flex";
+    this.statusRowEl.setCssStyles({ display: "flex" });
     this.statusRowEl.addClass("tag-tally-ai-status-row--active");
   }
 

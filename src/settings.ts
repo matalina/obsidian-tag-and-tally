@@ -43,7 +43,7 @@ export class TextMapperSettingTab extends PluginSettingTab {
 
         containerEl.empty();
 
-        containerEl.createEl("h2", { text: "Text Mapper Settings" });
+        new Setting(containerEl).setName("Text Mapper").setHeading();
 
         new Setting(containerEl)
             .setName("Save location")

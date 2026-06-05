@@ -45,7 +45,7 @@ export class PickWidget extends WidgetType {
             // If it doesn't match the pick regex, it's already been replaced
             if (!PICK_REGEX.test(currentText)) {
                 // Return a plain text element with the current content
-                const el = document.createElement("span");
+                const el = activeDocument.createElement("span");
                 el.textContent = currentText;
                 return el;
             }
@@ -77,12 +77,12 @@ export class PickWidget extends WidgetType {
 
         // Create a plain text element (not a code element)
         // This is what will be displayed - just plain text, no code styling
-        const el = document.createElement("span");
+        const el = activeDocument.createElement("span");
         el.textContent = result;
         // Ensure it's treated as plain text, not code
-        el.style.all = "unset";
-        el.style.display = "inline";
-        el.style.cursor = "text";
+        el.setCssStyles({ all: "unset" });
+        el.setCssStyles({ display: "inline" });
+        el.setCssStyles({ cursor: "text" });
         
         return el;
     }

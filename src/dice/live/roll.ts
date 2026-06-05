@@ -49,7 +49,7 @@ export class RollWidget extends WidgetType {
             // If it doesn't match the roll regex, it's already been replaced
             if (!ROLL_REGEX.test(currentText)) {
                 // Return a plain text element with the current content
-                const el = document.createElement("span");
+                const el = activeDocument.createElement("span");
                 el.textContent = currentText;
                 return el;
             }
@@ -82,7 +82,7 @@ export class RollWidget extends WidgetType {
 
         // Create a plain text element (not a code element)
         // This is what will be displayed - just plain text, no code styling
-        const el = document.createElement("span");
+        const el = activeDocument.createElement("span");
         el.textContent = result;
         
         // Ensure it's treated as plain text, not code
@@ -91,15 +91,15 @@ export class RollWidget extends WidgetType {
         el.removeAttribute("class");
         
         // Set styles to ensure it looks like plain text
-        el.style.display = "inline";
-        el.style.fontFamily = "inherit";
-        el.style.fontSize = "inherit";
-        el.style.color = "inherit";
-        el.style.backgroundColor = "transparent";
-        el.style.padding = "0";
-        el.style.margin = "0";
-        el.style.border = "none";
-        el.style.cursor = "text";
+        el.setCssStyles({ display: "inline" });
+        el.setCssStyles({ fontFamily: "inherit" });
+        el.setCssStyles({ fontSize: "inherit" });
+        el.setCssStyles({ color: "inherit" });
+        el.setCssStyles({ backgroundColor: "transparent" });
+        el.setCssStyles({ padding: "0" });
+        el.setCssStyles({ margin: "0" });
+        el.setCssStyles({ border: "none" });
+        el.setCssStyles({ cursor: "text" });
         
         // Prevent any code block interactions
         el.setAttribute("data-roll-result", "true");

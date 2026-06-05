@@ -94,7 +94,7 @@ export class ResolveWidget {
 
   async toDOM(): Promise<HTMLElement> {
     const result = await this.replaceInFile();
-    const el = document.createElement('span');
+    const el = activeDocument.createElement('span');
     el.textContent = result;
     return el;
   }

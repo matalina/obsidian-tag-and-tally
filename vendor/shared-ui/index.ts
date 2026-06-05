@@ -1,4 +1,5 @@
 import "./styles/callouts-custom.css";
+import "./styles/text-mapper.css";
 
 // Tab components (use in plugin sidebar and app pages)
 export { default as ResolutionTab } from "./components/ResolutionTab.vue";

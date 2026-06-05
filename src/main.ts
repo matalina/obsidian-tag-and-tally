@@ -87,7 +87,7 @@ export default class TextMapperPlugin extends Plugin {
     // The vault may not have indexed all folders immediately on load
     // Cache will be used first, then files will be checked for updates
     // Note: After parser fixes, tables need to be reloaded to use the new parsing logic
-    setTimeout(async () => {
+    window.setTimeout(async () => {
       await this.loadCustomTables();
       await this.promptManager.refresh();
       await this.gmPromptManager.refresh();
@@ -97,39 +97,39 @@ export default class TextMapperPlugin extends Plugin {
     // Process when files are opened or rendered
     this.registerEvent(
       this.app.workspace.on('file-open', () => {
-        setTimeout(() => this.processAllPreviewPanes(), 200);
+        window.setTimeout(() => this.processAllPreviewPanes(), 200);
       }),
     );
 
     // Process preview panes when workspace layout changes
     this.registerEvent(
       this.app.workspace.on('layout-change', () => {
-        setTimeout(() => this.processAllPreviewPanes(), 100);
+        window.setTimeout(() => this.processAllPreviewPanes(), 100);
       }),
     );
 
     // Process on markdown render
     this.registerEvent(
       (this.app.workspace as unknown as { on: (event: string, cb: () => void) => unknown }).on('markdown-render', () => {
-        setTimeout(() => this.processAllPreviewPanes(), 100);
+        window.setTimeout(() => this.processAllPreviewPanes(), 100);
       }) as never,
     );
 
     // Also process on active leaf change
     this.registerEvent(
       this.app.workspace.on('active-leaf-change', () => {
-        setTimeout(() => this.processAllPreviewPanes(), 200);
+        window.setTimeout(() => this.processAllPreviewPanes(), 200);
       }),
     );
 
     this.registerEvent(
       this.app.workspace.on('active-leaf-change', () => {
-        setTimeout(() => this.processAllPreviewPanes(), 200);
+        window.setTimeout(() => this.processAllPreviewPanes(), 200);
       }),
     );
 
     // Initial processing - wait longer for markdown to render
-    setTimeout(() => {
+    window.setTimeout(() => {
       this.processAllPreviewPanes();
     }, 1000);
 
@@ -153,12 +153,12 @@ export default class TextMapperPlugin extends Plugin {
         });
       });
       if (shouldProcess) {
-        setTimeout(() => this.processAllPreviewPanes(), 200);
+        window.setTimeout(() => this.processAllPreviewPanes(), 200);
       }
     });
 
     // Observe markdown preview sections specifically
-    const markdownSections = document.querySelectorAll('.markdown-preview-section, .markdown-reading-view');
+    const markdownSections = activeDocument.querySelectorAll('.markdown-preview-section, .markdown-reading-view');
     markdownSections.forEach((section) => {
       observer.observe(section, {
         childList: true,
@@ -167,7 +167,7 @@ export default class TextMapperPlugin extends Plugin {
     });
 
     // Also observe the body as fallback
-    observer.observe(document.body, {
+    observer.observe(activeDocument.body, {
       childList: true,
       subtree: true,
     });
@@ -343,7 +343,6 @@ export default class TextMapperPlugin extends Plugin {
     source: string,
     el: HTMLElement,
     ctx: MarkdownPostProcessorContext,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<any> {
     try {
       const mapper = new TextMapper(el, ctx.docId, source, this, ctx.sourcePath);
@@ -511,7 +510,7 @@ export default class TextMapperPlugin extends Plugin {
             const tableName = match[1].trim();
             const tableResult = store.random(tableName);
             const formatted = `${tableResult.result} ← _(${tableResult.roll.output})_`;
-            const el = document.createElement('span');
+            const el = activeDocument.createElement('span');
             el.textContent = formatted;
             node.replaceWith(el);
           }
@@ -565,7 +564,7 @@ export default class TextMapperPlugin extends Plugin {
 
       // Handle ai:* commands (with optional :gm-name)
       if (AI_REGEX.test(mdText)) {
-        const pill = document.createElement('span');
+        const pill = activeDocument.createElement('span');
         pill.className = 'tag-tally-ai-pending';
         pill.textContent = 'AI generating…';
         node.replaceWith(pill);
@@ -603,7 +602,7 @@ export default class TextMapperPlugin extends Plugin {
 
   processAllPreviewPanes() {
     // Process both reading view and preview mode
-    const allPanes = document.querySelectorAll('.markdown-preview-view, .markdown-reading-view');
+    const allPanes = activeDocument.querySelectorAll('.markdown-preview-view, .markdown-reading-view');
 
     allPanes.forEach((pane) => {
       // Try multiple selectors to find code elements
@@ -757,7 +756,7 @@ export default class TextMapperPlugin extends Plugin {
 
         // Process ai:* widgets
         if (AI_REGEX.test(mdText)) {
-          const pill = document.createElement('span');
+          const pill = activeDocument.createElement('span');
           pill.className = 'tag-tally-ai-pending';
           pill.textContent = 'AI generating…';
           codeElement.replaceWith(pill);
@@ -816,7 +815,7 @@ export default class TextMapperPlugin extends Plugin {
               const tableName = match[1].trim();
               const tableResult = store.random(tableName);
               const formatted = `${tableResult.result} ← _(${tableResult.roll.output})_`;
-              const el = document.createElement('span');
+              const el = activeDocument.createElement('span');
               el.textContent = formatted;
               codeElement.replaceWith(el);
             }
@@ -1028,54 +1027,52 @@ Lasting Scars \`boxes:0/1\`
     try {
       // Prompt for filename
       const filename = await new Promise<string>((resolve) => {
-        const input = document.createElement('input');
+        const input = activeDocument.createElement('input');
         input.type = 'text';
         input.placeholder = 'Character Name';
-        input.style.width = '100%';
-        input.style.padding = '8px';
-        input.style.marginBottom = '10px';
+        input.setCssStyles({ width: '100%', padding: '8px', marginBottom: '10px' });
 
-        const modal = document.createElement('div');
-        modal.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: var(--background-primary);
-                    border: 1px solid var(--background-modifier-border);
-                    border-radius: 8px;
-                    padding: 20px;
-                    z-index: 10000;
-                    min-width: 300px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-                `;
+        const modal = activeDocument.createElement('div');
+        modal.setCssStyles({
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          background: 'var(--background-primary)',
+          border: '1px solid var(--background-modifier-border)',
+          borderRadius: '8px',
+          padding: '20px',
+          zIndex: '10000',
+          minWidth: '300px',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+        });
 
-        const title = document.createElement('div');
+        const title = activeDocument.createElement('div');
         title.textContent = 'Create Character Sheet';
-        title.style.cssText = 'font-weight: bold; margin-bottom: 10px; font-size: 16px;';
+        title.setCssStyles({ fontWeight: 'bold', marginBottom: '10px', fontSize: '16px' });
 
-        const buttonContainer = document.createElement('div');
-        buttonContainer.style.cssText = 'display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px;';
+        const buttonContainer = activeDocument.createElement('div');
+        buttonContainer.setCssStyles({ display: 'flex', gap: '10px', justifyContent: 'flex-end', marginTop: '10px' });
 
-        const createButton = document.createElement('button');
+        const createButton = activeDocument.createElement('button');
         createButton.textContent = 'Create';
         createButton.className = 'mod-cta';
-        createButton.style.cssText = 'padding: 6px 12px;';
+        createButton.setCssStyles({ padding: '6px 12px' });
 
-        const cancelButton = document.createElement('button');
+        const cancelButton = activeDocument.createElement('button');
         cancelButton.textContent = 'Cancel';
-        cancelButton.style.cssText = 'padding: 6px 12px;';
+        cancelButton.setCssStyles({ padding: '6px 12px' });
 
         const handleCreate = () => {
           const name = input.value.trim() || 'Character';
           const sanitizedName = name.replace(/[<>:"/\\|?*]/g, ''); // Remove invalid filename characters
           resolve(sanitizedName);
-          document.body.removeChild(modal);
+          activeDocument.body.removeChild(modal);
         };
 
         const handleCancel = () => {
           resolve('');
-          document.body.removeChild(modal);
+          activeDocument.body.removeChild(modal);
         };
 
         createButton.addEventListener('click', handleCreate);
@@ -1093,7 +1090,7 @@ Lasting Scars \`boxes:0/1\`
         buttonContainer.appendChild(cancelButton);
         buttonContainer.appendChild(createButton);
         modal.appendChild(buttonContainer);
-        document.body.appendChild(modal);
+        activeDocument.body.appendChild(modal);
         input.focus();
       });
 
@@ -1146,10 +1143,8 @@ Lasting Scars \`boxes:0/1\`
     }
     this.inflightAi.clear();
 
-    // Clean up the views if needed
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE_TAG_TALLY);
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE_DOCUMENTATION);
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE_AI_CHAT);
+    // Views are not detached here: Obsidian restores user leaf placement on
+    // reload, and detaching in onunload resets it (obsidianmd/detach-leaves).
   }
 }
 
@@ -1325,7 +1320,7 @@ export class TextMapper extends MarkdownRenderChild {
 
     // Set initial cursor style and update viewBox
     if (this.svgDomElement) {
-      this.svgDomElement.style.cursor = 'grab';
+      this.svgDomElement.setCssStyles({ cursor: 'grab' });
       // Ensure initial viewBox is set correctly with the configured zoom
       this.updateViewBox();
 
@@ -1381,7 +1376,7 @@ export class TextMapper extends MarkdownRenderChild {
     this.dragStartPanX = this.panX;
     this.dragStartPanY = this.panY;
 
-    this.svgDomElement.style.cursor = 'grabbing';
+    this.svgDomElement.setCssStyles({ cursor: 'grabbing' });
   }
 
   handleMouseMove(e: MouseEvent) {
@@ -1406,7 +1401,7 @@ export class TextMapper extends MarkdownRenderChild {
     if (!this.isDragging || !this.svgDomElement) return;
 
     this.isDragging = false;
-    this.svgDomElement.style.cursor = 'grab';
+    this.svgDomElement.setCssStyles({ cursor: 'grab' });
   }
 
   handleTouchStart(e: TouchEvent) {
@@ -1677,7 +1672,7 @@ export class TextMapper extends MarkdownRenderChild {
       const svgUrl = URL.createObjectURL(svgBlob);
 
       // Create canvas and draw SVG
-      const canvas = document.createElement('canvas');
+      const canvas = activeDocument.createElement('canvas');
 
       // Set dimensions and validate
       canvas.width = width;
@@ -1707,13 +1702,13 @@ export class TextMapper extends MarkdownRenderChild {
       img.crossOrigin = 'anonymous'; // Prevent CORS issues
 
       await new Promise<void>((resolve, reject) => {
-        const imgTimeout = setTimeout(() => {
+        const imgTimeout = window.setTimeout(() => {
           URL.revokeObjectURL(svgUrl);
           reject(new Error('Timeout loading SVG image'));
         }, 10000); // 10 second timeout for image loading
 
         img.onload = () => {
-          clearTimeout(imgTimeout);
+          window.clearTimeout(imgTimeout);
           try {
             ctx.drawImage(img, 0, 0, width, height);
             URL.revokeObjectURL(svgUrl);
@@ -1726,7 +1721,7 @@ export class TextMapper extends MarkdownRenderChild {
           }
         };
         img.onerror = (error) => {
-          clearTimeout(imgTimeout);
+          window.clearTimeout(imgTimeout);
           URL.revokeObjectURL(svgUrl);
           reject(new Error(`Failed to load SVG image: ${error}`));
         };
@@ -1747,12 +1742,15 @@ export class TextMapper extends MarkdownRenderChild {
           throw new Error(`toDataURL returned invalid data (length: ${dataUrl?.length || 0})`);
         }
 
-        // Convert data URL to blob
-        const response = await fetch(dataUrl);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch data URL: ${response.status} ${response.statusText}`);
+        // Convert data URL to blob by decoding the base64 payload directly.
+        // (Obsidian discourages fetch; requestUrl does not handle data: URLs.)
+        const base64 = dataUrl.slice(dataUrl.indexOf(',') + 1);
+        const binary = atob(base64);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+          bytes[i] = binary.charCodeAt(i);
         }
-        blob = await response.blob();
+        blob = new Blob([bytes], { type: 'image/png' });
         if (!blob || blob.size === 0) {
           throw new Error(`Blob from data URL is empty (size: ${blob?.size || 0})`);
         }
@@ -1761,13 +1759,13 @@ export class TextMapper extends MarkdownRenderChild {
         console.warn('toDataURL failed, trying toBlob fallback:', error);
         try {
           blob = await new Promise<Blob>((resolve, reject) => {
-            const timeout = setTimeout(() => {
+            const timeout = window.setTimeout(() => {
               reject(new Error('Timeout: Canvas conversion took too long'));
             }, 30000);
 
             canvas.toBlob(
               (result) => {
-                clearTimeout(timeout);
+                window.clearTimeout(timeout);
                 if (result) {
                   resolve(result);
                 } else {

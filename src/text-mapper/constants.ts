@@ -21,7 +21,6 @@ export const SVG_ID_REGEX = /(id=")(\S+)(")/g;
 export const SVG_HREF_REGEX = /(xlink:href="#)(\S+)(")/g;
 
 export interface SVGElement {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     createSvg(tag: string, options?: any): SVGElement;
     appendChild(node: Node): Node;
     textContent: string;

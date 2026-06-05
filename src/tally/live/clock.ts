@@ -93,7 +93,7 @@ export class ClockWidget extends WidgetType {
         const radius = center - 2;
 
         if (this.max <= 1) {
-            const circleEl = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const circleEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "circle");
             circleEl.setAttribute("cx", center.toString());
             circleEl.setAttribute("cy", center.toString());
             circleEl.setAttribute("r", radius.toString());
@@ -104,7 +104,7 @@ export class ClockWidget extends WidgetType {
         } else {
             const step = 360 / this.max;
             for (let i = 0; i < this.max; i++) {
-                const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                const pathEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "path");
                 pathEl.setAttribute(
                     "d",
                     this.calculatePath(center, center, radius, i, step)
@@ -113,7 +113,7 @@ export class ClockWidget extends WidgetType {
                 pathEl.setAttribute("stroke", "currentColor");
                 this.svgEl.appendChild(pathEl);
             }
-            const circleEl = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const circleEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "circle");
             circleEl.setAttribute("cx", center.toString());
             circleEl.setAttribute("cy", center.toString());
             circleEl.setAttribute("r", radius.toString());
@@ -137,13 +137,13 @@ export class ClockWidget extends WidgetType {
     }
 
     toDOM(view: EditorView): HTMLElement {
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-clock");
 
         this.btnEl = this.el.createEl("button");
         this.btnEl.classList.add("clickable-icon", "tag-tally-clock-btn");
 
-        this.svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        this.svgEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "svg");
         this.svgEl.setAttribute("width", this.size.toString());
         this.svgEl.setAttribute("height", this.size.toString());
         this.svgEl.classList.add("tag-tally-clock-svg");

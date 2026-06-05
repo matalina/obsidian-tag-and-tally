@@ -28,9 +28,9 @@ export class TagTallyView extends ItemView {
     async onOpen(): Promise<void> {
         const container = this.containerEl.children[1] as HTMLElement;
         container.empty();
-        container.style.display = "flex";
-        container.style.flexDirection = "column";
-        container.style.height = "100%";
+        container.setCssStyles({ display: "flex" });
+        container.setCssStyles({ flexDirection: "column" });
+        container.setCssStyles({ height: "100%" });
 
         const { unmount } = mountSidebar({
             container,

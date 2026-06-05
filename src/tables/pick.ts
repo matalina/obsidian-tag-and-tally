@@ -121,7 +121,7 @@ export class PickWidget {
 
         // Create a plain span element with just text (not a code element)
         // This completely removes the code block and replaces it with plain text
-        const el = document.createElement("span");
+        const el = activeDocument.createElement("span");
         el.textContent = result;
         // Don't add any classes that might make it look like code
         // Just plain text that replaces the code block

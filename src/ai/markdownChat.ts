@@ -35,7 +35,7 @@ export function enhanceCodeBlocks(container: HTMLElement): void {
     const code = pre.querySelector("code");
     if (!code) continue;
 
-    const btn = document.createElement("button");
+    const btn = activeDocument.createElement("button");
     btn.type = "button";
     btn.className = "tag-tally-ai-code-copy";
     btn.textContent = "Copy";

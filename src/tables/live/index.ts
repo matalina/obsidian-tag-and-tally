@@ -132,7 +132,7 @@ class RandomPickPlugin implements PluginValue {
 
                   // Replace the code block with the formatted result
                   // Use setTimeout to ensure it happens after decoration building
-                  setTimeout(() => {
+                  window.setTimeout(() => {
                     try {
                       const mod = {
                         from: from,
@@ -163,7 +163,7 @@ class RandomPickPlugin implements PluginValue {
               try {
                 replacedPickBlocks.add(nodeKey);
                 const inner = match[1].trim();
-                setTimeout(() => {
+                window.setTimeout(() => {
                   try {
                     const result = executeResolveInner(inner);
                     const mod = {
@@ -204,7 +204,7 @@ class RandomPickPlugin implements PluginValue {
 
                 // Replace the code block with the formatted result
                 // Use setTimeout to ensure it happens after decoration building
-                setTimeout(() => {
+                window.setTimeout(() => {
                   try {
                     const mod = {
                       from: from,

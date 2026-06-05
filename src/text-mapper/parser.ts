@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   ATTRIBUTES_REGEX,
   PATH_ATTRIBUTES_REGEX,
@@ -405,7 +404,7 @@ export class TextMapperParser {
     spline.start = match[5];
 
     let rest = line;
-    // eslint-disable-next-line no-constant-condition
+     
     while (true) {
       let segment: string;
       [segment, rest] = this.splitPathSegments(rest);
@@ -453,9 +452,9 @@ export class TextMapperParser {
     return spline;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   parseAttributes(attrs: string): any {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const output: any = {};
     let matches;
     while ((matches = ATTRIBUTE_MAP_REGEX.exec(attrs))) {
@@ -473,9 +472,9 @@ export class TextMapperParser {
    * The parameters will be parsed into a string[]: ["NAME", "X", "Y", "Z"]
    * The key would be "NAME".
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   parseOption(optionStr: string): any {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const option: any = {
       valid: false,
       key: '',
@@ -583,7 +582,7 @@ export class TextMapperParser {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   shape(svgEl: SVGElement, attributes: any) {
     const points = this.orientation
       .hexCorners()
@@ -766,15 +765,22 @@ export class TextMapperParser {
   svgDefs(svgEl: SVGElement): void {
     const defsEl = svgEl.createSvg('defs');
     const SVG_NS = 'http://www.w3.org/2000/svg';
+    const XLINK_NS = 'http://www.w3.org/1999/xlink';
+    // The wrapper MUST declare xmlns:xlink — many defs use `xlink:href` (e.g.
+    // <use xlink:href="#level">). Without it, image/svg+xml (strict XML) parsing
+    // fails on the undefined prefix and ALL icon defs are silently dropped.
     const parsed = new DOMParser().parseFromString(
-      `<svg xmlns="${SVG_NS}">${this.defs.join('\n')}</svg>`,
+      `<svg xmlns="${SVG_NS}" xmlns:xlink="${XLINK_NS}">${this.defs.join('\n')}</svg>`,
       'image/svg+xml',
     );
     const root = parsed.documentElement;
+    if (root.querySelector('parsererror')) {
+      console.error('text-mapper: failed to parse SVG defs', root.textContent);
+    }
     while (root.firstChild) defsEl.appendChild(root.firstChild);
 
     // collect region types from attributes and paths in case the sets don't overlap
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const types: any = {};
     for (const region of this.regions) {
       for (const rtype of region.types) {

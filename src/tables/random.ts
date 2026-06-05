@@ -73,7 +73,7 @@ export class RandomWidget {
     };
 
     toDOM(): HTMLElement {
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-random");
 
         // Initial roll

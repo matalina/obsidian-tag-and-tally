@@ -628,7 +628,7 @@ export async function createTravelTab(
             }
 
             // Show open map button
-            openMapButton.style.display = '';
+            openMapButton.setCssStyles({ display: '' });
             const file = app.vault.getAbstractFileByPath(selectedPath);
             if (file && file instanceof TFile) {
               const leaf = app.workspace.getLeaf(true);
@@ -644,10 +644,10 @@ export async function createTravelTab(
             currentSelectedMapPath = null;
             await onMapSelected(null);
             // Hide open map button
-            openMapButton.style.display = 'none';
+            openMapButton.setCssStyles({ display: 'none' });
             // Clear display when no map is selected
             resultsContainer.empty();
-            resultsContainer.style.display = 'none';
+            resultsContainer.setCssStyles({ display: 'none' });
           }
         });
       }
@@ -717,7 +717,7 @@ export async function createTravelTab(
       currentSelectedMapPath = null;
       await onMapSelected(null);
       // Hide open map button
-      openMapButton.style.display = 'none';
+      openMapButton.setCssStyles({ display: 'none' });
     } else if (currentSelection && foundSelectedMap) {
       // If a map is still selected after refresh, read its theme
       const mapTheme = await getTravelThemeFromMap(app, currentSelection);
@@ -866,7 +866,7 @@ export async function createTravelTab(
         }
 
         // Show open map button
-        openMapButton.style.display = '';
+        openMapButton.setCssStyles({ display: '' });
         const file = app.vault.getAbstractFileByPath(selectedPath);
         if (file && file instanceof TFile) {
           const leaf = app.workspace.getLeaf(true);
@@ -882,10 +882,10 @@ export async function createTravelTab(
         currentSelectedMapPath = null;
         await onMapSelected(null);
         // Hide open map button
-        openMapButton.style.display = 'none';
+        openMapButton.setCssStyles({ display: 'none' });
         // Clear display when no map is selected
         resultsContainer.empty();
-        resultsContainer.style.display = 'none';
+        resultsContainer.setCssStyles({ display: 'none' });
       }
     });
   } else {
@@ -1152,14 +1152,14 @@ export async function createTravelTab(
     const currentMapPath = mapPath || currentSelectedMapPath;
 
     if (!coord || !currentMapPath) {
-      resultsContainer.style.display = 'none';
+      resultsContainer.setCssStyles({ display: 'none' });
       return;
     }
 
     // Track currently displayed coordinate
     currentDisplayedCoord = coord;
 
-    resultsContainer.style.display = 'block';
+    resultsContainer.setCssStyles({ display: 'block' });
 
     // Use override data if provided, otherwise read from hex note first, then fall back to textmapper
     let mapInfo: {
@@ -1342,7 +1342,7 @@ export async function createTravelTab(
           await navigator.clipboard.writeText(markdownText.trim());
           // Temporarily change icon to show success
           setIcon(copyButton, 'check');
-          setTimeout(() => {
+          window.setTimeout(() => {
             setIcon(copyButton, 'copy');
           }, 1000);
         } catch (err) {
@@ -1357,15 +1357,15 @@ export async function createTravelTab(
       const hasLevel = !!mapInfo.level;
       const hasFeature = !!mapInfo.feature;
       if (!hasLevel || !hasFeature) {
-        populateButton.style.display = '';
-        populateCurrentButton.style.display = '';
+        populateButton.setCssStyles({ display: '' });
+        populateCurrentButton.setCssStyles({ display: '' });
       } else {
-        populateButton.style.display = 'none';
-        populateCurrentButton.style.display = 'none';
+        populateButton.setCssStyles({ display: 'none' });
+        populateCurrentButton.setCssStyles({ display: 'none' });
       }
     } else {
-      populateButton.style.display = 'none';
-      populateCurrentButton.style.display = 'none';
+      populateButton.setCssStyles({ display: 'none' });
+      populateCurrentButton.setCssStyles({ display: 'none' });
     }
   }
 
@@ -1842,7 +1842,7 @@ export async function createTravelTab(
         entryResultVueUnmount = null;
       }
       entryResultContainer.empty();
-      entryResultContainer.style.display = 'block';
+      entryResultContainer.setCssStyles({ display: 'block' });
       const mountPoint = entryResultContainer.createDiv();
       const vueApp = createApp(ResultBox, {
         copyValue,
@@ -1967,7 +1967,7 @@ export async function createTravelTab(
 
       // If not found, wait a bit and try again (map might still be rendering)
       if (!mapper) {
-        await new Promise((resolve) => setTimeout(resolve, 200));
+        await new Promise((resolve) => window.setTimeout(resolve, 200));
         mapper = plugin.getMapperBySourcePath(normalizedPath);
         if (!mapper) {
           mapper = plugin.getMapperBySourcePath('/' + normalizedPath);
@@ -2831,7 +2831,7 @@ export async function createTravelTab(
 
     // Display results
     calculatorResults.empty();
-    calculatorResults.style.display = 'block';
+    calculatorResults.setCssStyles({ display: 'block' });
 
     const resultDiv = calculatorResults.createDiv();
     resultDiv.createEl('strong', { text: 'Destination: ' });
@@ -2954,7 +2954,7 @@ export async function createTravelTab(
     const coord = parseHexCoordinate(hexInputValue);
     if (coord) {
       // Small delay to ensure UI is fully rendered
-      setTimeout(async () => {
+      window.setTimeout(async () => {
         await updateMapInfoDisplay(coord);
       }, 100);
     }
@@ -3180,7 +3180,7 @@ ${hexEntries.join('\n')}
       // Update selected map path in this scope
       currentSelectedMapPath = file.path;
       // Show open map button
-      openMapButton.style.display = '';
+      openMapButton.setCssStyles({ display: '' });
       // Refresh the map dropdown to include the new map
       await refreshMapDropdown();
       // Update the map selector to select the new map

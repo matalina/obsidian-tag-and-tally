@@ -138,7 +138,7 @@ export class TrackWidget {
     }
 
     toDOM(): HTMLElement {
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-track");
 
         this.btnEls = [];

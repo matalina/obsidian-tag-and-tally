@@ -219,7 +219,6 @@ function createMarkdownRendererWithLookup(
   md.use(markdownItObsidianCallouts)
   // markdown-it-anchor's plugin signature uses (md, opts) but markdown-it@14 lacks
   // typings for the options overload, so cast to satisfy TS.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ;(md.use as any)(markdownItAnchor, { slugify: slugifyHeading, level: [2, 3] })
 
   const defaultTableOpen = md.renderer.rules.table_open

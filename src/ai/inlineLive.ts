@@ -24,7 +24,7 @@ import {
 
 class GeneratingPillWidget extends WidgetType {
   toDOM(): HTMLElement {
-    const el = document.createElement("span");
+    const el = activeDocument.createElement("span");
     el.className = "tag-tally-ai-pending";
     el.textContent = "AI generating…";
     return el;

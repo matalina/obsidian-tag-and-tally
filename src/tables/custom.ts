@@ -156,7 +156,7 @@ export class CustomWidget {
 
         // Create a plain span element with just text (not a code element)
         // This completely removes the code block and replaces it with plain text
-        const el = document.createElement("span");
+        const el = activeDocument.createElement("span");
         el.textContent = result;
 
         return el;

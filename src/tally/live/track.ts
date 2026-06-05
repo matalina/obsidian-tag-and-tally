@@ -87,7 +87,7 @@ export class TrackWidget extends WidgetType {
     }
 
     toDOM(view: EditorView): HTMLElement {
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-track");
 
         this.btnEls = [];

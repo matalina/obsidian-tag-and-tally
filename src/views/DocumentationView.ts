@@ -32,16 +32,16 @@ export class DocumentationView extends ItemView {
         const container = this.containerEl.children[1] as HTMLElement;
         container.classList.add("tag-tally-documentation-view");
         container.empty();
-        container.style.width = "100%";
-        container.style.height = "100vh";
-        container.style.minHeight = "100vh";
-        container.style.maxHeight = "100%";
-        container.style.display = "flex";
-        container.style.flexDirection = "column";
-        container.style.boxSizing = "border-box";
-        container.style.overflow = "hidden";
+        container.setCssStyles({ width: "100%" });
+        container.setCssStyles({ height: "100vh" });
+        container.setCssStyles({ minHeight: "100vh" });
+        container.setCssStyles({ maxHeight: "100%" });
+        container.setCssStyles({ display: "flex" });
+        container.setCssStyles({ flexDirection: "column" });
+        container.setCssStyles({ boxSizing: "border-box" });
+        container.setCssStyles({ overflow: "hidden" });
         // Keep hamburger and content below Obsidian's tab/title bar
-        container.style.paddingTop = "3rem";
+        container.setCssStyles({ paddingTop: "3rem" });
 
         const router = createRulebookRouter();
         const app = createApp(RulebookApp, { initialPayload: rulebookPayload, searchIndex });

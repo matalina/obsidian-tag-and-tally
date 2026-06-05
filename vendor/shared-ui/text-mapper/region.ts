@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { SvgNode } from "./svg-adapter";
 import { Point, Orientation } from "./orientation";
 import { NamespaceFunction } from "./constants";

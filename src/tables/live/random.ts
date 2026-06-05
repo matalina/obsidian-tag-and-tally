@@ -79,7 +79,7 @@ export class RandomWidget extends WidgetType {
 
     toDOM(view: EditorView): HTMLElement {
         this.view = view;
-        this.el = document.createElement("span");
+        this.el = activeDocument.createElement("span");
         this.el.classList.add("tag-tally-random");
 
         // Get initial roll (cached if widget was recreated)

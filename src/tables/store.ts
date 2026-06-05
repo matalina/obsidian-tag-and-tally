@@ -627,14 +627,14 @@ export class TableStore {
               try {
                 await app.vault.createFolder(normalizedPath);
                 // Wait a bit for the folder to be created
-                await new Promise((resolve) => setTimeout(resolve, 100));
+                await new Promise((resolve) => window.setTimeout(resolve, 100));
                 folder = app.vault.getAbstractFileByPath(normalizedPath);
               } catch (createError: any) {
                 // Folder already exists - try to get it with retries
                 // The folder exists but vault might not have indexed it yet
                 for (let i = 0; i < 5; i++) {
                   const delay = 100 * (i + 1);
-                  await new Promise((resolve) => setTimeout(resolve, delay));
+                  await new Promise((resolve) => window.setTimeout(resolve, delay));
 
                   folder = app.vault.getAbstractFileByPath(normalizedPath);
                   if (!folder) {
