@@ -1,7 +1,7 @@
 {
   "id": "tag-and-tally",
   "name": "Tag and Tally",
-  "version": "0.1.41",
+  "version": "0.1.42",
   "minAppVersion": "1.4.0",
   "description": "Run Tag and Tally tabletop RPG sessions in your vault — dice resolution, an in-vault rulebook, NPC generator, random tables, and decks.",
   "author": "Alicia Wilkerson",
