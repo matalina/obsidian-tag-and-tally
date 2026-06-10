@@ -15,13 +15,15 @@
     cursor: grabbing;
 }
 
-/* Documentation pane: ensure rulebook content is selectable for copy/paste */
+/* Documentation pane: ensure rulebook content is selectable for copy/paste.
+ * A direct user-select on the content beats Obsidian's inherited
+ * user-select: none, so no !important needed. */
 .tag-tally-documentation-view .rulebook-panel__content,
 .tag-tally-documentation-view .rulebook-panel__body {
-    user-select: text !important;
-    -webkit-user-select: text !important;
-    -moz-user-select: text !important;
-    -ms-user-select: text !important;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 .tag-tally-track {
@@ -95,8 +97,9 @@
 }
 
 /* Shared control appearance: no shadows/outlines (all tabs); thin border only.
- * Obsidian core form styling uses high specificity + !important on focus rings;
- * we match it to keep the flat look across themes. */
+ * The .tag-tally-main-content-scoped selectors out-specify Obsidian's bare
+ * input/button/select rules and load after core CSS, so the flat look holds
+ * without !important. */
 .tag-tally-main-content .tag-tally-control,
 .tag-tally-main-content .tag-tally-select,
 .tag-tally-main-content .tag-tally-button,
@@ -112,8 +115,8 @@
 .tag-tally-main-content input[type="text"],
 .tag-tally-main-content input[type="number"],
 .tag-tally-main-content button:not(.clickable-icon) {
-    box-shadow: none !important;
-    outline: none !important;
+    box-shadow: none;
+    outline: none;
 }
 
 .tag-tally-main-content .tag-tally-control:focus,
@@ -124,8 +127,8 @@
 .tag-tally-main-content select:focus,
 .tag-tally-main-content input:focus,
 .tag-tally-main-content button:focus {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .tag-tally-main-content .tag-tally-control,
@@ -138,13 +141,13 @@
 .tag-tally-main-content .tag-tally-dice-roll-btn,
 .tag-tally-main-content .tag-tally-dice-clear-btn,
 .tag-tally-main-content .tag-tally-output {
-    border: 1px solid var(--gray-3, var(--background-modifier-border)) !important;
+    border: 1px solid var(--gray-3, var(--background-modifier-border));
 }
 
 /* Travel / generic input field appearance (matches Resolution tab inputs) */
 .tag-tally-main-content .tag-tally-input {
-    background: var(--background-primary) !important;
-    color: var(--text-normal) !important;
+    background: var(--background-primary);
+    color: var(--text-normal);
     padding: 0.5rem 1rem;
     min-height: 2.5rem;
     border-radius: var(--radius-2, 5px);
@@ -156,8 +159,8 @@
 .tag-tally-main-content .clickable-icon,
 .tag-tally-main-content .tag-tally-cards-btn:empty,
 .tag-tally-main-content button[aria-label] {
-    box-shadow: none !important;
-    outline: none !important;
+    box-shadow: none;
+    outline: none;
 }
 
 /* Resolution form styles */
@@ -1079,51 +1082,14 @@
     padding: 1em;
 }
 
-/* Documentation view: rulebook panel layout (ensures overlay works in Obsidian).
- * Overrides shared-ui RulebookPanel's default fixed-position layout to make it
- * work as a workspace-leaf overlay. Refactoring shared-ui to expose an
- * "obsidian" mode would let us drop these !important rules — deferred. */
-.tag-tally-documentation-rulebook {
-    overflow: auto !important;
-    height: 100vh !important;
-}
-.tag-tally-documentation-rulebook .rulebook-panel {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 !important;
-    min-height: 0 !important;
-    height: 100% !important;
-}
-.tag-tally-documentation-rulebook .rulebook-panel__header {
-    display: flex !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 102 !important;
-}
-.tag-tally-documentation-rulebook .rulebook-panel__backdrop {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 100 !important;
-}
-.tag-tally-documentation-rulebook .rulebook-panel__sidebar {
-    position: absolute !important;
-    left: 0 !important;
-    top: 3.5rem !important;
-    height: calc(100% - 3.5rem) !important;
-    width: 16rem !important;
-    max-width: 85vw !important;
-    z-index: 101 !important;
-    background-color: #fff !important;
-}
-.tag-tally-documentation-rulebook .rulebook-panel__main {
-    position: relative !important;
-    z-index: 0 !important;
-    flex: 1 !important;
-    min-height: 0 !important;
-    overflow-y: auto !important;
+/* Documentation view: rulebook panel sizing for the workspace leaf.
+ * The shared-ui RulebookPanel already provides its full overlay layout
+ * (position/flex/z-index for panel, header, backdrop, sidebar, main); we only
+ * size the wrapper to the leaf here. The leaf-scoped selector out-weighs
+ * RulebookApp.vue's scoped wrapper style by source order, so no !important. */
+.tag-tally-documentation-view .tag-tally-documentation-rulebook {
+    overflow: auto;
+    height: 100vh;
 }
 .tag-tally-documentation-rulebook .rulebook-view__empty {
     padding: 1.5rem;

@@ -824,17 +824,6 @@ export function generateSentence(
       if (tableName === '__WOUND_DAMAGE_TYPE__') {
         let storedDamageType = resolvedValues.get('__wound_damage_type__');
 
-        // Valid damage types (single words, not injury types)
-        const validDamageTypes = [
-          'Physical',
-          'Psychic',
-          'Elemental',
-          'Necrotic',
-          'Radiant',
-          'Shadow',
-          'Chaos',
-          'Toxic',
-        ];
         const injuryTypes = ['Strain', 'Lingering Trauma', 'Debilitating Injury', 'Lasting Scar'];
 
         // Check if storedDamageType is actually an injury type (has spaces or matches injury type names)
@@ -1366,7 +1355,7 @@ export function generateSentence(
             replacements.set(ref.index, tableResult.result);
             continue;
           }
-        } catch (fallbackError) {
+        } catch {
           // Ignore fallback error
         }
         replacements.set(ref.index, `[Error: creature-name]`);
@@ -1963,17 +1952,6 @@ export function generateSentenceWithTags(
       if (tableName === '__WOUND_DAMAGE_TYPE__') {
         let storedDamageType = resolvedValues.get('__wound_damage_type__');
 
-        // Valid damage types (single words, not injury types)
-        const validDamageTypes = [
-          'Physical',
-          'Psychic',
-          'Elemental',
-          'Necrotic',
-          'Radiant',
-          'Shadow',
-          'Chaos',
-          'Toxic',
-        ];
         const injuryTypes = ['Strain', 'Lingering Trauma', 'Debilitating Injury', 'Lasting Scar'];
 
         // Check if storedDamageType is actually an injury type (has spaces or matches injury type names)
@@ -2518,7 +2496,7 @@ export function generateSentenceWithTags(
             replacements.set(ref.index, tableResult.result);
             continue;
           }
-        } catch (fallbackError) {
+        } catch {
           // Ignore fallback error
         }
         replacements.set(ref.index, `[error]`);

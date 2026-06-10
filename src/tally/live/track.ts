@@ -64,14 +64,13 @@ export class TrackWidget extends WidgetType {
     }
 
     private updateButtons() {
-        for (const i in this.btnEls) {
-            const btnEl = this.btnEls[i];
-            if (parseInt(i) < this.value) {
+        this.btnEls.forEach((btnEl, i) => {
+            if (i < this.value) {
                 btnEl.classList.add("active");
             } else {
                 btnEl.classList.remove("active");
             }
-        }
+        });
     }
 
     private updateDoc(view: EditorView) {

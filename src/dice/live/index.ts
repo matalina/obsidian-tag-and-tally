@@ -20,9 +20,6 @@ import { ROLL_REGEX } from "../roll";
 import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 import Plugin from "../../main";
 
-// Track which roll blocks have been replaced to prevent multiple replacements
-const replacedRollBlocks = new Set<string>();
-
 // Live preview mode inline elements for dice and roll
 class DiceRollPlugin implements PluginValue {
     decorations: DecorationSet;

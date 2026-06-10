@@ -547,10 +547,9 @@ export class TableStore {
     // But only if cache version matches current version (3) - invalidate old caches
     // Version 3: Fixed range parsing (check ranges before single numbers)
     const CACHE_VERSION = 3;
-    const cacheVersion = cache?.version;
 
     if (cache && cache.version === CACHE_VERSION && cache.files) {
-      for (const [filePath, cachedFile] of Object.entries(cache.files)) {
+      for (const cachedFile of Object.values(cache.files)) {
         for (const table of cachedFile.tables) {
           this.tables[table.name] = table;
           this.customTableNames.add(table.name);
@@ -629,7 +628,7 @@ export class TableStore {
                 // Wait a bit for the folder to be created
                 await new Promise((resolve) => window.setTimeout(resolve, 100));
                 folder = app.vault.getAbstractFileByPath(normalizedPath);
-              } catch (createError: any) {
+              } catch {
                 // Folder already exists - try to get it with retries
                 // The folder exists but vault might not have indexed it yet
                 for (let i = 0; i < 5; i++) {

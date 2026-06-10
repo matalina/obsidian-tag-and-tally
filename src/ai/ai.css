@@ -1,20 +1,22 @@
-/* Match rulebook / documentation view: Obsidian sidebars often use user-select: none; re-enable for copy/paste */
+/* Match rulebook / documentation view: Obsidian sidebars often use
+ * user-select: none; re-enable for copy/paste. A direct user-select beats the
+ * inherited none, so no !important needed. */
 .tag-tally-ai-chat-view .tag-tally-ai-chat,
 .tag-tally-ai-chat-view .tag-tally-ai-chat-messages,
 .tag-tally-ai-chat-view .tag-tally-ai-msg,
 .tag-tally-ai-chat-view .tag-tally-ai-msg-body,
 .tag-tally-ai-chat-view .tag-tally-ai-status {
-  user-select: text !important;
-  -webkit-user-select: text !important;
-  -moz-user-select: text !important;
-  -ms-user-select: text !important;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 
 .tag-tally-ai-chat-view .tag-tally-ai-input {
-  user-select: text !important;
-  -webkit-user-select: text !important;
-  -moz-user-select: text !important;
-  -ms-user-select: text !important;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 
 .tag-tally-ai-chat {
@@ -269,14 +271,14 @@ details.tag-tally-ai-tool-result[open] > .tag-tally-ai-tool-result-summary::befo
 /* Flat control appearance to match .tag-tally-main-content tabs: thin border only, no shadow/outline. */
 .tag-tally-ai-chat-view .tag-tally-select,
 .tag-tally-ai-chat-view .tag-tally-button {
-  box-shadow: none !important;
-  outline: none !important;
-  border: 1px solid var(--gray-3, var(--background-modifier-border)) !important;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid var(--gray-3, var(--background-modifier-border));
 }
 .tag-tally-ai-chat-view .tag-tally-select:focus,
 .tag-tally-ai-chat-view .tag-tally-button:focus {
-  box-shadow: none !important;
-  outline: none !important;
+  box-shadow: none;
+  outline: none;
 }
 
 .tag-tally-ai-gm-select {

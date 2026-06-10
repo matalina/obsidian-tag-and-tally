@@ -13,7 +13,7 @@ import { editorLivePreviewField } from 'obsidian';
 import { RandomWidget } from './random';
 import { RANDOM_REGEX } from '../random';
 import { PICK_REGEX } from '../pick';
-import { CUSTOM_REGEX, CUSTOM_REGEX_G } from '../custom';
+import { CUSTOM_REGEX } from '../custom';
 import { CustomRandomWidget, CUSTOM_RANDOM_REGEX } from '../custom-random';
 import { getTableStore } from '../store';
 import { RESOLVE_REGEX, executeResolveInner } from '../../resolution/resolve';

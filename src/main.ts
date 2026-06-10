@@ -29,7 +29,7 @@ import { diceRollExtension } from './dice/live';
 import { RandomWidget, RANDOM_REGEX } from './tables/random';
 import { PickWidget, PICK_REGEX } from './tables/pick';
 import { CustomWidget, CUSTOM_REGEX } from './tables/custom';
-import { CustomRandomWidget, CUSTOM_RANDOM_REGEX } from './tables/custom-random';
+import { CUSTOM_RANDOM_REGEX } from './tables/custom-random';
 import { randomPickExtension } from './tables/live';
 import { getTableStore } from './tables/store';
 import { TagWidget, TAG_REGEX } from './tag/tag';
@@ -38,7 +38,7 @@ import { sentenceExtension } from './sentences/live';
 import { SentenceWidget, SENTENCE_REGEX } from './sentences/sentence';
 import { ResolveWidget, RESOLVE_REGEX } from './resolution/resolve';
 import { AiChatView, VIEW_TYPE_AI_CHAT } from './ai/chatView';
-import { DEFAULT_AI_SETTINGS, mergeAiSettings, type AiPluginSettings } from './ai/settings';
+import { mergeAiSettings, type AiPluginSettings } from './ai/settings';
 import { PromptManager } from './ai/promptManager';
 import { AI_REGEX, isAiCommand, kickOffAi, spliceMarker, type AiCommand } from './ai/inline';
 import { aiInlineExtension } from './ai/inlineLive';
@@ -136,7 +136,6 @@ export default class TextMapperPlugin extends Plugin {
     // Use MutationObserver to watch for code elements being added to the DOM
     const observer = new MutationObserver((mutations) => {
       let shouldProcess = false;
-      let codeCount = 0;
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === Node.ELEMENT_NODE) {
@@ -144,10 +143,8 @@ export default class TextMapperPlugin extends Plugin {
             // Check if the added node or its children contain code elements
             if (el.tagName === 'CODE') {
               shouldProcess = true;
-              codeCount++;
             } else if (el.querySelector('code')) {
               shouldProcess = true;
-              codeCount += el.querySelectorAll('code').length;
             }
           }
         });
@@ -626,7 +623,6 @@ export default class TextMapperPlugin extends Plugin {
       let randomIndex = 0;
       let pickIndex = 0;
       let customIndex = 0;
-      let customRandomIndex = 0;
       let tagIndex = 0;
       let sentenceIndex = 0;
       let resolveIndex = 0;
@@ -1545,8 +1541,6 @@ export class TextMapper extends MarkdownRenderChild {
 
     const hexPoint = this.parser.orientation.pixels(new Point(x, y));
     const initialCenter = this.parser.getInitialCenter();
-    const viewBoxWidth = this.fixedViewBoxWidth / this.zoom;
-    const viewBoxHeight = this.fixedViewBoxHeight / this.zoom;
 
     // Calculate pan to center the hex in the view
     this.panX = hexPoint.x - initialCenter.x;

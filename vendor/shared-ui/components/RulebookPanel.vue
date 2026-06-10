@@ -307,7 +307,7 @@ watch(
   min-width: 16rem;
   z-index: 101;
   isolation: isolate;
-  background-color: #fff;
+  background-color: var(--background-primary, #fff);
   border-right: 1px solid var(--rulebook-border, #ddd);
   padding: 1rem;
   overflow-y: auto;

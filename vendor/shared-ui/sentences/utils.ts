@@ -1398,7 +1398,7 @@ export function generateSentence(
                         replacements.set(ref.index, tableResult.result);
                         continue;
                     }
-                } catch (fallbackError) {
+                } catch {
                     // Ignore fallback error
                 }
                 replacements.set(ref.index, `[Error: creature-name]`);
@@ -2501,7 +2501,7 @@ export function generateSentenceWithTags(
                         replacements.set(ref.index, tableResult.result);
                         continue;
                     }
-                } catch (fallbackError) {
+                } catch {
                     // Ignore fallback error
                 }
                 replacements.set(ref.index, `[error]`);

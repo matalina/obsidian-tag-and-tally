@@ -342,17 +342,17 @@ export function useTextMapper(): UseTextMapperReturn {
             const img = new Image();
 
             await new Promise<void>((resolve, reject) => {
-                const timeout = setTimeout(() => {
+                const timeout = window.setTimeout(() => {
                     reject(new Error("Timeout loading SVG image"));
                 }, 10000);
 
                 img.onload = () => {
-                    clearTimeout(timeout);
+                    window.clearTimeout(timeout);
                     ctx.drawImage(img, 0, 0, width, height);
                     resolve();
                 };
                 img.onerror = (_e) => {
-                    clearTimeout(timeout);
+                    window.clearTimeout(timeout);
                     reject(new Error("Failed to load SVG image"));
                 };
                 img.src = svgDataUri;

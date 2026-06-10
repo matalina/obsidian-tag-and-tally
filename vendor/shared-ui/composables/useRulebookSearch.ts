@@ -30,8 +30,8 @@ export function useRulebookSearch(entries: SearchEntry[] | Ref<SearchEntry[]>) {
 
   let timer: ReturnType<typeof setTimeout> | null = null
   watch(query, (q) => {
-    if (timer) clearTimeout(timer)
-    timer = setTimeout(() => {
+    if (timer) window.clearTimeout(timer)
+    timer = window.setTimeout(() => {
       debouncedQuery.value = q
     }, 200)
   })

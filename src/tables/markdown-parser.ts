@@ -63,8 +63,7 @@ function parseTableSection(
     }
     
     let formulaHeader = headerMatch[1].trim();
-    const valueHeader = headerMatch[2].trim();
-    
+
     // Strip markdown formatting (bold, italic, etc.) from the formula header
     // Handles cases like "**1d10**" or "*1d20*" or "1d10"
     formulaHeader = formulaHeader.replace(/\*\*/g, "").replace(/\*/g, "").trim();
