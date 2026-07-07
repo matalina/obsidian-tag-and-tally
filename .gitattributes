@@ -1,0 +1,5 @@
+# Store text files with LF in the repo; check out native line endings.
+* text=auto
+
+# Shell scripts must stay LF even on Windows checkouts so bash can run them on Linux.
+*.sh text eol=lf
