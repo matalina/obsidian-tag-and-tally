@@ -8,9 +8,9 @@
     "dev": "vite build --watch",
     "build": "vite build",
     "typecheck": "vue-tsc --noEmit",
-    "push": "bash scripts/push-to-vault.sh",
+    "push": "node scripts/push-to-vault.mjs",
     "check": "node scripts/check.mjs",
-    "publish": "bash scripts/publish.sh"
+    "publish": "node scripts/publish.mjs"
   },
   "keywords": [
     "obsidian",
