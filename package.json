@@ -1,6 +1,6 @@
 {
   "name": "obsidian-tag-and-tally",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "description": "Run Tag and Tally tabletop RPG sessions in your vault — dice resolution, an in-vault rulebook, NPC generator, random tables, and decks.",
   "main": "main.js",
   "type": "module",
